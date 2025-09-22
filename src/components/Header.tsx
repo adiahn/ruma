@@ -38,24 +38,25 @@ const Header = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="px-2 sm:px-4 lg:px-5">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
+      <div className="container-custom">
+        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20">
+          {/* Logo */}
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.2 }}
+            className="flex-shrink-0"
+          >
+            <Link
+              to="/"
+              className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 hover:text-slate-700 transition-colors duration-300 leading-tight"
             >
-              <Link
-                to="/"
-                className="text-2xl font-bold text-slate-900 hover:text-slate-700 transition-colors duration-300"
-              >
-                Dr. Babangida Ruma
-              </Link>
-            </motion.div>
+              <span className="block sm:hidden">Dr. B. Ruma</span>
+              <span className="hidden sm:block">Dr. Babangida Ruma</span>
+            </Link>
+          </motion.div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-1">
+            <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -65,7 +66,7 @@ const Header = () => {
                 >
                   <Link
                     to={item.path}
-                    className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
+                    className={`relative px-3 xl:px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 touch-target ${
                       location.pathname === item.path
                         ? 'text-slate-900 bg-slate-100'
                         : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
@@ -86,14 +87,14 @@ const Header = () => {
 
             {/* CTA Button - Desktop */}
             <motion.div
-              className="hidden lg:block"
+              className="hidden lg:block flex-shrink-0"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <Link
                 to="/contact"
-                className="px-6 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="px-4 xl:px-6 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-all duration-300 shadow-lg hover:shadow-xl touch-target"
               >
                 Get in Touch
               </Link>
@@ -102,7 +103,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <motion.button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-slate-600 hover:text-slate-900 transition-colors duration-300"
+              className="lg:hidden p-2 text-slate-600 hover:text-slate-900 transition-colors duration-300 touch-target flex-shrink-0"
               aria-label="Toggle menu"
               whileTap={{ scale: 0.95 }}
             >
@@ -142,7 +143,7 @@ const Header = () => {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="lg:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-slate-200/50 shadow-xl overflow-hidden"
               >
-                <nav className="px-2 sm:px-4 lg:px-5 py-6 space-y-2">
+                <nav className="container-custom py-6 space-y-2">
                   {navItems.map((item, index) => (
                     <motion.div
                       key={item.name}
@@ -153,7 +154,7 @@ const Header = () => {
                       <Link
                         to={item.path}
                         onClick={closeMenu}
-                        className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 ${
+                        className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 touch-target ${
                           location.pathname === item.path
                             ? 'text-slate-900 bg-slate-100'
                             : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
@@ -174,7 +175,7 @@ const Header = () => {
                     <Link
                       to="/contact"
                       onClick={closeMenu}
-                      className="block w-full px-4 py-3 bg-slate-900 text-white text-center font-medium rounded-lg hover:bg-slate-800 transition-all duration-300"
+                      className="block w-full px-4 py-3 bg-slate-900 text-white text-center font-medium rounded-lg hover:bg-slate-800 transition-all duration-300 touch-target"
                     >
                       Get in Touch
                     </Link>
@@ -184,7 +185,6 @@ const Header = () => {
             )}
           </AnimatePresence>
         </div>
-      </div>
     </motion.header>
   );
 };

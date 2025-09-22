@@ -36,9 +36,8 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <section className="min-h-screen bg-gray-50 flex items-center">
-        <div className="w-full px-2 sm:px-4 lg:px-5">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="w-full container-custom">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20 items-center">
             {/* Content Side */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -46,7 +45,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
             >
               <motion.h1 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight"
+                className="text-responsive-xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -55,7 +54,7 @@ const Home = () => {
               </motion.h1>
               
               <motion.p 
-                className="text-xl md:text-2xl text-slate-600 mb-8 font-medium"
+                className="text-responsive-sm text-slate-600 mb-6 sm:mb-8 font-medium"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -64,7 +63,7 @@ const Home = () => {
               </motion.p>
               
               <motion.p 
-                className="text-lg text-slate-600 mb-12 leading-relaxed max-w-xl"
+                className="text-base sm:text-lg text-slate-600 mb-8 sm:mb-12 leading-relaxed max-w-xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -74,48 +73,48 @@ const Home = () => {
               </motion.p>
               
               <motion.div 
-                className="flex flex-col sm:flex-row gap-4 mb-12"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
-                <Button to="/business" size="lg" className="bg-slate-900 text-white hover:bg-slate-800">
+                <Button to="/business" size="lg" className="bg-slate-900 text-white hover:bg-slate-800 w-full sm:w-auto">
                   Explore My Portfolio
                 </Button>
-                <Button to="/contact" variant="outline" size="lg" className="border-slate-300 text-slate-700 hover:bg-slate-100">
+                <Button to="/contact" variant="outline" size="lg" className="border-slate-300 text-slate-700 hover:bg-slate-100 w-full sm:w-auto">
                   Get in Touch
                 </Button>
               </motion.div>
               
               {/* Simple Stats */}
               <motion.div 
-                className="grid grid-cols-4 gap-6"
+                className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.0 }}
               >
-                <div>
-                  <div className="text-2xl lg:text-3xl font-bold text-slate-900 mb-1">5+</div>
-                  <div className="text-xs lg:text-sm text-slate-600">Companies</div>
+                <div className="text-center sm:text-left">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-1">5+</div>
+                  <div className="text-xs sm:text-sm text-slate-600">Companies</div>
                 </div>
-                <div>
-                  <div className="text-2xl lg:text-3xl font-bold text-slate-900 mb-1">$50M+</div>
-                  <div className="text-xs lg:text-sm text-slate-600">Portfolio</div>
+                <div className="text-center sm:text-left">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-1">$50M+</div>
+                  <div className="text-xs sm:text-sm text-slate-600">Portfolio</div>
                 </div>
-                <div>
-                  <div className="text-2xl lg:text-3xl font-bold text-slate-900 mb-1">25+</div>
-                  <div className="text-xs lg:text-sm text-slate-600">Partners</div>
+                <div className="text-center sm:text-left">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-1">25+</div>
+                  <div className="text-xs sm:text-sm text-slate-600">Partners</div>
                 </div>
-                <div>
-                  <div className="text-2xl lg:text-3xl font-bold text-slate-900 mb-1">3</div>
-                  <div className="text-xs lg:text-sm text-slate-600">Countries</div>
+                <div className="text-center sm:text-left">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-1">3</div>
+                  <div className="text-xs sm:text-sm text-slate-600">Countries</div>
                 </div>
               </motion.div>
             </motion.div>
             
             {/* Portrait Side */}
             <motion.div 
-              className="flex justify-center lg:justify-end"
+              className="flex justify-center lg:justify-end order-first lg:order-last"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -123,14 +122,14 @@ const Home = () => {
               <div className="relative">
                 {/* Transparent PNG Portrait */}
                 <motion.div 
-                  className="w-96 h-[28rem] lg:w-[28rem] lg:h-[36rem] xl:w-[32rem] xl:h-[42rem]"
+                  className="w-64 h-80 sm:w-80 sm:h-96 md:w-96 md:h-[28rem] lg:w-[28rem] lg:h-[36rem] xl:w-[32rem] xl:h-[42rem]"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
                   <img 
                     src="/src/assets/hero.png"
                     alt="Dr. Babangida Ruma"
-                    className="w-full h-full object-cover object-center"
+                    className="img-responsive"
                     style={{
                       filter: 'drop-shadow(0 20px 25px rgba(0, 0, 0, 0.1))'
                     }}
@@ -138,32 +137,29 @@ const Home = () => {
                 </motion.div>
                 
                 {/* Subtle Background Element */}
-                <div className="absolute -z-10 top-8 -right-8 w-full h-full bg-white rounded-2xl opacity-80" />
+                <div className="absolute -z-10 top-4 -right-4 sm:top-8 sm:-right-8 w-full h-full bg-white rounded-2xl opacity-80" />
               </div>
             </motion.div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Partners Section */}
-      <section className="py-16 bg-white border-t border-gray-100">
-        <div className="px-2 sm:px-4 lg:px-5">
-          <div className="max-w-7xl mx-auto">
-            <motion.div 
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                Trusted Partners
-              </h2>
-              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                Collaborating with industry leaders to drive innovation and create lasting value
-              </p>
-            </motion.div>
-          </div>
+      <section className="section-padding-sm bg-white border-t border-gray-100">
+        <div className="container-custom">
+          <motion.div 
+            className="text-center mb-8 sm:mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-responsive-md font-bold text-slate-900 mb-4">
+              Trusted Partners
+            </h2>
+            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+              Collaborating with industry leaders to drive innovation and create lasting value
+            </p>
+          </motion.div>
         </div>
 
         <div className="relative overflow-hidden space-y-6">
