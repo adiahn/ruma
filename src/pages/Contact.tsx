@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Container from '../components/Container';
 import Button from '../components/Button';
+import { Mail, Phone, MapPin, CheckCircle, Handshake, DollarSign, Mic } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -38,19 +39,19 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: '📧',
+      icon: Mail,
       title: 'Email',
       details: 'contact@babangidaruma.com',
       subtitle: 'Response within 24 hours'
     },
     {
-      icon: '📞',
+      icon: Phone,
       title: 'Phone',
       details: '+234 (0) 800 RUMA',
       subtitle: 'Business hours: 9 AM - 5 PM WAT'
     },
     {
-      icon: '📍',
+      icon: MapPin,
       title: 'Location',
       details: 'Lagos, Nigeria',
       subtitle: 'By appointment only'
@@ -85,8 +86,8 @@ const Contact = () => {
               <div className="space-y-8 mb-12">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-xl">
-                      {info.icon}
+                    <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center">
+                      <info.icon size={24} className="text-slate-600" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-slate-900 mb-1">{info.title}</h3>
@@ -127,7 +128,7 @@ const Contact = () => {
               
               {isSubmitted ? (
                 <div className="text-center py-12">
-                  <div className="text-6xl mb-4">✅</div>
+                  <CheckCircle size={60} className="mx-auto mb-4 text-green-600" />
                   <h4 className="text-xl font-bold text-slate-900 mb-2">Message Sent Successfully!</h4>
                   <p className="text-slate-600">Thank you for reaching out. We'll get back to you within 24 hours.</p>
                 </div>
@@ -247,24 +248,26 @@ const Contact = () => {
               {
                 title: 'Strategic Partnerships',
                 description: 'Joint ventures and strategic alliances that leverage complementary strengths and capabilities.',
-                icon: '🤝'
+                icon: Handshake
               },
               {
                 title: 'Investment Opportunities',
                 description: 'Capital investment and growth partnerships for high-potential ventures and established businesses.',
-                icon: '💰'
+                icon: DollarSign
               },
               {
                 title: 'Speaking & Advisory',
                 description: 'Keynote speaking, board advisory positions, and strategic consulting engagements.',
-                icon: '🎤'
+                icon: Mic
               }
             ].map((opportunity, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl p-8 text-center elegant-shadow hover:elegant-shadow-lg transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="text-4xl mb-6">{opportunity.icon}</div>
+                <div className="mb-6">
+                  <opportunity.icon size={48} className="mx-auto text-slate-600" />
+                </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-4">{opportunity.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{opportunity.description}</p>
               </div>

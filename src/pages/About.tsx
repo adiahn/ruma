@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from '../components/Container';
 import Button from '../components/Button';
+import { User, BarChart3, Trophy, Award, GraduationCap, Globe, Lightbulb, Heart } from 'lucide-react';
 
 const About = () => {
   const timeline = [
@@ -89,7 +90,7 @@ const About = () => {
             <div className="relative">
               <div className="aspect-[4/5] bg-gradient-to-br from-slate-200 to-slate-300 rounded-2xl elegant-shadow-lg flex items-center justify-center">
                 <div className="text-center text-slate-600">
-                  <div className="text-8xl mb-6">👤</div>
+                  <User size={80} className="mx-auto mb-6 text-slate-400" />
                   <p className="text-xl font-medium">Professional Portrait</p>
                 </div>
               </div>
@@ -131,7 +132,7 @@ const About = () => {
                   <div className={`${index % 2 === 0 ? 'lg:pl-12' : 'lg:pr-12'}`}>
                     <div className="aspect-video bg-gradient-to-br from-slate-200 to-slate-300 rounded-xl elegant-shadow flex items-center justify-center">
                       <div className="text-slate-600 text-center">
-                        <div className="text-4xl mb-2">📊</div>
+                        <BarChart3 size={40} className="mx-auto mb-2 text-slate-400" />
                         <p className="text-sm">Milestone Image</p>
                       </div>
                     </div>
@@ -164,7 +165,7 @@ const About = () => {
                 className="bg-slate-50 p-6 rounded-xl hover:bg-slate-100 transition-colors duration-200 text-center"
               >
                 <div className="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="text-slate-600 text-xl">🏆</div>
+                  <Trophy size={24} className="text-slate-600" />
                 </div>
                 <h3 className="font-semibold text-slate-900">{achievement}</h3>
               </div>

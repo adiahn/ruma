@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from '../components/Container';
 import Button from '../components/Button';
+import { Newspaper, Lightbulb, Clipboard, MapPin, Calendar, Clock } from 'lucide-react';
 
 const Media = () => {
   const mediaItems = [
@@ -121,7 +122,7 @@ const Media = () => {
                 
                 <div className="aspect-video bg-gradient-to-br from-slate-200 to-slate-300 rounded-xl elegant-shadow flex items-center justify-center">
                   <div className="text-slate-600 text-center">
-                    <div className="text-6xl mb-4">📰</div>
+                    <Newspaper size={60} className="mx-auto mb-4 text-slate-400" />
                     <p className="text-lg font-medium">Media Feature</p>
                   </div>
                 </div>
@@ -201,7 +202,10 @@ const Media = () => {
                     <h3 className="text-xl font-bold text-slate-900 mb-2">{event.event}</h3>
                     <p className="text-slate-600 mb-2">{event.topic}</p>
                     <div className="flex items-center gap-4 text-sm text-slate-500">
-                      <span>📍 {event.location}</span>
+                      <div className="flex items-center gap-1">
+                        <MapPin size={14} />
+                        <span>{event.location}</span>
+                      </div>
                       <span>• {event.type}</span>
                     </div>
                   </div>
@@ -244,7 +248,7 @@ const Media = () => {
                 className="text-center p-6 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors duration-200"
               >
                 <div className="w-12 h-12 bg-slate-200 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <div className="text-slate-600 text-xl">💡</div>
+                  <Lightbulb size={24} className="text-slate-600" />
                 </div>
                 <h3 className="font-semibold text-slate-900">{topic}</h3>
               </div>
@@ -285,7 +289,7 @@ const Media = () => {
             
             <div className="text-center">
               <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
-                <div className="text-6xl mb-6">📋</div>
+                <Clipboard size={60} className="mx-auto mb-6 text-slate-300" />
                 <h3 className="text-2xl font-bold mb-4">Media Kit</h3>
                 <p className="text-slate-300 mb-6">
                   Download comprehensive media resources and information.

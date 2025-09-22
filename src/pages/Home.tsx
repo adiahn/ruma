@@ -36,7 +36,7 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <section className="min-h-screen bg-gray-50 flex items-center">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-2 sm:px-4 lg:px-5">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content Side */}
@@ -148,7 +148,7 @@ const Home = () => {
 
       {/* Partners Section */}
       <section className="py-16 bg-white border-t border-gray-100">
-        <div className="px-4 sm:px-6 lg:px-8">
+        <div className="px-2 sm:px-4 lg:px-5">
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-12"
@@ -663,8 +663,9 @@ const Home = () => {
       {/* About Preview */}
       <AnimatedSection animation="slideUp">
         <section className="section-padding bg-slate-50">
-          <Container>
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="px-2 sm:px-4 lg:px-5">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-16 items-center">
               <AnimatedSection animation="slideInLeft" delay={0.2}>
                 <div>
                   <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
@@ -704,14 +705,16 @@ const Home = () => {
                 </div>
               </AnimatedSection>
             </div>
-          </Container>
+          </div>
+        </div>
         </section>
       </AnimatedSection>
 
           {/* Values Section */}
           <AnimatedSection animation="fadeIn">
             <section className="section-padding bg-white">
-              <Container>
+              <div className="px-2 sm:px-4 lg:px-5">
+                <div className="max-w-7xl mx-auto">
                 <AnimatedSection animation="slideUp" delay={0.2}>
                   <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
@@ -754,7 +757,8 @@ const Home = () => {
                     </motion.div>
                   ))}
                 </div>
-              </Container>
+              </div>
+            </div>
             </section>
           </AnimatedSection>
 
@@ -772,7 +776,8 @@ const Home = () => {
             }}
             transition={{ duration: 8, repeat: Infinity }}
           />
-          <Container className="text-center relative z-10">
+          <div className="px-2 sm:px-4 lg:px-5">
+            <div className="max-w-7xl mx-auto text-center relative z-10">
             <motion.h2 
               className="text-4xl md:text-5xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
@@ -803,7 +808,8 @@ const Home = () => {
                 View Portfolio
               </Button>
             </motion.div>
-          </Container>
+          </div>
+        </div>
         </section>
       </AnimatedSection>
     </div>
