@@ -659,50 +659,50 @@ const Home = () => {
       {/* About Preview */}
       <AnimatedSection animation="slideUp">
         <section className="section-padding bg-slate-50">
-          <div className="px-2 sm:px-4 lg:px-5">
-            <div className="max-w-7xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="container-custom">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
               <AnimatedSection animation="slideInLeft" delay={0.2}>
-                <div>
-                  <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+                <div className="text-center lg:text-left">
+                  <h2 className="text-responsive-lg font-bold text-slate-900 mb-4 sm:mb-6">
                     Building the Future of African Business
                   </h2>
-                  <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                  <p className="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed">
                     For over two decades, I have dedicated my career to creating businesses 
                     that not only generate wealth but also contribute meaningfully to societal 
                     development. From humble beginnings to building a multi-billion dollar 
                     empire, my journey represents the power of vision, determination, and 
                     strategic thinking.
                   </p>
-                  <Button to="/about" variant="outline">
-                    Learn More About My Journey
-                  </Button>
+                  <div className="flex justify-center lg:justify-start">
+                    <Button to="/about" variant="outline" className="w-full sm:w-auto">
+                      Learn More About My Journey
+                    </Button>
+                  </div>
                 </div>
               </AnimatedSection>
               
               <AnimatedSection animation="slideInRight" delay={0.4}>
-                <div className="relative">
+                <div className="relative flex justify-center lg:justify-end">
                   <motion.div 
-                    className="aspect-square bg-gradient-to-br from-slate-200 to-slate-300 rounded-2xl elegant-shadow-lg flex items-center justify-center hover-lift"
+                    className="aspect-square bg-gradient-to-br from-slate-200 to-slate-300 rounded-2xl elegant-shadow-lg flex items-center justify-center hover-lift w-full max-w-sm lg:max-w-none"
                     whileHover={{ rotate: 1 }}
                     transition={{ duration: 0.3 }}
                   >
                     <div className="text-center text-slate-600">
                       <motion.div 
-                        className="text-6xl mb-4"
+                        className="text-4xl sm:text-6xl mb-4"
                         animate={{ scale: [1, 1.1, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
                       >
                         📸
                       </motion.div>
-                      <p className="text-lg font-medium">Professional Portrait</p>
+                      <p className="text-base sm:text-lg font-medium">Professional Portrait</p>
                     </div>
                   </motion.div>
                 </div>
               </AnimatedSection>
             </div>
           </div>
-        </div>
         </section>
       </AnimatedSection>
 
