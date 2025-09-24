@@ -8,6 +8,8 @@ import About from './pages/About';
 import Business from './pages/Business';
 import Media from './pages/Media';
 import Contact from './pages/Contact';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
             <Route path="/business" element={<Business />} />
             <Route path="/media" element={<Media />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
           </Routes>
         </main>
         <Footer />

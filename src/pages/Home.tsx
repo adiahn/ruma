@@ -741,6 +741,99 @@ const Home = () => {
             </section>
           </AnimatedSection>
 
+      {/* Blog Preview Section */}
+      <AnimatedSection animation="fadeIn">
+        <section className="section-padding bg-white">
+          <div className="px-2 sm:px-4 lg:px-5">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-12">
+                <motion.h2 
+                  className="text-responsive-lg font-bold text-slate-900 mb-4 sm:mb-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  Latest Insights
+                </motion.h2>
+                <motion.p 
+                  className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  Thoughts on entrepreneurship, innovation, and building sustainable businesses across Africa and beyond.
+                </motion.p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                {[
+                  {
+                    title: "The Future of African Entrepreneurship",
+                    excerpt: "Exploring key strategies for creating lasting value in Africa's rapidly growing business landscape.",
+                    date: "Jan 15, 2024",
+                    readTime: "8 min read",
+                    category: "Entrepreneurship"
+                  },
+                  {
+                    title: "Innovation in Traditional Industries",
+                    excerpt: "How technology and innovation are transforming traditional African industries and creating new opportunities.",
+                    date: "Jan 10, 2024",
+                    readTime: "6 min read",
+                    category: "Innovation"
+                  },
+                  {
+                    title: "Building Strategic Partnerships",
+                    excerpt: "The importance of strategic partnerships in scaling businesses and achieving sustainable growth.",
+                    date: "Jan 5, 2024",
+                    readTime: "7 min read",
+                    category: "Business Strategy"
+                  }
+                ].map((post, index) => (
+                  <motion.article
+                    key={index}
+                    className="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 group cursor-pointer"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="mb-4">
+                      <span className="bg-slate-200 text-slate-700 px-3 py-1 rounded-full text-sm font-medium">
+                        {post.category}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3 group-hover:text-slate-700 transition-colors">
+                      {post.title}
+                    </h3>
+                    
+                    <p className="text-slate-600 mb-4 text-sm leading-relaxed">
+                      {post.excerpt}
+                    </p>
+                    
+                    <div className="flex items-center justify-between text-xs text-slate-500">
+                      <span>{post.date}</span>
+                      <span>{post.readTime}</span>
+                    </div>
+                  </motion.article>
+                ))}
+              </div>
+              
+              <motion.div 
+                className="text-center mt-8 sm:mt-12"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+              >
+                <Button to="/blog" size="lg" className="bg-slate-900 text-white hover:bg-slate-800">
+                  View All Articles
+                </Button>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
       {/* CTA Section */}
       <AnimatedSection animation="fadeIn">
         <section className="section-padding bg-slate-900 text-white relative overflow-hidden">
