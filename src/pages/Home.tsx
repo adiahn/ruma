@@ -35,17 +35,29 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="min-h-screen bg-gray-50 flex items-center">
-        <div className="w-full container-custom">
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20 items-center">
-            {/* Content Side */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background Image with Greyscale */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/src/assets/hero.jpg)',
+            filter: 'grayscale(100%) brightness(0.3)'
+          }}
+        />
+        
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-60" />
+        
+        {/* Content */}
+        <div className="relative z-10 w-full container-custom">
+          <div className="max-w-4xl">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <motion.h1 
-                className="text-responsive-xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight"
+                className="text-responsive-xl font-bold text-white mb-4 sm:mb-6 leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -54,16 +66,16 @@ const Home = () => {
               </motion.h1>
               
               <motion.p 
-                className="text-responsive-sm text-slate-600 mb-6 sm:mb-8 font-medium"
+                className="text-responsive-sm text-gray-200 mb-6 sm:mb-8 font-medium"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Visionary Entrepreneur & Philanthropist
+                A Legacy of Excellence
               </motion.p>
               
               <motion.p 
-                className="text-base sm:text-lg text-slate-600 mb-8 sm:mb-12 leading-relaxed max-w-xl"
+                className="text-base sm:text-lg text-gray-300 mb-8 sm:mb-12 leading-relaxed max-w-2xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -78,15 +90,15 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
-                <Button to="/business" size="lg" className="bg-slate-900 text-white hover:bg-slate-800 w-full sm:w-auto">
-                  Explore My Portfolio
+                <Button to="/business" size="lg" className="bg-white text-slate-900 hover:bg-gray-100 w-full sm:w-auto border-2 border-yellow-400">
+                  READ MORE →
                 </Button>
-                <Button to="/contact" variant="outline" size="lg" className="border-slate-300 text-slate-700 hover:bg-slate-100 w-full sm:w-auto">
+                <Button to="/contact" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-slate-900 w-full sm:w-auto">
                   Get in Touch
                 </Button>
               </motion.div>
               
-              {/* Simple Stats */}
+              {/* Stats */}
               <motion.div 
                 className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6"
                 initial={{ opacity: 0, y: 20 }}
@@ -94,51 +106,22 @@ const Home = () => {
                 transition={{ duration: 0.8, delay: 1.0 }}
               >
                 <div className="text-center sm:text-left">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-1">5+</div>
-                  <div className="text-xs sm:text-sm text-slate-600">Companies</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1">5+</div>
+                  <div className="text-xs sm:text-sm text-gray-300">Companies</div>
                 </div>
                 <div className="text-center sm:text-left">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-1">$50M+</div>
-                  <div className="text-xs sm:text-sm text-slate-600">Portfolio</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1">$50M+</div>
+                  <div className="text-xs sm:text-sm text-gray-300">Portfolio</div>
                 </div>
                 <div className="text-center sm:text-left">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-1">25+</div>
-                  <div className="text-xs sm:text-sm text-slate-600">Partners</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1">25+</div>
+                  <div className="text-xs sm:text-sm text-gray-300">Partners</div>
                 </div>
                 <div className="text-center sm:text-left">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-1">3</div>
-                  <div className="text-xs sm:text-sm text-slate-600">Countries</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1">3</div>
+                  <div className="text-xs sm:text-sm text-gray-300">Countries</div>
                 </div>
               </motion.div>
-            </motion.div>
-            
-            {/* Portrait Side */}
-            <motion.div 
-              className="flex justify-center lg:justify-end order-first lg:order-last"
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <div className="relative">
-                {/* Transparent PNG Portrait */}
-                <motion.div 
-                  className="w-64 h-80 sm:w-80 sm:h-96 md:w-96 md:h-[28rem] lg:w-[28rem] lg:h-[36rem] xl:w-[32rem] xl:h-[42rem]"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <img 
-                    src="/src/assets/hero.png"
-                    alt="Dr. Babangida Ruma"
-                    className="img-responsive"
-                    style={{
-                      filter: 'drop-shadow(0 20px 25px rgba(0, 0, 0, 0.1))'
-                    }}
-                  />
-                </motion.div>
-                
-                {/* Subtle Background Element */}
-                <div className="absolute -z-10 top-4 -right-4 sm:top-8 sm:-right-8 w-full h-full bg-white rounded-2xl opacity-80" />
-              </div>
             </motion.div>
           </div>
         </div>
