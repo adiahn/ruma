@@ -36,93 +36,91 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background Image with Greyscale */}
+        {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(/src/assets/hero.jpg)',
-            filter: 'grayscale(100%) brightness(0.3)'
+            filter: 'grayscale(100%) brightness(0.4)'
           }}
         />
         
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-60" />
+        <div className="absolute inset-0 bg-black bg-opacity-40" />
         
         {/* Content */}
-        <div className="relative z-10 w-full container-custom">
-          <div className="max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <motion.h1 
-                className="text-responsive-xl font-bold text-white mb-4 sm:mb-6 leading-tight"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                Dr. Babangida Ruma
-              </motion.h1>
-              
-              <motion.p 
-                className="text-responsive-sm text-gray-200 mb-6 sm:mb-8 font-medium"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                A Legacy of Excellence
-              </motion.p>
-              
-              <motion.p 
-                className="text-base sm:text-lg text-gray-300 mb-8 sm:mb-12 leading-relaxed max-w-2xl"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-                Building sustainable enterprises that create lasting value across Africa and beyond. 
-                With over two decades of transformative leadership, fostering innovation and economic growth.
-              </motion.p>
-              
-              <motion.div 
-                className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-              >
-                <Button to="/business" size="lg" className="bg-white text-slate-900 hover:bg-gray-100 w-full sm:w-auto border-2 border-yellow-400">
-                  READ MORE →
-                </Button>
-                <Button to="/contact" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-slate-900 w-full sm:w-auto">
-                  Get in Touch
-                </Button>
-              </motion.div>
-              
-              {/* Stats */}
-              <motion.div 
-                className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.0 }}
-              >
-                <div className="text-center sm:text-left">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1">5+</div>
-                  <div className="text-xs sm:text-sm text-gray-300">Companies</div>
+        <div className="relative z-10 w-full">
+          <div className="max-w-6xl mx-auto px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center min-h-screen py-20">
+              {/* Left Content */}
+              <div className="space-y-12">
+                {/* Name */}
+                <div>
+                  <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-tight tracking-tight">
+                    Dr. Babangida Ruma
+                  </h1>
                 </div>
-                <div className="text-center sm:text-left">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1">$50M+</div>
-                  <div className="text-xs sm:text-sm text-gray-300">Portfolio</div>
+                
+                {/* Title */}
+                <div>
+                  <h2 className="text-2xl sm:text-3xl text-gray-200 font-light tracking-wide">
+                    A Legacy of Excellence
+                  </h2>
                 </div>
-                <div className="text-center sm:text-left">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1">25+</div>
-                  <div className="text-xs sm:text-sm text-gray-300">Partners</div>
+                
+                {/* Description */}
+                <div className="max-w-2xl">
+                  <p className="text-lg text-gray-300 leading-relaxed">
+                    Building sustainable enterprises that create lasting value across Africa and beyond. 
+                    With over two decades of transformative leadership, fostering innovation and economic growth.
+                  </p>
                 </div>
-                <div className="text-center sm:text-left">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1">3</div>
-                  <div className="text-xs sm:text-sm text-gray-300">Countries</div>
+                
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    to="/business" 
+                    size="lg" 
+                    className="bg-white text-slate-900 hover:bg-gray-100 px-8 py-4 font-medium"
+                  >
+                    Explore Portfolio
+                  </Button>
+                  <Button 
+                    to="/contact" 
+                    variant="outline" 
+                    size="lg" 
+                    className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 font-medium"
+                  >
+                    Get in Touch
+                  </Button>
                 </div>
-              </motion.div>
-            </motion.div>
+                
+                {/* Stats */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-8 border-t border-gray-600">
+                  <div>
+                    <div className="text-3xl font-light text-white mb-2">5+</div>
+                    <div className="text-sm text-gray-300 uppercase tracking-wide">Companies</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-light text-white mb-2">$50M+</div>
+                    <div className="text-sm text-gray-300 uppercase tracking-wide">Portfolio</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-light text-white mb-2">25+</div>
+                    <div className="text-sm text-gray-300 uppercase tracking-wide">Partners</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-light text-white mb-2">3</div>
+                    <div className="text-sm text-gray-300 uppercase tracking-wide">Countries</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Right Side - Empty for now, can add content later */}
+              <div className="hidden lg:block">
+                {/* This space can be used for additional content or left empty for the background to show */}
+              </div>
+            </div>
           </div>
         </div>
       </section>

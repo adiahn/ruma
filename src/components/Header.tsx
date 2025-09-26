@@ -29,164 +29,118 @@ const Header = () => {
   const closeMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        isScrolled
-          ? 'bg-white/90 backdrop-blur-xl shadow-lg border-b border-slate-200/50'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="container-custom">
-        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20">
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      isScrolled
+        ? 'bg-white/80 backdrop-blur-sm shadow-sm border-b border-white/20'
+        : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.2 }}
-            className="flex-shrink-0"
+          <Link
+            to="/"
+            className={`text-xl font-light transition-colors duration-200 ${
+              isScrolled 
+                ? 'text-slate-900 hover:text-slate-700' 
+                : 'text-white hover:text-gray-200'
+            }`}
           >
-            <Link
-              to="/"
-              className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 hover:text-slate-700 transition-colors duration-300 leading-tight"
-            >
-              <span className="block sm:hidden">Dr. B. Ruma</span>
-              <span className="hidden sm:block">Dr. Babangida Ruma</span>
-            </Link>
-          </motion.div>
+            Dr. Babangida Ruma
+          </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
-              {navItems.map((item, index) => (
-                <motion.div
-                  key={item.name}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Link
-                    to={item.path}
-                    className={`relative px-3 xl:px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 touch-target ${
-                      location.pathname === item.path
-                        ? 'text-slate-900 bg-slate-100'
-                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                    }`}
-                  >
-                    {item.name}
-                    {location.pathname === item.path && (
-                      <motion.div
-                        layoutId="activeIndicator"
-                        className="absolute inset-0 bg-slate-100 rounded-lg -z-10"
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                      />
-                    )}
-                  </Link>
-                </motion.div>
-              ))}
-            </nav>
-
-            {/* CTA Button - Desktop */}
-            <motion.div
-              className="hidden lg:block flex-shrink-0"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
               <Link
-                to="/contact"
-                className="px-4 xl:px-6 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-all duration-300 shadow-lg hover:shadow-xl touch-target"
+                key={item.name}
+                to={item.path}
+                className={`text-sm font-medium transition-colors duration-200 ${
+                  isScrolled
+                    ? location.pathname === item.path
+                      ? 'text-slate-900'
+                      : 'text-slate-600 hover:text-slate-900'
+                    : location.pathname === item.path
+                      ? 'text-white'
+                      : 'text-gray-200 hover:text-white'
+                }`}
               >
-                Get in Touch
+                {item.name}
               </Link>
-            </motion.div>
+            ))}
+          </nav>
 
-            {/* Mobile Menu Button */}
-            <motion.button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-slate-600 hover:text-slate-900 transition-colors duration-300 touch-target flex-shrink-0"
-              aria-label="Toggle menu"
-              whileTap={{ scale: 0.95 }}
+          {/* CTA Button - Desktop */}
+          <div className="hidden md:block">
+            <Link
+              to="/contact"
+              className={`px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+                isScrolled
+                  ? 'bg-slate-900 text-white hover:bg-slate-800'
+                  : 'bg-white text-slate-900 hover:bg-gray-100'
+              }`}
             >
-              <AnimatePresence mode="wait">
-                {isMobileMenuOpen ? (
-                  <motion.div
-                    key="close"
-                    initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <X size={24} />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="menu"
-                    initial={{ rotate: 90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: -90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Menu size={24} />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.button>
+              Get in Touch
+            </Link>
           </div>
 
-          {/* Mobile Navigation */}
-          <AnimatePresence>
-            {isMobileMenuOpen && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="lg:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-slate-200/50 shadow-xl overflow-hidden"
-              >
-                <nav className="container-custom py-6 space-y-2">
-                  {navItems.map((item, index) => (
-                    <motion.div
-                      key={item.name}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: index * 0.1 }}
-                    >
-                      <Link
-                        to={item.path}
-                        onClick={closeMenu}
-                        className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 touch-target ${
-                          location.pathname === item.path
-                            ? 'text-slate-900 bg-slate-100'
-                            : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                        }`}
-                      >
-                        {item.name}
-                      </Link>
-                    </motion.div>
-                  ))}
-                  
-                  {/* Mobile CTA Button */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: 0.5 }}
-                    className="pt-4"
-                  >
-                    <Link
-                      to="/contact"
-                      onClick={closeMenu}
-                      className="block w-full px-4 py-3 bg-slate-900 text-white text-center font-medium rounded-lg hover:bg-slate-800 transition-all duration-300 touch-target"
-                    >
-                      Get in Touch
-                    </Link>
-                  </motion.div>
-                </nav>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className={`md:hidden p-2 transition-colors duration-200 ${
+              isScrolled 
+                ? 'text-slate-600 hover:text-slate-900' 
+                : 'text-white hover:text-gray-200'
+            }`}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
-    </motion.header>
+
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className={`md:hidden absolute top-full left-0 w-full border-b shadow-sm ${
+            isScrolled 
+              ? 'bg-white border-slate-100' 
+              : 'bg-black/90 backdrop-blur-sm border-white/20'
+          }`}>
+            <nav className="px-6 py-4 space-y-1">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={closeMenu}
+                  className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
+                    isScrolled
+                      ? location.pathname === item.path
+                        ? 'text-slate-900 bg-slate-50'
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                      : location.pathname === item.path
+                        ? 'text-white bg-white/20'
+                        : 'text-gray-200 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <div className="pt-4">
+                <Link
+                  to="/contact"
+                  onClick={closeMenu}
+                  className={`block w-full px-3 py-2 text-center text-sm font-medium rounded-md transition-colors duration-200 ${
+                    isScrolled
+                      ? 'bg-slate-900 text-white hover:bg-slate-800'
+                      : 'bg-white text-slate-900 hover:bg-gray-100'
+                  }`}
+                >
+                  Get in Touch
+                </Link>
+              </div>
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
   );
 };
 
