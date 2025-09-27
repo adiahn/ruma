@@ -51,33 +51,32 @@ const Home = () => {
         {/* Content */}
         <div className="relative z-10 w-full">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center min-h-screen py-20">
-              {/* Left Content */}
-              <div className="space-y-12">
+            <div className="flex items-center justify-center min-h-screen py-20">
+              <div className="text-center max-w-4xl">
                 {/* Name */}
-                <div>
+                <div className="mb-8">
                   <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-tight tracking-tight">
                     Dr. Babangida Ruma
                   </h1>
                 </div>
                 
                 {/* Title */}
-                <div>
+                <div className="mb-8">
                   <h2 className="text-2xl sm:text-3xl text-gray-200 font-light tracking-wide">
                     A Legacy of Excellence
                   </h2>
                 </div>
                 
                 {/* Description */}
-                <div className="max-w-2xl">
-                  <p className="text-lg text-gray-300 leading-relaxed">
+                <div className="mb-12">
+                  <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
                     Building sustainable enterprises that create lasting value across Africa and beyond. 
                     With over two decades of transformative leadership, fostering innovation and economic growth.
                   </p>
                 </div>
                 
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <Button 
                     to="/business" 
                     size="lg" 
@@ -114,11 +113,6 @@ const Home = () => {
                     <div className="text-sm text-gray-300 uppercase tracking-wide">Countries</div>
                   </div>
                 </div>
-              </div>
-              
-              {/* Right Side - Empty for now, can add content later */}
-              <div className="hidden lg:block">
-                {/* This space can be used for additional content or left empty for the background to show */}
               </div>
             </div>
           </div>

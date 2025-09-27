@@ -5,7 +5,9 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
+import Profile from './pages/Profile';
 import Business from './pages/Business';
+import Recognitions from './pages/Recognitions';
 import Media from './pages/Media';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
@@ -21,7 +23,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/business" element={<Business />} />
+            <Route path="/recognitions" element={<Recognitions />} />
             <Route path="/media" element={<Media />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />

@@ -19,8 +19,9 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
+    { name: 'Profile', path: '/profile' },
     { name: 'Business', path: '/business' },
+    { name: 'Recognitions', path: '/recognitions' },
     { name: 'Blog', path: '/blog' },
     { name: 'Media', path: '/media' },
     { name: 'Contact', path: '/contact' },
@@ -31,8 +32,10 @@ const Header = () => {
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled
-        ? 'bg-white/80 backdrop-blur-sm shadow-sm border-b border-white/20'
-        : 'bg-transparent'
+        ? 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-slate-200'
+        : location.pathname === '/'
+          ? 'bg-transparent'
+          : 'bg-white/10 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -40,8 +43,8 @@ const Header = () => {
           <Link
             to="/"
             className={`text-xl font-light transition-colors duration-200 ${
-              isScrolled 
-                ? 'text-slate-900 hover:text-slate-700' 
+              isScrolled || location.pathname !== '/'
+                ? 'text-slate-900 hover:text-slate-700'
                 : 'text-white hover:text-gray-200'
             }`}
           >
@@ -55,7 +58,7 @@ const Header = () => {
                 key={item.name}
                 to={item.path}
                 className={`text-sm font-medium transition-colors duration-200 ${
-                  isScrolled
+                  isScrolled || location.pathname !== '/'
                     ? location.pathname === item.path
                       ? 'text-slate-900'
                       : 'text-slate-600 hover:text-slate-900'
@@ -74,7 +77,7 @@ const Header = () => {
             <Link
               to="/contact"
               className={`px-4 py-2 text-sm font-medium transition-colors duration-200 ${
-                isScrolled
+                isScrolled || location.pathname !== '/'
                   ? 'bg-slate-900 text-white hover:bg-slate-800'
                   : 'bg-white text-slate-900 hover:bg-gray-100'
               }`}
@@ -87,8 +90,8 @@ const Header = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`md:hidden p-2 transition-colors duration-200 ${
-              isScrolled 
-                ? 'text-slate-600 hover:text-slate-900' 
+              isScrolled || location.pathname !== '/'
+                ? 'text-slate-600 hover:text-slate-900'
                 : 'text-white hover:text-gray-200'
             }`}
             aria-label="Toggle menu"
@@ -100,8 +103,8 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className={`md:hidden absolute top-full left-0 w-full border-b shadow-sm ${
-            isScrolled 
-              ? 'bg-white border-slate-100' 
+            isScrolled || location.pathname !== '/'
+              ? 'bg-white border-slate-200'
               : 'bg-black/90 backdrop-blur-sm border-white/20'
           }`}>
             <nav className="px-6 py-4 space-y-1">
@@ -111,7 +114,7 @@ const Header = () => {
                   to={item.path}
                   onClick={closeMenu}
                   className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
-                    isScrolled
+                    isScrolled || location.pathname !== '/'
                       ? location.pathname === item.path
                         ? 'text-slate-900 bg-slate-50'
                         : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
@@ -128,7 +131,7 @@ const Header = () => {
                   to="/contact"
                   onClick={closeMenu}
                   className={`block w-full px-3 py-2 text-center text-sm font-medium rounded-md transition-colors duration-200 ${
-                    isScrolled
+                    isScrolled || location.pathname !== '/'
                       ? 'bg-slate-900 text-white hover:bg-slate-800'
                       : 'bg-white text-slate-900 hover:bg-gray-100'
                   }`}
