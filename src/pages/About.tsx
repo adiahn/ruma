@@ -6,39 +6,39 @@ import { User, BarChart3, Trophy, Award, GraduationCap, Globe, Lightbulb, Heart 
 const About = () => {
   const timeline = [
     {
-      year: '2000',
-      title: 'The Beginning',
-      description: 'Started first venture with a vision to create sustainable businesses in Nigeria.',
+      year: 'Early 2000s',
+      title: 'Foundation of CODE',
+      description: 'Founded Collective Development (CODE), pioneering foundation advancing girl-child education, women\'s empowerment, and community-driven entrepreneurship.',
     },
     {
-      year: '2005',
-      title: 'Expansion Phase',
-      description: 'Expanded operations across West Africa, establishing key partnerships and foundations.',
+      year: '2014',
+      title: 'U.S. State Department Recognition',
+      description: 'Honored as U.S. Department of State Alumni Member of the Month, recognizing his contributions to international development.',
     },
     {
-      year: '2012',
-      title: 'International Growth',
-      description: 'Launched international operations, reaching markets across 12 countries.',
+      year: '2015-2017',
+      title: 'Global Youth Leadership',
+      description: 'Served as Global Youth Ambassador for Commonwealth Youth Council and UN Global Ambassador for #TheirWorldAtSchool Global Education Campaign.',
     },
     {
       year: '2018',
-      title: 'Philanthropic Focus',
-      description: 'Established major philanthropic initiatives, investing over $50M in community development.',
+      title: 'Author & Thought Leader',
+      description: 'Published "Technology: A Tool for Youth Empowerment", "ThinkLikeRuma", and "100 Skills for Survival" books.',
     },
     {
-      year: '2024',
-      title: 'Continued Innovation',
-      description: 'Leading digital transformation initiatives and sustainable development projects.',
+      year: '2020',
+      title: 'Africa Youth Award Nomination',
+      description: 'Only Nigerian nominated for Africa Youth Award, recognizing contributions to human capital development through technology and skills empowerment.',
     },
   ];
 
   const achievements = [
-    'African Business Leader of the Year 2024',
-    'Forbes Africa Person of the Year 2023',
-    'Harvard Business School Distinguished Alumni',
-    'UN Global Compact Advocate',
-    'Technology Innovation Leader Award',
-    'Outstanding Philanthropy Recognition',
+    'Father of Technology and Innovation (UNESCO)',
+    'U.S. Department of State Alumni Member of the Month (2014)',
+    'Commonwealth Young Achievers Award',
+    'Global Achievers Award (First African in History)',
+    '100 Most Influential Young Africans (2016 & 2020)',
+    'Top 20 Most Influential Young Leaders in the World (2016)',
   ];
 
   return (
@@ -51,7 +51,7 @@ const About = () => {
               About Dr. Ruma
             </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              A journey of innovation, leadership, and sustainable impact across Africa and beyond.
+              A journey of social entrepreneurship, youth empowerment, and transformative leadership across Africa and beyond.
             </p>
           </div>
         </Container>
@@ -65,24 +65,25 @@ const About = () => {
               <h2 className="text-4xl font-bold text-slate-900 mb-6">The Journey</h2>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
                 <p>
-                  Dr. Babangida Ruma stands as one of Africa's most influential business leaders, 
-                  with a career spanning over two decades of transformative entrepreneurship. 
-                  His journey began with a vision to create businesses that not only generate 
-                  wealth but also contribute meaningfully to societal development.
+                  Dr. Babangida Ruma is a Nigerian social entrepreneur, visionary youth leader, 
+                  and advocate for enterprise development, skills development, digital innovation, 
+                  and sustainable growth. With more than two decades of transformative leadership, 
+                  he has dedicated his career to building platforms that empower young people, 
+                  strengthen institutions, and create inclusive economic opportunities across Africa.
                 </p>
                 <p>
-                  From humble beginnings to building a multi-billion dollar business empire, 
-                  Dr. Ruma has demonstrated exceptional leadership across diverse industries 
-                  including real estate, technology, manufacturing, and financial services. 
-                  His strategic approach to business development has created thousands of jobs 
-                  and fostered economic growth across multiple regions.
+                  He is the Founder & Executive Vice Chairman of Collective Development (CODE), 
+                  a pioneering foundation advancing girl-child education, women's empowerment, 
+                  skills acquisition, and community-driven entrepreneurship. Under his leadership, 
+                  CODE has launched several groundbreaking initiatives including the Women & Girls 
+                  Entrepreneurship Support Program (WAGES) and the Learning Initiative for 
+                  Entrepreneurship (LIFE).
                 </p>
                 <p>
-                  As a thought leader and mentor, Dr. Ruma continues to inspire the next 
-                  generation of entrepreneurs while maintaining his commitment to ethical 
-                  business practices and sustainable development. His philanthropic initiatives 
-                  have impacted millions of lives, establishing him as a true champion of 
-                  social responsibility.
+                  Globally recognized for his passion for digital innovation and technology, 
+                  Dr. Ruma was named the Father of Technology and Innovation by the UNESCO 
+                  Institute for Information Technologies in Education for his groundbreaking 
+                  work in using technology to impact communities with sustainable digital solutions.
                 </p>
               </div>
             </div>
@@ -105,7 +106,7 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Journey Timeline</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Key milestones in building a sustainable business empire.
+              Key milestones in advancing youth empowerment and social entrepreneurship.
             </p>
           </div>
           
@@ -154,7 +155,7 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Recognition & Awards</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Honored by leading institutions for excellence in business and social impact.
+              Honored by leading institutions for excellence in youth development and social entrepreneurship.
             </p>
           </div>
           

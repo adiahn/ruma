@@ -1,34 +1,32 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import Container from '../components/Container';
 import Button from '../components/Button';
 import AnimatedSection from '../components/AnimatedSection';
 import { Lightbulb, Star, Target, Crown } from 'lucide-react';
 
 const Home = () => {
   const stats = [
-    { label: 'Companies Founded', value: '5+' },
-    { label: 'Portfolio Value', value: '$50M+' },
-    { label: 'Partners', value: '25+' },
-    { label: 'Countries', value: '3' },
+    { label: 'Organizations Founded', value: '4+' },
+    { label: 'Years of Impact', value: '20+' },
+    { label: 'Global Recognition', value: '25+' },
+    { label: 'Books Published', value: '3' },
   ];
 
   const values = [
     {
+      title: 'Youth Empowerment',
+      description: 'Dedicated to empowering young people through skills development, entrepreneurship, and digital innovation.',
+    },
+    {
+      title: 'Social Impact',
+      description: 'Creating sustainable solutions that address poverty, unemployment, and inequality across communities.',
+    },
+    {
       title: 'Innovation',
-      description: 'Pioneering new business models and disrupting traditional industries with cutting-edge solutions.',
-    },
-    {
-      title: 'Excellence',
-      description: 'Maintaining the highest standards in every venture, partnership, and business endeavor.',
-    },
-    {
-      title: 'Impact',
-      description: 'Creating sustainable value for stakeholders while contributing to community development.',
+      description: 'Using technology as a tool for community transformation and sustainable development.',
     },
     {
       title: 'Leadership',
-      description: 'Building exceptional teams and inspiring others to achieve extraordinary results.',
+      description: 'Inspiring the next generation of entrepreneurs and change makers across Africa.',
     },
   ];
 
@@ -63,15 +61,15 @@ const Home = () => {
                 {/* Title */}
                 <div className="mb-8">
                   <h2 className="text-2xl sm:text-3xl text-gray-200 font-light tracking-wide">
-                    A Legacy of Excellence
+                    Social Entrepreneur & Youth Advocate
                   </h2>
                 </div>
                 
                 {/* Description */}
                 <div className="mb-12">
                   <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                    Building sustainable enterprises that create lasting value across Africa and beyond. 
-                    With over two decades of transformative leadership, fostering innovation and economic growth.
+                    Empowering young people, strengthening institutions, and creating inclusive economic opportunities across Africa. 
+                    With over two decades of transformative leadership in social entrepreneurship and youth development.
                   </p>
                 </div>
                 
@@ -96,22 +94,12 @@ const Home = () => {
                 
                 {/* Stats */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-8 border-t border-gray-600">
-                  <div>
-                    <div className="text-3xl font-light text-white mb-2">5+</div>
-                    <div className="text-sm text-gray-300 uppercase tracking-wide">Companies</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-light text-white mb-2">$50M+</div>
-                    <div className="text-sm text-gray-300 uppercase tracking-wide">Portfolio</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-light text-white mb-2">25+</div>
-                    <div className="text-sm text-gray-300 uppercase tracking-wide">Partners</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-light text-white mb-2">3</div>
-                    <div className="text-sm text-gray-300 uppercase tracking-wide">Countries</div>
-                  </div>
+                  {stats.map((stat, index) => (
+                    <div key={index}>
+                      <div className="text-3xl font-light text-white mb-2">{stat.value}</div>
+                      <div className="text-sm text-gray-300 uppercase tracking-wide">{stat.label}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -128,12 +116,12 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-responsive-md font-bold text-slate-900 mb-4">
-              Trusted Partners
-            </h2>
-            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
-              Collaborating with industry leaders to drive innovation and create lasting value
-            </p>
+                  <h2 className="text-responsive-md font-bold text-slate-900 mb-4">
+                    Global Collaborations
+                  </h2>
+                  <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+                    Working with international organizations to advance youth empowerment and social development
+                  </p>
           </motion.div>
         </div>
 
@@ -639,14 +627,13 @@ const Home = () => {
               <AnimatedSection animation="slideInLeft" delay={0.2}>
                 <div className="text-center lg:text-left">
                   <h2 className="text-responsive-lg font-bold text-slate-900 mb-4 sm:mb-6">
-                    Building the Future of African Business
+                    Empowering Africa's Youth Through Innovation
                   </h2>
                   <p className="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed">
-                    For over two decades, I have dedicated my career to creating businesses 
-                    that not only generate wealth but also contribute meaningfully to societal 
-                    development. From humble beginnings to building a multi-billion dollar 
-                    empire, my journey represents the power of vision, determination, and 
-                    strategic thinking.
+                    For over two decades, I have dedicated my career to empowering young people, 
+                    strengthening institutions, and creating inclusive economic opportunities across Africa. 
+                    Through social entrepreneurship and digital innovation, I work to transform 
+                    communities and build sustainable futures for the next generation.
                   </p>
                   <div className="flex justify-center lg:justify-start">
                     <Button to="/about" variant="outline" className="w-full sm:w-auto">
@@ -753,32 +740,32 @@ const Home = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  Thoughts on entrepreneurship, innovation, and building sustainable businesses across Africa and beyond.
+                  Insights on youth empowerment, social entrepreneurship, and building sustainable communities across Africa and beyond.
                 </motion.p>
               </div>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 {[
                   {
-                    title: "The Future of African Entrepreneurship",
-                    excerpt: "Exploring key strategies for creating lasting value in Africa's rapidly growing business landscape.",
+                    title: "Empowering Africa's Youth Through Technology",
+                    excerpt: "How digital innovation and skills development are transforming young people's lives across Africa.",
                     date: "Jan 15, 2024",
                     readTime: "8 min read",
-                    category: "Entrepreneurship"
+                    category: "Youth Empowerment"
                   },
                   {
-                    title: "Innovation in Traditional Industries",
-                    excerpt: "How technology and innovation are transforming traditional African industries and creating new opportunities.",
+                    title: "Social Entrepreneurship as a Force for Change",
+                    excerpt: "Building sustainable solutions that address poverty, unemployment, and inequality in communities.",
                     date: "Jan 10, 2024",
                     readTime: "6 min read",
-                    category: "Innovation"
+                    category: "Social Impact"
                   },
                   {
-                    title: "Building Strategic Partnerships",
-                    excerpt: "The importance of strategic partnerships in scaling businesses and achieving sustainable growth.",
+                    title: "The Future of Skills Development in Africa",
+                    excerpt: "Creating pathways for young people to acquire practical skills and access enterprise opportunities.",
                     date: "Jan 5, 2024",
                     readTime: "7 min read",
-                    category: "Business Strategy"
+                    category: "Skills Development"
                   }
                 ].map((post, index) => (
                   <motion.article
@@ -856,8 +843,8 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Whether you're looking for strategic partnerships, investment opportunities, 
-              or inspiring leadership insights, let's explore how we can work together.
+              Whether you're interested in youth empowerment initiatives, social entrepreneurship partnerships, 
+              or learning about sustainable community development, let's explore how we can work together.
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center"

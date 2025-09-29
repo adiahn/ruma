@@ -5,78 +5,78 @@ import Button from '../components/Button';
 const Business = () => {
   const portfolio = [
     {
-      name: 'Ruma Properties Ltd',
-      industry: 'Real Estate Development',
-      description: 'Leading real estate development company with luxury residential and commercial properties across major cities.',
-      value: '$500M+',
-      established: '2018',
+      name: 'Collective Development (CODE)',
+      industry: 'Social Entrepreneurship',
+      description: 'Pioneering foundation advancing girl-child education, women\'s empowerment, skills acquisition, and community-driven entrepreneurship.',
+      value: '20+ Years',
+      established: 'Early 2000s',
       status: 'Active',
     },
     {
-      name: 'TechVision Solutions',
-      industry: 'Technology & Software',
-      description: 'Innovative technology solutions provider specializing in enterprise software and digital transformation.',
-      value: '$300M+',
-      established: '2020',
+      name: 'Enterprise University of Nigeria',
+      industry: 'Education & Training',
+      description: 'Institution committed to nurturing a new generation of entrepreneurs through practical education, research, and innovation.',
+      value: 'Growing',
+      established: 'Recent',
       status: 'Growing',
     },
     {
-      name: 'Industrial Holdings Corp',
-      industry: 'Manufacturing',
-      description: 'Diversified manufacturing operations producing consumer goods and industrial equipment.',
-      value: '$400M+',
-      established: '2016',
-      status: 'Active',
-    },
-    {
-      name: 'Ruma Financial Services',
-      industry: 'Financial Services',
-      description: 'Comprehensive financial services including investment banking, asset management, and fintech solutions.',
-      value: '$250M+',
-      established: '2019',
+      name: 'MSMEs Business Management Organization (BMO)',
+      industry: 'Business Support',
+      description: 'Platform providing business support services, advisory solutions, and capacity-building programs for micro, small, and medium-sized enterprises.',
+      value: 'Expanding',
+      established: 'Recent',
       status: 'Expanding',
     },
     {
-      name: 'Global Logistics Network',
-      industry: 'Transportation & Logistics',
-      description: 'International logistics and supply chain management with operations across multiple continents.',
-      value: '$200M+',
-      established: '2017',
+      name: 'Opportunities Hub (OHUB)',
+      industry: 'Youth Development',
+      description: 'Dynamic ecosystem dedicated to unlocking pathways for young people by placing African youth at the center of global transformation.',
+      value: 'Active',
+      established: '2015-2017',
       status: 'Active',
     },
     {
-      name: 'HealthCare Innovations',
-      industry: 'Healthcare Technology',
-      description: 'Revolutionary healthcare technology solutions improving patient care and medical efficiency.',
-      value: '$150M+',
-      established: '2021',
+      name: 'The Ruma Foundation',
+      industry: 'Philanthropy',
+      description: 'Philanthropic institution focused on giving back to communities and transforming lives through human capital development.',
+      value: 'Ongoing',
+      established: 'Ongoing',
+      status: 'Active',
+    },
+    {
+      name: 'WAGES Program',
+      industry: 'Women Empowerment',
+      description: 'Women & Girls Entrepreneurship Support Program designed to equip young women with practical skills and business knowledge.',
+      value: 'Impact',
+      established: 'Under CODE',
       status: 'Innovation',
     },
   ];
 
   const stats = [
-    { label: 'Total Portfolio Value', value: '$2.1B+' },
-    { label: 'Active Companies', value: '15+' },
-    { label: 'Employees Worldwide', value: '10,000+' },
-    { label: 'Markets Served', value: '12' },
+    { label: 'Organizations Founded', value: '4+' },
+    { label: 'Years of Impact', value: '20+' },
+    { label: 'Books Published', value: '3' },
+    { label: 'Global Recognition', value: '25+' },
   ];
 
   const principles = [
     {
-      title: 'Sustainable Growth',
-      description: 'Building businesses that create long-term value for all stakeholders while respecting environmental and social responsibilities.',
+      title: 'Youth Empowerment',
+      description: 'Dedicated to empowering young people through skills development, entrepreneurship, and digital innovation across Africa.',
     },
     {
-      title: 'Innovation-Driven',
-      description: 'Embracing cutting-edge technologies and innovative business models to stay ahead in competitive markets.',
+      title: 'Social Impact',
+      description: 'Creating sustainable solutions that address poverty, unemployment, and inequality while fostering community development.',
     },
     {
-      title: 'People-First Approach',
-      description: 'Investing in human capital and creating environments where talent can thrive and contribute to organizational success.',
+      title: 'Technology for Good',
+      description: 'Using technology as a tool for community transformation and sustainable development, earning recognition as Father of Innovation.',
     },
     {
-      title: 'Strategic Partnerships',
-      description: 'Building strong alliances and partnerships that amplify capabilities and create mutual value across industries.',
+      title: 'Community-Driven',
+      description: 'Building platforms that strengthen institutions and create inclusive economic opportunities for underserved communities.',
     },
   ];
 
@@ -87,11 +87,11 @@ const Business = () => {
         <Container>
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-              Business Portfolio
+              Organizations & Initiatives
             </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              A diversified empire spanning multiple industries, each strategically positioned 
-              to create sustainable value and drive innovation.
+              A portfolio of social enterprises and initiatives dedicated to youth empowerment, 
+              skills development, and sustainable community transformation across Africa.
             </p>
           </div>
           
@@ -113,9 +113,9 @@ const Business = () => {
       <section className="section-padding bg-white">
         <Container>
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Active Ventures</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">Active Organizations</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Strategic investments across key sectors driving economic growth and innovation.
+              Social enterprises and initiatives driving youth empowerment and community development across Africa.
             </p>
           </div>
           
@@ -163,9 +163,9 @@ const Business = () => {
       <section className="section-padding bg-slate-50">
         <Container>
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Business Philosophy</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">Core Mission</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              The core principles that guide our investment decisions and business operations.
+              The fundamental principles that guide our approach to social entrepreneurship and community development.
             </p>
           </div>
           
@@ -191,28 +191,28 @@ const Business = () => {
         <Container>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">Investment Approach</h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Approach to Social Impact</h2>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
                 <p>
-                  Our investment strategy focuses on identifying high-potential opportunities 
-                  in emerging markets, particularly across Africa. We look for businesses that 
-                  combine strong fundamentals with the potential for significant social impact.
+                  Our approach focuses on creating sustainable solutions that address critical 
+                  social challenges across Africa. We prioritize initiatives that empower young 
+                  people, strengthen communities, and create inclusive economic opportunities.
                 </p>
                 <p>
-                  Each investment is carefully evaluated for its alignment with our core values: 
-                  sustainability, innovation, and community development. We provide not just 
-                  capital, but strategic guidance and operational expertise to help our portfolio 
-                  companies achieve their full potential.
+                  Each organization is carefully designed to align with our core mission: 
+                  youth empowerment, skills development, and community transformation. We provide 
+                  not just resources, but strategic guidance and mentorship to help communities 
+                  achieve their full potential.
                 </p>
                 <p>
-                  Our hands-on approach ensures that every venture receives the support needed 
-                  to navigate challenges, scale operations, and create lasting value for all 
-                  stakeholders involved.
+                  Our hands-on approach ensures that every initiative receives the support needed 
+                  to create lasting impact, scale effectively, and transform lives across 
+                  underserved communities in Africa.
                 </p>
               </div>
               <div className="mt-8">
                 <Button to="/contact" variant="outline">
-                  Discuss Investment Opportunities
+                  Discuss Partnership Opportunities
                 </Button>
               </div>
             </div>
@@ -255,11 +255,11 @@ const Business = () => {
       <section className="section-padding bg-slate-900 text-white">
         <Container className="text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Ready to Explore Partnership Opportunities?
+            Ready to Make a Difference Together?
           </h2>
           <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Whether you're an entrepreneur with a groundbreaking idea or an established 
-            business looking for strategic investment, let's discuss how we can work together.
+            Whether you're passionate about youth empowerment, social entrepreneurship, 
+            or community development, let's discuss how we can collaborate to create lasting impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button to="/contact" variant="secondary">

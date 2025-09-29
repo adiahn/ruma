@@ -6,79 +6,79 @@ import AnimatedSection from '../components/AnimatedSection';
 const Recognitions = () => {
   const awards = [
     {
-      year: "2023",
-      title: "African Business Leader of the Year",
-      organization: "African Business Awards",
-      category: "Leadership Excellence",
-      description: "Recognized for outstanding leadership in transforming African business landscapes and creating sustainable economic opportunities across the continent.",
+      year: "2020",
+      title: "Africa Youth Award Nomination",
+      organization: "Africa Youth Awards",
+      category: "Youth Development",
+      description: "Only Nigerian nominated for Africa Youth Award, recognizing contributions to human capital development through technology and skills empowerment.",
       location: "Lagos, Nigeria"
     },
     {
-      year: "2022",
-      title: "Entrepreneur of the Year",
-      organization: "West African Business Excellence Awards",
-      category: "Entrepreneurship",
-      description: "Honored for innovative business practices and significant contributions to economic development in West Africa.",
+      year: "2018",
+      title: "Social Worker of the Year",
+      organization: "Nigerian Social Work Association",
+      category: "Social Impact",
+      description: "Recognized for exceptional contributions to social work and community development initiatives across Nigeria.",
+      location: "Abuja, Nigeria"
+    },
+    {
+      year: "2016",
+      title: "100 Most Influential Young Africans",
+      organization: "African Youth Awards",
+      category: "Youth Leadership",
+      description: "Listed among the 100 Most Influential Young Africans for outstanding contributions to youth empowerment and social entrepreneurship.",
       location: "Accra, Ghana"
     },
     {
-      year: "2021",
-      title: "Philanthropy Excellence Award",
-      organization: "African Philanthropy Network",
-      category: "Social Impact",
-      description: "Recognized for exceptional philanthropic efforts and community development initiatives across multiple African countries.",
-      location: "Nairobi, Kenya"
+      year: "2016",
+      title: "Top 20 Most Influential Young Leaders in the World",
+      organization: "Global Youth Leadership Summit",
+      category: "Global Leadership",
+      description: "Ranked among the Top 20 Most Influential Young Leaders in the World for innovative approaches to youth development and social change.",
+      location: "New York, USA"
     },
     {
-      year: "2020",
-      title: "Innovation in Business Award",
-      organization: "African Innovation Summit",
-      category: "Innovation",
-      description: "Awarded for pioneering sustainable business models and innovative approaches to economic development in Africa.",
-      location: "Cape Town, South Africa"
+      year: "2014",
+      title: "U.S. Department of State Alumni Member of the Month",
+      organization: "U.S. Department of State",
+      category: "International Recognition",
+      description: "Honored as U.S. Department of State Alumni Member of the Month for contributions to international development and youth empowerment.",
+      location: "Washington D.C., USA"
     },
     {
-      year: "2019",
-      title: "Lifetime Achievement Award",
-      organization: "African Business Council",
-      category: "Lifetime Achievement",
-      description: "Honored for decades of dedicated service to African economic development and business excellence.",
-      location: "Cairo, Egypt"
-    },
-    {
-      year: "2018",
-      title: "Community Impact Award",
-      organization: "African Development Foundation",
-      category: "Community Development",
-      description: "Recognized for creating thousands of employment opportunities and significant community development initiatives.",
-      location: "Dakar, Senegal"
+      year: "2015-2017",
+      title: "Global Youth Ambassador",
+      organization: "Commonwealth Youth Council",
+      category: "Global Leadership",
+      description: "Served as Global Youth Ambassador for the Commonwealth Youth Council, the largest youth organization in the world.",
+      location: "London, UK"
     }
   ];
 
   const recognitions = [
     {
       icon: <Award size={24} />,
-      title: "25+ Awards",
-      description: "International and regional recognition for business excellence and social impact"
+      title: "Father of Technology and Innovation",
+      description: "Named by UNESCO Institute for Information Technologies in Education"
     },
     {
       icon: <Trophy size={24} />,
-      title: "5 Lifetime Achievement Awards",
-      description: "Honored for decades of dedicated service to African development"
+      title: "Global Achievers Award",
+      description: "First African in history to receive both Commonwealth and Global Achievers Awards"
     },
     {
       icon: <Star size={24} />,
-      title: "Featured in Forbes Africa",
-      description: "Recognized as one of Africa's most influential business leaders"
+      title: "100 Most Influential Young Africans",
+      description: "Recognized in 2016 & 2020 for outstanding contributions to youth development"
     },
     {
       icon: <Users size={24} />,
-      title: "10,000+ Lives Impacted",
-      description: "Direct and indirect impact through business and philanthropic efforts"
+      title: "Top 20 Most Influential Young Leaders",
+      description: "Ranked among the world's most influential young leaders in 2016"
     }
   ];
 
-  const categories = ["All", "Leadership Excellence", "Entrepreneurship", "Social Impact", "Innovation", "Lifetime Achievement", "Community Development"];
+  const categories = ["All", "Youth Development", "Social Impact", "Youth Leadership", "Global Leadership", "International Recognition", "Technology Innovation"];
 
   return (
     <div className="pt-16">
@@ -116,7 +116,7 @@ const Recognitions = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  Celebrating Excellence in African Business Leadership
+                  Celebrating Excellence in Youth Development and Social Entrepreneurship
                 </motion.p>
                 
                 <motion.p 
@@ -125,7 +125,7 @@ const Recognitions = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  Dr. Babangida Ruma's exceptional contributions to African business development and community empowerment have earned him numerous prestigious awards and international recognition.
+                  Dr. Babangida Ruma's exceptional contributions to youth empowerment, social entrepreneurship, and digital innovation have earned him numerous prestigious awards and international recognition.
                 </motion.p>
               </div>
             </div>
@@ -234,13 +234,13 @@ const Recognitions = () => {
                   <Star size={32} className="text-white" />
                 </div>
                 <h2 className="text-3xl font-light text-slate-900 mb-6">
-                  Featured in Forbes Africa
+                  Father of Technology and Innovation
                 </h2>
                 <p className="text-lg text-slate-700 leading-relaxed mb-8">
-                  "Dr. Babangida Ruma stands as one of Africa's most influential business leaders, whose innovative approaches to sustainable development and community empowerment have transformed entire regions. His commitment to creating lasting value while fostering economic growth serves as a model for entrepreneurs across the continent."
+                  "Dr. Babangida Ruma has been globally recognized for his passion for digital innovation and technology. Named the Father of Technology and Innovation by the UNESCO Institute for Information Technologies in Education, his groundbreaking work in using technology to impact communities with sustainable digital solutions has transformed countless lives across Africa."
                 </p>
                 <div className="text-sm text-slate-500">
-                  — Forbes Africa, 2023
+                  — UNESCO Institute for Information Technologies in Education
                 </div>
               </div>
             </div>

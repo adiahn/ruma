@@ -6,57 +6,57 @@ import AnimatedSection from '../components/AnimatedSection';
 const Profile = () => {
   const timeline = [
     {
-      year: "Early Years",
-      title: "The Foundation",
-      description: "Dr. Babangida Ruma's journey began with a vision to transform African business landscapes through innovation and sustainable development.",
-      details: "From his early years, Dr. Ruma demonstrated exceptional leadership qualities and a deep commitment to creating lasting value across communities. His foundational experiences shaped his understanding of the unique challenges and opportunities within African markets."
+      year: "Early 2000s",
+      title: "Foundation of CODE",
+      description: "Founded Collective Development (CODE), a pioneering foundation advancing girl-child education, women's empowerment, and community-driven entrepreneurship.",
+      details: "Dr. Ruma established CODE as a platform to address critical social issues in Northern Nigeria and beyond. The foundation launched groundbreaking initiatives including WAGES (Women & Girls Entrepreneurship Support Program) and INCOMING (Initiative for Community Intervention on Girls-Child)."
     },
     {
-      year: "1990s",
-      title: "Building an Empire",
-      description: "Established his first major business ventures, focusing on sustainable development and innovative solutions for African markets.",
-      details: "During this transformative period, Dr. Ruma founded multiple companies that would become cornerstones of his business empire. His approach emphasized local talent development, community engagement, and sustainable business practices that would benefit entire regions."
+      year: "2014",
+      title: "U.S. State Department Recognition",
+      description: "Honored as U.S. Department of State Alumni Member of the Month, recognizing his contributions to international development and youth empowerment.",
+      details: "This recognition highlighted Dr. Ruma's growing international profile and his commitment to using technology and innovation to create sustainable solutions for communities across Africa."
     },
     {
-      year: "2000s",
-      title: "Expanding Horizons",
-      description: "Expanded operations across multiple African countries, establishing partnerships and creating thousands of employment opportunities.",
-      details: "The new millennium marked a period of significant expansion for Dr. Ruma's business empire. His ventures created over 10,000 direct and indirect employment opportunities across three countries, while maintaining a focus on sustainable development and community empowerment."
+      year: "2015-2017",
+      title: "Global Youth Leadership",
+      description: "Served as Global Youth Ambassador for Commonwealth Youth Council and UN Global Ambassador for #TheirWorldAtSchool Global Education Campaign.",
+      details: "As the largest youth organization in the world, the Commonwealth Youth Council provided Dr. Ruma with a platform to advocate for youth empowerment, skills development, and digital innovation on a global scale."
     },
     {
-      year: "2010s",
-      title: "Becoming a Legend",
-      description: "Recognized as a leading voice in African entrepreneurship and sustainable development, with numerous awards and international recognition.",
-      details: "This decade saw Dr. Ruma's recognition as one of Africa's most influential business leaders. His innovative approaches to sustainable development and his commitment to empowering local communities earned him international acclaim and numerous prestigious awards."
+      year: "2018",
+      title: "Author & Thought Leader",
+      description: "Published influential books including 'Technology: A Tool for Youth Empowerment', 'ThinkLikeRuma', and '100 Skills for Survival'.",
+      details: "Dr. Ruma's books have become essential resources for young people seeking to develop practical skills and entrepreneurial knowledge. He has also authored or co-authored more than 20 journal articles and book chapters."
     },
     {
       year: "2020s",
-      title: "Creating a Legacy",
-      description: "Continuing to drive transformation across Africa while mentoring the next generation of African entrepreneurs and business leaders.",
-      details: "Today, Dr. Ruma continues to shape the future of African business through his ongoing ventures, philanthropic efforts, and mentorship programs. His legacy extends beyond business success to include significant contributions to education, community development, and sustainable economic growth across the continent."
+      title: "Continuing Impact",
+      description: "Named Father of Technology and Innovation by UNESCO and nominated for Africa Youth Award, continuing to inspire the next generation.",
+      details: "Dr. Ruma continues to drive transformation through his various organizations including The Ruma Foundation, Enterprise University of Nigeria, and MSMEs Business Management Organization, while mentoring young entrepreneurs across Africa."
     }
   ];
 
   const achievements = [
     {
       icon: <Users size={24} />,
-      title: "10,000+ Lives Impacted",
-      description: "Direct and indirect employment opportunities created across Africa"
+      title: "4+ Organizations Founded",
+      description: "CODE, Enterprise University, MSMEs BMO, and The Ruma Foundation"
     },
     {
       icon: <Globe size={24} />,
-      title: "3 Countries",
-      description: "Operations spanning multiple African nations"
+      title: "Global Recognition",
+      description: "UNESCO Father of Technology and Innovation, Commonwealth Young Achievers Award"
     },
     {
       icon: <Award size={24} />,
       title: "25+ Awards",
-      description: "Recognition for excellence in business and philanthropy"
+      description: "Including Global Achievers Award (First African in History)"
     },
     {
       icon: <Lightbulb size={24} />,
-      title: "5+ Companies",
-      description: "Successful ventures across diverse industries"
+      title: "3 Books Published",
+      description: "Technology: A Tool for Youth Empowerment, ThinkLikeRuma, 100 Skills for Survival"
     }
   ];
 
@@ -99,7 +99,7 @@ const Profile = () => {
                 {/* Title */}
                 <div>
                   <h2 className="text-xl sm:text-2xl text-gray-200 font-light tracking-wide">
-                    Visionary Entrepreneur & Philanthropist
+                    Social Entrepreneur & Youth Advocate
                   </h2>
                 </div>
               </div>
@@ -130,25 +130,25 @@ const Profile = () => {
                   A Legacy of Excellence
                 </h2>
                 <p className="text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-                  Dr. Babangida Ruma is a visionary entrepreneur, philanthropist, and business leader who has dedicated his life to transforming African economies through sustainable business practices and innovative solutions.
+                  Dr. Babangida Ruma is a Nigerian social entrepreneur, visionary youth leader, and advocate for enterprise development, skills development, digital innovation, and sustainable growth.
                 </p>
               </div>
 
               <div className="prose prose-lg prose-slate max-w-none">
                 <p className="text-lg text-slate-700 leading-relaxed mb-8">
-                  Dr. Babangida Ruma is a visionary entrepreneur, philanthropist, and business leader who has dedicated his life to transforming African economies through sustainable business practices and innovative solutions. With over two decades of transformative leadership, he has built a portfolio of successful companies that create lasting value across Africa and beyond.
+                  With more than two decades of transformative leadership, Dr. Ruma has dedicated his career to building platforms that empower young people, strengthen institutions, and create inclusive economic opportunities across Africa. He is the Founder & Executive Vice Chairman of Collective Development (CODE), a pioneering foundation advancing girl-child education, women's empowerment, skills acquisition, and community-driven entrepreneurship.
                 </p>
                 
                 <p className="text-lg text-slate-700 leading-relaxed mb-8">
-                  As the Founder and President of multiple successful ventures, Dr. Ruma has been instrumental in revolutionizing business practices across the continent. His approach emphasizes local talent development, community engagement, and sustainable business models that benefit entire regions.
+                  Dr. Ruma founded the Enterprise University of Nigeria, an institution committed to nurturing a new generation of entrepreneurs through practical education, research, and innovation. He also established the MSMEs Business Management Organization (BMO), providing business support services and capacity-building programs for micro, small, and medium-sized enterprises across Nigeria.
                 </p>
                 
                 <p className="text-lg text-slate-700 leading-relaxed mb-8">
-                  Through his various business ventures and philanthropic efforts, Dr. Ruma has created thousands of employment opportunities across multiple African countries. His commitment to empowering local communities and fostering economic growth has earned him recognition as one of Africa's most influential business leaders.
+                  Globally recognized for his passion for digital innovation and technology, Dr. Ruma was named the Father of Technology and Innovation by the UNESCO Institute for Information Technologies in Education. He has worked with world leaders to empower young people, build human capability, rebrand nations, and promote peace and harmony.
                 </p>
                 
                 <p className="text-lg text-slate-700 leading-relaxed">
-                  Today, Dr. Ruma continues to drive transformation across Africa while mentoring the next generation of African entrepreneurs and business leaders. His legacy extends beyond business success to include significant contributions to education, community development, and sustainable economic growth across the continent.
+                  Through The Ruma Foundation, Dr. Ruma continues to create opportunities for vulnerable groups by promoting access to quality education, women's and youth empowerment, skills development, and sustainable livelihoods. His impact has been celebrated with numerous international recognitions, making him one of Africa's most influential young leaders.
                 </p>
               </div>
             </div>
