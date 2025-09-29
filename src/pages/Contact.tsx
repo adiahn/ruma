@@ -29,11 +29,12 @@ const Contact = () => {
   };
 
   const inquiryTypes = [
-    'Business Partnership',
-    'Investment Opportunity',
+    'Youth Empowerment Partnership',
+    'Social Entrepreneurship Collaboration',
     'Speaking Engagement',
     'Media Inquiry',
-    'Philanthropic Collaboration',
+    'CODE Program Inquiry',
+    'Skills Development Initiative',
     'General Inquiry'
   ];
 
@@ -41,20 +42,20 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: 'contact@babangidaruma.com',
-      subtitle: 'Response within 24 hours'
+      details: 'info@collectivedevelopment.org',
+      subtitle: 'For CODE and general inquiries'
     },
     {
-      icon: Phone,
-      title: 'Phone',
-      details: '+234 (0) 800 RUMA',
-      subtitle: 'Business hours: 9 AM - 5 PM WAT'
+      icon: Mail,
+      title: 'Media & Speaking',
+      details: 'media@babangidaruma.com',
+      subtitle: 'Speaking engagements and media requests'
     },
     {
       icon: MapPin,
       title: 'Location',
-      details: 'Lagos, Nigeria',
-      subtitle: 'By appointment only'
+      details: 'Katsina State, Nigeria',
+      subtitle: 'Technical Assistant on Enterprise Development'
     }
   ];
 
@@ -68,8 +69,8 @@ const Contact = () => {
               Get in Touch
             </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Ready to explore partnership opportunities, discuss investments, or collaborate 
-              on meaningful projects? Let's start a conversation.
+              Ready to explore youth empowerment initiatives, social entrepreneurship partnerships, 
+              or collaborate on community development projects? Let's start a conversation.
             </p>
           </div>
         </Container>
@@ -82,6 +83,12 @@ const Contact = () => {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-8">Let's Connect</h2>
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-8">
+                <p className="text-amber-800 text-sm">
+                  <strong>Note:</strong> Contact information shown is for demonstration purposes. 
+                  Please use the official channels provided by Dr. Ruma's organizations for actual inquiries.
+                </p>
+              </div>
               
               <div className="space-y-8 mb-12">
                 {contactInfo.map((info, index) => (
@@ -103,20 +110,20 @@ const Contact = () => {
                 <h3 className="text-xl font-bold text-slate-900 mb-6">Why Connect With Dr. Ruma?</h3>
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
-                    <div className="text-2xl font-bold text-slate-900 mb-1">15+</div>
-                    <div className="text-slate-600 text-sm">Successful Companies</div>
+                    <div className="text-2xl font-bold text-slate-900 mb-1">4+</div>
+                    <div className="text-slate-600 text-sm">Organizations Founded</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-slate-900 mb-1">$2.1B+</div>
-                    <div className="text-slate-600 text-sm">Portfolio Value</div>
+                    <div className="text-2xl font-bold text-slate-900 mb-1">20+</div>
+                    <div className="text-slate-600 text-sm">Years of Impact</div>
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-slate-900 mb-1">25+</div>
-                    <div className="text-slate-600 text-sm">Years Experience</div>
+                    <div className="text-slate-600 text-sm">Awards & Recognition</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-slate-900 mb-1">12</div>
-                    <div className="text-slate-600 text-sm">Countries</div>
+                    <div className="text-2xl font-bold text-slate-900 mb-1">3</div>
+                    <div className="text-slate-600 text-sm">Books Published</div>
                   </div>
                 </div>
               </div>
@@ -219,7 +226,7 @@ const Contact = () => {
                       required
                       rows={5}
                       className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-slate-900 focus:border-slate-400 focus:ring-2 focus:ring-slate-400 focus:ring-opacity-20 transition-all duration-200 resize-none"
-                      placeholder="Please provide details about your inquiry, partnership opportunity, or speaking engagement request..."
+                      placeholder="Please provide details about your youth empowerment initiative, social entrepreneurship collaboration, or community development project..."
                     />
                   </div>
 
@@ -237,27 +244,27 @@ const Contact = () => {
       <section className="section-padding bg-slate-50">
         <Container>
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Partnership Opportunities</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">Collaboration Opportunities</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Explore various ways we can collaborate to create mutual value and positive impact.
+              Explore various ways we can collaborate to advance youth empowerment and community development.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Strategic Partnerships',
-                description: 'Joint ventures and strategic alliances that leverage complementary strengths and capabilities.',
+                title: 'Youth Empowerment Programs',
+                description: 'Collaborate on skills development, entrepreneurship training, and digital innovation initiatives for young people.',
                 icon: Handshake
               },
               {
-                title: 'Investment Opportunities',
-                description: 'Capital investment and growth partnerships for high-potential ventures and established businesses.',
+                title: 'Social Entrepreneurship',
+                description: 'Partner on community development projects and sustainable solutions that address poverty and inequality.',
                 icon: DollarSign
               },
               {
                 title: 'Speaking & Advisory',
-                description: 'Keynote speaking, board advisory positions, and strategic consulting engagements.',
+                description: 'Keynote speaking on youth development, technology innovation, and social entrepreneurship topics.',
                 icon: Mic
               }
             ].map((opportunity, index) => (
@@ -280,11 +287,11 @@ const Contact = () => {
       <section className="section-padding bg-slate-900 text-white">
         <Container className="text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Let's Build Something Extraordinary Together
+            Let's Empower Communities Together
           </h2>
           <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Every great partnership begins with a conversation. Reach out today and 
-            let's explore how we can create lasting value together.
+            Every great collaboration begins with a conversation. Reach out today and 
+            let's explore how we can create lasting impact in youth empowerment and community development.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="secondary">

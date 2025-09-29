@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,12 +13,32 @@ const Header = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isMobileMenuOpen && !(event.target as Element).closest('header')) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isMobileMenuOpen]);
 
   const navItems = [
     { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
     { name: 'Profile', path: '/profile' },
     { name: 'Business', path: '/business' },
     { name: 'Recognitions', path: '/recognitions' },
@@ -52,24 +72,39 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`text-sm font-medium transition-colors duration-200 ${
-                  isScrolled || location.pathname !== '/'
-                    ? location.pathname === item.path
-                      ? 'text-slate-900'
-                      : 'text-slate-600 hover:text-slate-900'
-                    : location.pathname === item.path
-                      ? 'text-white'
-                      : 'text-gray-200 hover:text-white'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+          <nav className="hidden md:flex items-center space-x-1">
+            {navItems.map((item) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`relative px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg ${
+                    isScrolled || location.pathname !== '/'
+                      ? isActive
+                        ? 'text-slate-900 bg-slate-100'
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                      : isActive
+                        ? 'text-white bg-white/20'
+                        : 'text-gray-200 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  {item.name}
+                  {isActive && (
+                    <motion.div
+                      className={`absolute bottom-0 left-0 right-0 h-0.5 ${
+                        isScrolled || location.pathname !== '/'
+                          ? 'bg-slate-900'
+                          : 'bg-white'
+                      }`}
+                      layoutId="activeIndicator"
+                      initial={false}
+                      transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                    />
+                  )}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* CTA Button - Desktop */}
@@ -101,31 +136,41 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className={`md:hidden absolute top-full left-0 w-full border-b shadow-sm ${
-            isScrolled || location.pathname !== '/'
-              ? 'bg-white border-slate-200'
-              : 'bg-black/90 backdrop-blur-sm border-white/20'
-          }`}>
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
+              className={`md:hidden absolute top-full left-0 w-full border-b shadow-sm ${
+                isScrolled || location.pathname !== '/'
+                  ? 'bg-white border-slate-200'
+                  : 'bg-black/90 backdrop-blur-sm border-white/20'
+              }`}
+            >
             <nav className="px-6 py-4 space-y-1">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={closeMenu}
-                  className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
-                    isScrolled || location.pathname !== '/'
-                      ? location.pathname === item.path
-                        ? 'text-slate-900 bg-slate-50'
-                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                      : location.pathname === item.path
-                        ? 'text-white bg-white/20'
-                        : 'text-gray-200 hover:text-white hover:bg-white/10'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                const isActive = location.pathname === item.path;
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    onClick={closeMenu}
+                    className={`block px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                      isScrolled || location.pathname !== '/'
+                        ? isActive
+                          ? 'text-slate-900 bg-slate-100 border-l-4 border-slate-900'
+                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                        : isActive
+                          ? 'text-white bg-white/20 border-l-4 border-white'
+                          : 'text-gray-200 hover:text-white hover:bg-white/10'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
               <div className="pt-4">
                 <Link
                   to="/contact"
@@ -140,8 +185,9 @@ const Header = () => {
                 </Link>
               </div>
             </nav>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
