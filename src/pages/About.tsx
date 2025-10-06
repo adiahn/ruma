@@ -1,36 +1,9 @@
 import React from 'react';
 import Container from '../components/Container';
 import Button from '../components/Button';
-import { User, BarChart3, Trophy, Award, GraduationCap, Globe, Lightbulb, Heart } from 'lucide-react';
+import { User, Trophy } from 'lucide-react';
 
 const About = () => {
-  const timeline = [
-    {
-      year: 'Early 2000s',
-      title: 'Foundation of CODE',
-      description: 'Founded Collective Development (CODE), pioneering foundation advancing girl-child education, women\'s empowerment, and community-driven entrepreneurship.',
-    },
-    {
-      year: '2014',
-      title: 'U.S. State Department Recognition',
-      description: 'Honored as U.S. Department of State Alumni Member of the Month, recognizing his contributions to international development.',
-    },
-    {
-      year: '2015-2017',
-      title: 'Global Youth Leadership',
-      description: 'Served as Global Youth Ambassador for Commonwealth Youth Council and UN Global Ambassador for #TheirWorldAtSchool Global Education Campaign.',
-    },
-    {
-      year: '2018',
-      title: 'Author & Thought Leader',
-      description: 'Published "Technology: A Tool for Youth Empowerment", "ThinkLikeRuma", and "100 Skills for Survival" books.',
-    },
-    {
-      year: '2020',
-      title: 'Africa Youth Award Nomination',
-      description: 'Only Nigerian nominated for Africa Youth Award, recognizing contributions to human capital development through technology and skills empowerment.',
-    },
-  ];
 
   const achievements = [
     'Father of Technology and Innovation (UNESCO)',
@@ -100,54 +73,6 @@ const About = () => {
         </Container>
       </section>
 
-      {/* Timeline Section */}
-      <section className="section-padding bg-slate-50">
-        <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Journey Timeline</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Key milestones in advancing youth empowerment and social entrepreneurship.
-            </p>
-          </div>
-          
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-slate-300 hidden lg:block" />
-            
-            <div className="space-y-12">
-              {timeline.map((item, index) => (
-                <div
-                  key={index}
-                  className={`grid lg:grid-cols-2 gap-8 items-center ${
-                    index % 2 === 0 ? 'lg:text-right' : 'lg:text-left lg:flex-row-reverse'
-                  }`}
-                >
-                  <div className={`${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'}`}>
-                    <div className="inline-block bg-slate-900 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
-                      {item.year}
-                    </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-4">{item.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{item.description}</p>
-                  </div>
-                  
-                  <div className={`${index % 2 === 0 ? 'lg:pl-12' : 'lg:pr-12'}`}>
-                    <div className="aspect-video bg-gradient-to-br from-slate-200 to-slate-300 rounded-xl elegant-shadow flex items-center justify-center">
-                      <div className="text-slate-600 text-center">
-                        <BarChart3 size={40} className="mx-auto mb-2 text-slate-400" />
-                        <p className="text-sm">Milestone Image</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Timeline Dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-slate-900 rounded-full border-4 border-white hidden lg:block" 
-                       style={{ top: `${index * 12 + 6}rem` }} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
 
       {/* Achievements Section */}
       <section className="section-padding bg-white">

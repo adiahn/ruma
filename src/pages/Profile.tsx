@@ -156,65 +156,55 @@ const Profile = () => {
         </div>
       </section>
 
-      {/* Journey Through Excellence Section - Redesigned */}
-      <section className="section-padding bg-gradient-to-br from-slate-900 to-slate-800 text-white relative overflow-hidden">
-        {/* Decorative Background Elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 right-20 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 left-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="container-custom relative z-10">
+      {/* Journey Timeline Section */}
+      <section className="section-padding bg-slate-50">
+        <div className="container-custom">
           <AnimatedSection animation="fadeIn">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-20">
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white mb-6">
-                  Journey Through Excellence
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Decades of impact, innovation, and transformative leadership
-                </p>
-              </div>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Journey Timeline</h2>
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+                Key milestones in advancing youth empowerment and social entrepreneurship.
+              </p>
+            </div>
+            
+            <div className="relative">
+              {/* Timeline Line */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-slate-300 hidden lg:block" />
               
-              <div className="relative">
-                {/* Vertical Timeline Line */}
-                <div className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-0.5 bg-white/20 lg:transform lg:-translate-x-1/2"></div>
-                
-                <div className="space-y-16">
-                  {timeline.map((item, index) => (
-                    <motion.div
-                      key={index}
-                      className={`relative flex flex-col lg:flex-row gap-8 ${
-                        index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                      }`}
-                      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8, delay: index * 0.2 }}
-                      viewport={{ once: true }}
-                    >
-                      {/* Timeline Dot */}
-                      <div className="absolute left-8 lg:left-1/2 w-4 h-4 bg-white rounded-full border-4 border-slate-900 lg:transform lg:-translate-x-1/2 z-10"></div>
-                      
-                      {/* Content Card */}
-                      <div className={`lg:w-1/2 ml-20 lg:ml-0 ${index % 2 === 0 ? 'lg:pr-16' : 'lg:pl-16'}`}>
-                        <motion.div 
-                          className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300"
-                          whileHover={{ scale: 1.02, y: -5 }}
-                        >
-                          <div className="inline-block bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                            {item.year}
-                          </div>
-                          <h3 className="text-2xl font-semibold text-white mb-4">{item.title}</h3>
-                          <p className="text-lg text-gray-200 mb-4 leading-relaxed">{item.description}</p>
-                          <p className="text-gray-300 leading-relaxed">{item.details}</p>
-                        </motion.div>
+              <div className="space-y-12">
+                {timeline.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className={`grid lg:grid-cols-2 gap-8 items-center ${
+                      index % 2 === 0 ? 'lg:text-right' : 'lg:text-left lg:flex-row-reverse'
+                    }`}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className={`${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'}`}>
+                      <div className="inline-block bg-slate-900 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                        {item.year}
                       </div>
-                      
-                      {/* Empty space for alternating layout */}
-                      <div className="hidden lg:block lg:w-1/2"></div>
-                    </motion.div>
-                  ))}
-                </div>
+                      <h3 className="text-2xl font-bold text-slate-900 mb-4">{item.title}</h3>
+                      <p className="text-slate-600 leading-relaxed">{item.description}</p>
+                    </div>
+                    
+                    <div className={`${index % 2 === 0 ? 'lg:pl-12' : 'lg:pr-12'}`}>
+                      <div className="aspect-video bg-gradient-to-br from-slate-200 to-slate-300 rounded-xl flex items-center justify-center">
+                        <div className="text-slate-600 text-center">
+                          <Calendar size={40} className="mx-auto mb-2 text-slate-400" />
+                          <p className="text-sm">Milestone</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Timeline Dot */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-slate-900 rounded-full border-4 border-white hidden lg:block" 
+                         style={{ top: `${index * 12 + 6}rem` }} />
+                  </motion.div>
+                ))}
               </div>
             </div>
           </AnimatedSection>
