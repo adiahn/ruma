@@ -1,35 +1,8 @@
 import { motion } from 'framer-motion';
 import Button from '../components/Button';
 import AnimatedSection from '../components/AnimatedSection';
-import { Lightbulb, Star, Target, Crown } from 'lucide-react';
 
 const Home = () => {
-  const stats = [
-    { label: 'Organizations Founded', value: '4+' },
-    { label: 'Years of Impact', value: '20+' },
-    { label: 'Global Recognition', value: '25+' },
-    { label: 'Books Published', value: '3' },
-  ];
-
-  const values = [
-    {
-      title: 'Youth Empowerment',
-      description: 'Dedicated to empowering young people through skills development, entrepreneurship, and digital innovation.',
-    },
-    {
-      title: 'Social Impact',
-      description: 'Creating sustainable solutions that address poverty, unemployment, and inequality across communities.',
-    },
-    {
-      title: 'Innovation',
-      description: 'Using technology as a tool for community transformation and sustainable development.',
-    },
-    {
-      title: 'Leadership',
-      description: 'Inspiring the next generation of entrepreneurs and change makers across Africa.',
-    },
-  ];
-
   return (
     <div>
       {/* Hero Section */}
@@ -50,35 +23,35 @@ const Home = () => {
         <div className="relative z-10 w-full">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="flex items-center justify-center min-h-screen py-20">
-              <div className="text-center max-w-4xl">
+              <div className="text-center max-w-6xl">
                 {/* Name */}
-                <div className="mb-8">
-                  <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-tight tracking-tight">
-                    Dr. Babangida Ruma
+                <div className="mb-6">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white leading-tight tracking-tight">
+                    Welcome to the Official Page of Dr. Babangida Ruma
                   </h1>
                 </div>
                 
                 {/* Title */}
-                <div className="mb-8">
-                  <h2 className="text-2xl sm:text-3xl text-gray-200 font-light tracking-wide">
+                <div className="mb-6">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl text-gray-200 font-light tracking-wide">
                     Social Entrepreneur & Youth Advocate
                   </h2>
                 </div>
                 
                 {/* Description */}
-                <div className="mb-12">
-                  <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                <div className="mb-10">
+                  <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
                     Empowering young people, strengthening institutions, and creating inclusive economic opportunities across Africa. 
                     With over two decades of transformative leadership in social entrepreneurship and youth development.
                   </p>
                 </div>
                 
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
                     to="/business" 
                     size="lg" 
-                    className="bg-white text-slate-900 hover:bg-gray-100 px-8 py-4 font-medium"
+                    className="bg-white text-slate-900 hover:bg-gray-100 px-8 py-4 font-medium text-base"
                   >
                     Explore Portfolio
                   </Button>
@@ -86,20 +59,10 @@ const Home = () => {
                     to="/contact" 
                     variant="outline" 
                     size="lg" 
-                    className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 font-medium"
+                    className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 font-medium text-base"
                   >
                     Get in Touch
                   </Button>
-                </div>
-                
-                {/* Stats */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-8 border-t border-gray-600">
-                  {stats.map((stat, index) => (
-                    <div key={index}>
-                      <div className="text-3xl font-light text-white mb-2">{stat.value}</div>
-                      <div className="text-sm text-gray-300 uppercase tracking-wide">{stat.label}</div>
-                    </div>
-                  ))}
                 </div>
               </div>
             </div>
@@ -667,58 +630,6 @@ const Home = () => {
           </div>
         </section>
       </AnimatedSection>
-
-          {/* Values Section */}
-          <AnimatedSection animation="fadeIn">
-            <section className="section-padding bg-white">
-              <div className="px-2 sm:px-4 lg:px-5">
-                <div className="max-w-7xl mx-auto">
-                <AnimatedSection animation="slideUp" delay={0.2}>
-                  <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                      Core Values
-                    </h2>
-                    <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                      The principles that guide every decision and drive sustainable success.
-                    </p>
-                  </div>
-                </AnimatedSection>
-                
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  {values.map((value, index) => (
-                    <motion.div 
-                      key={index} 
-                      className="text-center group"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                      whileHover={{ scale: 1.05, y: -10 }}
-                    >
-                      <motion.div 
-                        className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-slate-100 transition-colors border border-slate-200"
-                        whileHover={{ scale: 1.1 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <motion.div 
-                          className="text-slate-600"
-                          animate={{ scale: [1, 1.1, 1] }}
-                          transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
-                        >
-                          {index === 0 && <Lightbulb size={24} />}
-                          {index === 1 && <Star size={24} />}
-                          {index === 2 && <Target size={24} />}
-                          {index === 3 && <Crown size={24} />}
-                        </motion.div>
-                      </motion.div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-4">{value.title}</h3>
-                      <p className="text-slate-600 leading-relaxed">{value.description}</p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            </section>
-          </AnimatedSection>
 
       {/* Blog Preview Section */}
       <AnimatedSection animation="fadeIn">

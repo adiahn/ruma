@@ -12,6 +12,10 @@ import Media from './pages/Media';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import PressRelease from './pages/library/PressRelease';
+import Speeches from './pages/library/Speeches';
+import Books from './pages/library/Books';
+import Gallery from './pages/library/Gallery';
 
 function App() {
   return (
@@ -30,6 +34,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/library/press-release" element={<PressRelease />} />
+            <Route path="/library/speeches" element={<Speeches />} />
+            <Route path="/library/books" element={<Books />} />
+            <Route path="/library/gallery" element={<Gallery />} />
           </Routes>
         </main>
         <Footer />
