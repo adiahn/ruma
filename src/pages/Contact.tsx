@@ -297,7 +297,7 @@ const Contact = () => {
             <Button variant="secondary">
               Schedule a Meeting
             </Button>
-            <Button to="/about" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
+            <Button to="/profile" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
               Learn More About Me
             </Button>
           </div>

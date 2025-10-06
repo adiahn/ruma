@@ -5,9 +5,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: 'About', path: '/about' },
+    { name: 'Profile', path: '/profile' },
     { name: 'Business', path: '/business' },
-    { name: 'Media', path: '/media' },
+    { name: 'Media Center', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -18,15 +18,15 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-slate-50 border-t border-slate-200">
+    <footer className="bg-slate-800 border-t border-slate-700">
       <div className="container-custom py-12 sm:py-16 lg:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-2">
-            <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-4">
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-4">
               Dr. Babangida Ruma
             </h3>
-            <p className="text-sm sm:text-base text-slate-600 mb-6 max-w-md leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-300 mb-6 max-w-md leading-relaxed">
               Visionary entrepreneur, philanthropist, and business leader dedicated to 
               creating sustainable value and positive impact across Africa and beyond.
             </p>
@@ -35,7 +35,7 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 hover:bg-slate-300 hover:text-slate-900 transition-colors touch-target"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-700 rounded-full flex items-center justify-center text-slate-300 hover:bg-slate-600 hover:text-white transition-colors touch-target"
                   aria-label={social.name}
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               Quick Links
             </h4>
             <ul className="space-y-2 sm:space-y-3">
@@ -64,7 +64,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-slate-600 hover:text-slate-900 transition-colors text-sm touch-target block py-1"
+                    className="text-slate-300 hover:text-white transition-colors text-sm touch-target block py-1"
                   >
                     {link.name}
                   </Link>
@@ -75,10 +75,10 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               Contact
             </h4>
-            <div className="space-y-2 sm:space-y-3 text-sm text-slate-600">
+            <div className="space-y-2 sm:space-y-3 text-sm text-slate-300">
               <p>Lagos, Nigeria</p>
               <p className="break-all">contact@babangidaruma.com</p>
               <p>+234 (0) 800 RUMA</p>
@@ -87,15 +87,15 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-200 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-          <p className="text-xs sm:text-sm text-slate-600 text-center sm:text-left">
+        <div className="border-t border-slate-700 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+          <p className="text-xs sm:text-sm text-slate-400 text-center sm:text-left">
             © {currentYear} Dr. Babangida Ruma. All rights reserved.
           </p>
           <div className="flex space-x-4 sm:space-x-6">
-            <a href="#" className="text-xs sm:text-sm text-slate-600 hover:text-slate-900 transition-colors touch-target py-1">
+            <a href="#" className="text-xs sm:text-sm text-slate-400 hover:text-white transition-colors touch-target py-1">
               Privacy Policy
             </a>
-            <a href="#" className="text-xs sm:text-sm text-slate-600 hover:text-slate-900 transition-colors touch-target py-1">
+            <a href="#" className="text-xs sm:text-sm text-slate-400 hover:text-white transition-colors touch-target py-1">
               Terms of Service
             </a>
           </div>

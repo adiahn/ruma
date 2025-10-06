@@ -265,7 +265,7 @@ const Business = () => {
             <Button to="/contact" variant="secondary">
               Start a Conversation
             </Button>
-            <Button to="/about" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
+            <Button to="/profile" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
               Learn About My Journey
             </Button>
           </div>

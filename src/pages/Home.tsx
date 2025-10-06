@@ -599,7 +599,7 @@ const Home = () => {
                     communities and build sustainable futures for the next generation.
                   </p>
                   <div className="flex justify-center lg:justify-start">
-                    <Button to="/about" variant="outline" className="w-full sm:w-auto">
+                    <Button to="/profile" variant="outline" className="w-full sm:w-auto">
                       Learn More About My Journey
                     </Button>
                   </div>

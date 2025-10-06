@@ -23,55 +23,63 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   disabled = false,
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-medium transition-all duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform-gpu touch-target';
+  const baseClasses = 'inline-flex items-center justify-center font-medium transition-all duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   
   const variantClasses = {
-    primary: 'bg-slate-900 text-white hover:bg-slate-800 focus:ring-slate-500 shadow-sm hover:shadow-md',
-    secondary: 'bg-white text-slate-900 border border-slate-200 hover:bg-slate-50 focus:ring-slate-500 shadow-sm hover:shadow-md',
-    outline: 'border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white focus:ring-slate-500',
+    primary: 'bg-slate-900 text-white hover:bg-slate-700 active:bg-slate-950 focus:ring-slate-500 shadow-md hover:shadow-lg active:scale-95',
+    secondary: 'bg-white text-slate-900 border-2 border-slate-200 hover:bg-slate-100 hover:border-slate-300 active:bg-slate-200 focus:ring-slate-500 shadow-md hover:shadow-lg active:scale-95',
+    outline: 'border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white active:bg-slate-950 focus:ring-slate-500 active:scale-95',
   };
   
   const sizeClasses = {
-    sm: 'px-3 sm:px-4 py-2 text-xs sm:text-sm',
-    md: 'px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base',
-    lg: 'px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg',
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg',
   };
   
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   
-  const MotionComponent = motion.div;
-
-  const buttonContent = (
-    <MotionComponent
-      whileHover={{ scale: 1.05, y: -2 }}
-      whileTap={{ scale: 0.98 }}
-      transition={{ duration: 0.2, ease: "easeInOut" }}
-      className="w-full h-full flex items-center justify-center"
-    >
-      {children}
-    </MotionComponent>
-  );
-  
   if (to) {
     return (
-      <Link to={to} className={classes}>
-        {buttonContent}
-      </Link>
+      <motion.div
+        whileHover={{ scale: 1.02, y: -2 }}
+        whileTap={{ scale: 0.98 }}
+        transition={{ duration: 0.2 }}
+        className="inline-block"
+      >
+        <Link to={to} className={classes}>
+          {children}
+        </Link>
+      </motion.div>
     );
   }
   
   if (href) {
     return (
-      <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
-        {buttonContent}
-      </a>
+      <motion.div
+        whileHover={{ scale: 1.02, y: -2 }}
+        whileTap={{ scale: 0.98 }}
+        transition={{ duration: 0.2 }}
+        className="inline-block"
+      >
+        <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      </motion.div>
     );
   }
   
   return (
-    <button onClick={onClick} disabled={disabled} className={classes}>
-      {buttonContent}
-    </button>
+    <motion.button
+      onClick={onClick}
+      disabled={disabled}
+      className={classes}
+      whileHover={{ scale: 1.02, y: -2 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.2 }}
+    >
+      {children}
+    </motion.button>
   );
 };
 
