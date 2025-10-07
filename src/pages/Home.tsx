@@ -12,59 +12,89 @@ const Home = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(/src/assets/hero.jpg)',
-            filter: 'grayscale(100%) brightness(0.4)'
+            filter: 'grayscale(100%) brightness(0.5)'
           }}
         />
         
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-40" />
+        {/* Lighter Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-20" />
         
         {/* Content */}
         <div className="relative z-10 w-full">
-          <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex items-center justify-center min-h-screen py-20">
-              <div className="text-center max-w-6xl">
-                {/* Name */}
-                <div className="mb-6">
-                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white leading-tight tracking-tight">
-                    Welcome to the Official Page of Dr. Babangida Ruma
-                  </h1>
-                </div>
-                
-                {/* Title */}
-                <div className="mb-6">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl text-gray-200 font-light tracking-wide">
-                    Social Entrepreneur & Youth Advocate
-                  </h2>
-                </div>
-                
-                {/* Description */}
-                <div className="mb-10">
-                  <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                    Empowering young people, strengthening institutions, and creating inclusive economic opportunities across Africa. 
-                    With over two decades of transformative leadership in social entrepreneurship and youth development.
-                  </p>
-                </div>
+              <div className="text-center">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight tracking-tight mb-12">
+                  Welcome to the Office of<br />Dr. Babangida Ruma
+                </h1>
                 
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    to="/business" 
-                    size="lg" 
-                    className="bg-white text-slate-900 hover:bg-gray-100 px-8 py-4 font-medium text-base"
-                  >
-                    Explore Portfolio
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                  <Button to="/profile" size="lg" className="min-w-[200px]">
+                    Learn About Dr. Ruma
                   </Button>
-                  <Button 
-                    to="/contact" 
-                    variant="outline" 
-                    size="lg" 
-                    className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 font-medium text-base"
-                  >
+                  <Button to="/business" variant="outline" size="lg" className="min-w-[200px] border-2 border-white text-white hover:bg-white hover:text-slate-900">
+                    Explore Initiatives
+                  </Button>
+                  <Button to="/contact" variant="secondary" size="lg" className="min-w-[200px]">
                     Get in Touch
                   </Button>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Working for a Better Future Section */}
+      <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
+        <div className="w-full px-6 lg:px-12">
+          <div className="max-w-[1600px] mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 items-stretch">
+              
+              {/* Section 1 - Partners */}
+              <AnimatedSection animation="slideInLeft">
+                <div className="h-full flex flex-col justify-center px-6">
+                  <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
+                    Working for<br />a Better Future
+                  </h2>
+                  <div className="w-16 h-1 bg-blue-900 mb-8"></div>
+                  
+                  {/* Organization Logos */}
+                  <div className="flex gap-4">
+                    <div className="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center border border-gray-200">
+                      <span className="text-xs text-center font-semibold text-gray-600">CODE</span>
+                    </div>
+                    <div className="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center border border-gray-200">
+                      <span className="text-xs text-center font-semibold text-gray-600">RUMA</span>
+                    </div>
+                    <div className="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center border border-gray-200">
+                      <span className="text-xs text-center font-semibold text-gray-600">EUN</span>
+                    </div>
+                    <div className="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center border border-gray-200">
+                      <span className="text-xs text-center font-semibold text-gray-600">BMO</span>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              {/* Section 2 - About/Quote */}
+              <AnimatedSection animation="fadeIn">
+                <div className="h-full flex flex-col justify-center px-6">
+                  <p className="text-gray-600 text-base leading-relaxed mb-6 italic text-justify">
+                    "In every position that I have had the good fortune to occupy, from being the Governor of Kwara State from 2003 to 2011, Chairman of the Nigerian Governors' Forum from 2007 to 2011, to the President of the Nigerian Senate from 2015 to 2019, I have been driven by a deep conviction to serve, to help, and to proffer solutions. With fresh ideas, courage, and a determination to make a difference, I always aimed to provide leadership that would significantly advance our progress. It has been a consistent mission of mine to leave every position better than I found it."
+                  </p>
+                  <p className="text-2xl font-serif italic text-gray-800">Dr. Babangida Ruma</p>
+                </div>
+              </AnimatedSection>
+
+              {/* Section 3 - Logo */}
+              <AnimatedSection animation="slideInRight">
+                <div className="h-full flex items-center justify-center px-6">
+                  <img src="/src/assets/logo-removebg-preview.png" alt="Office Badge" className="w-64 h-64 object-contain" />
+                </div>
+              </AnimatedSection>
+              
             </div>
           </div>
         </div>
