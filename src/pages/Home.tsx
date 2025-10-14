@@ -11,7 +11,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/src/assets/hero.jpg)',
+            backgroundImage: 'url(/assets/hero.jpg)',
             filter: 'grayscale(100%) brightness(0.5)'
           }}
         />
@@ -30,9 +30,6 @@ const Home = () => {
                 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                  <Button to="/profile" size="lg" className="min-w-[200px]">
-                    Learn About Dr. Ruma
-                  </Button>
                   <Button to="/business" variant="outline" size="lg" className="min-w-[200px] border-2 border-white text-white hover:bg-white hover:text-slate-900">
                     Explore Initiatives
                   </Button>
@@ -88,10 +85,11 @@ const Home = () => {
                 </div>
               </AnimatedSection>
 
-              {/* Section 3 - Logo */}
+              {/* Section 3 - Icon */}
               <AnimatedSection animation="slideInRight">
                 <div className="h-full flex items-center justify-center px-6">
-                  <img src="/src/assets/logo-removebg-preview.png" alt="Office Badge" className="w-64 h-64 object-contain" />
+                  {/* <img src="/src/assets/icon.png" alt="Office Icon" className="w-64 h-64 object-contain" /> */}
+                  <img src="/assets/logo-removebg-preview.png" alt="Office Badge" className="w-64 h-64 object-contain" /> 
                 </div>
               </AnimatedSection>
               

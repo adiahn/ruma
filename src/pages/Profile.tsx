@@ -68,7 +68,7 @@ const Profile = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/src/assets/hero.jpg)',
+            backgroundImage: 'url(/assets/hero.jpg)',
             filter: 'grayscale(100%) brightness(0.4)'
           }}
         />
@@ -108,7 +108,7 @@ const Profile = () => {
               <div className="relative lg:flex justify-center hidden">
                 <div className="relative w-80 h-96 lg:w-96 lg:h-[28rem] xl:w-[28rem] xl:h-[36rem]">
                   <img 
-                    src="/src/assets/hero.jpg"
+                           src="/assets/hero.jpg"
                     alt="Dr. Babangida Ruma"
                     className="w-full h-full object-cover rounded-lg"
                     style={{ filter: 'grayscale(100%)' }}

@@ -88,7 +88,7 @@ const Recognitions = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/src/assets/hero.jpg)',
+            backgroundImage: 'url(/assets/hero.jpg)',
             filter: 'grayscale(100%) brightness(0.4)'
           }}
         />
