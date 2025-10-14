@@ -83,12 +83,7 @@ const Contact = () => {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-8">Let's Connect</h2>
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-8">
-                <p className="text-amber-800 text-sm">
-                  <strong>Note:</strong> Contact information shown is for demonstration purposes. 
-                  Please use the official channels provided by Dr. Ruma's organizations for actual inquiries.
-                </p>
-              </div>
+          
               
               <div className="space-y-8 mb-12">
                 {contactInfo.map((info, index) => (
