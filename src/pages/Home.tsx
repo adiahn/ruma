@@ -22,18 +22,19 @@ const Home = () => {
         {/* Content */}
         <div className="relative z-10 w-full">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="flex items-center justify-center min-h-screen py-20">
+            {/* Bring content down a bit, reduce size */}
+            <div className="flex items-center justify-center min-h-[50vh] py-20">
               <div className="text-center">
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight tracking-tight mb-12">
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-12">
                   Welcome to the Office of<br />Dr. Babangida Ruma
                 </h1>
                 
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                  <Button to="/business" variant="outline" size="lg" className="min-w-[200px] border-2 border-white text-white hover:bg-white hover:text-slate-900">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-2">
+                  <Button to="/business" variant="outline" size="lg" className="min-w-[180px] border-2 border-white text-white hover:bg:white hover:text-slate-900">
                     Explore Initiatives
                   </Button>
-                  <Button to="/contact" variant="secondary" size="lg" className="min-w-[200px]">
+                  <Button to="/contact" variant="secondary" size="lg" className="min-w-[180px]">
                     Get in Touch
                   </Button>
                 </div>
