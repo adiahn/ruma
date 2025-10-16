@@ -63,7 +63,7 @@ const Header = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className={`flex items-center justify-between transition-all duration-300 ${
-          isScrolled ? 'h-20' : 'h-28'
+          isScrolled ? 'h-16' : 'h-20'
         }`}>
           {/* Logo */}
           <Link
@@ -74,7 +74,7 @@ const Header = () => {
               src="/assets/icon.png" 
               alt="Dr. Babangida Ruma" 
               className={`w-auto transition-all duration-300 ${
-                isScrolled ? 'h-16' : 'h-24'
+                isScrolled ? 'h-12' : 'h-16'
               }`} 
             />
           </Link>
