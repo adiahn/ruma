@@ -58,21 +58,6 @@ const Home = () => {
                   </h2>
                   <div className="w-16 h-1 bg-blue-900 mb-8"></div>
                   
-                  {/* Organization Logos */}
-                  <div className="flex gap-4">
-                    <div className="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center border border-gray-200">
-                      <span className="text-xs text-center font-semibold text-gray-600">CODE</span>
-                    </div>
-                    <div className="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center border border-gray-200">
-                      <span className="text-xs text-center font-semibold text-gray-600">RUMA</span>
-                    </div>
-                    <div className="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center border border-gray-200">
-                      <span className="text-xs text-center font-semibold text-gray-600">EUN</span>
-                    </div>
-                    <div className="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center border border-gray-200">
-                      <span className="text-xs text-center font-semibold text-gray-600">BMO</span>
-                    </div>
-                  </div>
                 </div>
               </AnimatedSection>
 
