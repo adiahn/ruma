@@ -127,28 +127,52 @@ const Profile = () => {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-responsive-lg font-light text-slate-900 mb-6">
-                  A Legacy of Excellence
+                  A True Living Legend
                 </h2>
                 <p className="text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-                  Dr. Babangida Ruma is a Nigerian social entrepreneur, visionary youth leader, and advocate for enterprise development, skills development, digital innovation, and sustainable growth.
+                  His name is a globally-recognised brand that stands for Creativity, Innovation, Philanthropy and Excellence in Enterprise education. His natural talent and unique vision, coupled with limitless drive, have led him to achieve what others might take many lifetimes to achieve. Colleagues and compatriots, competitors and admirers alike agree that Dr. Babangida Ruma is truly a living legend.
                 </p>
               </div>
 
               <div className="prose prose-lg prose-slate max-w-none">
                 <p className="text-lg text-slate-700 leading-relaxed mb-8">
-                  With more than two decades of transformative leadership, Dr. Ruma has dedicated his career to building platforms that empower young people, strengthen institutions, and create inclusive economic opportunities across Africa. He is the Founder & Executive Vice Chairman of Collective Development (CODE), a pioneering foundation advancing girl-child education, women's empowerment, skills acquisition, and community-driven entrepreneurship.
+                  Dr. Babangida Ruma is a Nigerian technology and social entrepreneur, visionary youth leader, and advocate for enterprise and skills development, as well as a political appointee. A prominent voice in youth development, he is known for his work in technology-driven education, entrepreneurship, and community organization. With more than two decades of transformative leadership, he has dedicated his career to building platforms that empower young people, strengthen institutions, and create inclusive economic opportunities across Nigeria and African countries.
                 </p>
                 
                 <p className="text-lg text-slate-700 leading-relaxed mb-8">
-                  Dr. Ruma founded the Enterprise University of Nigeria, an institution committed to nurturing a new generation of entrepreneurs through practical education, research, and innovation. He also established the MSMEs Business Management Organization (BMO), providing business support services and capacity-building programs for micro, small, and medium-sized enterprises across Nigeria.
+                  He is the Founder & Executive Vice Chairman of Collective Development (CODE), a pioneering foundation advancing girl-child education, women's empowerment, skills acquisition, and community-driven entrepreneurship. Under his leadership, CODE has launched groundbreaking initiatives such as the Women & Girls-child Entrepreneurship Support Program (WAGES), the Initiative for Community Intervention on Girls-Child (INCOMING), and the Learning Initiative for Entrepreneurship (LIFE) an innovation-driven skills and enterprise program transforming youth into creators of opportunities. These initiatives have positioned CODE as a leading force for social and economic transformation in Northern Nigeria and beyond.
                 </p>
                 
                 <p className="text-lg text-slate-700 leading-relaxed mb-8">
-                  Globally recognized for his passion for digital innovation and technology, Dr. Ruma was named the Father of Technology and Innovation by the UNESCO Institute for Information Technologies in Education. He has worked with world leaders to empower young people, build human capability, rebrand nations, and promote peace and harmony.
+                  He is also the Founder of Opportunities Hub (OHUB), a dynamic digital technology ecosystem placing African youth at the center of global transformation through digital innovation, employability and jobs creation. In line with his global vision, Dr. Ruma later founded the Social Innovation Academy (SINA) a forward thinking leadership and innovation institute equipping change makers with the skills, mindset, and systems to build sustainable impact enterprises and social ventures that solve Nigerian's most pressing challenges.
+                </p>
+                
+                <p className="text-lg text-slate-700 leading-relaxed mb-8">
+                  Driven by his mission to institutionalise enterprise-driven learning, Dr. Ruma founded the Enterprise University of Nigeria (EUN), an institution focused on nurturing a new generation of entrepreneurs through practical education, research, and innovation. He also established the MSMEs Business Management Organization (BMO), a national platform providing business support, advisory solutions, and capacity-building services for micro, small, and medium enterprises across Nigeria.
+                </p>
+                
+                <p className="text-lg text-slate-700 leading-relaxed mb-8">
+                  From 2015 to 2017, Dr. Ruma served as the Global Youth Ambassador for the Commonwealth Youth Council (CYC) the world's largest youth organisation and as the United Nations Global Ambassador for the #TheirWorldAtSchool Education Campaign. His work has significantly advanced youth empowerment, enterprise, innovation, and digital inclusion across Africa.
+                </p>
+                
+                <p className="text-lg text-slate-700 leading-relaxed mb-8">
+                  As part of his lifelong commitment to underserved communities, he founded The Ruma Foundation, a philanthropic foundation transforming lives through access to education, enterprise, skills development, and sustainable livelihoods. Through this foundation, he continues to impact vulnerable groups while promoting leadership, innovation, and economic inclusion across Northern Nigeria.
+                </p>
+                
+                <p className="text-lg text-slate-700 leading-relaxed mb-8">
+                  Globally celebrated for his innovative use of technology for development, Dr. Ruma was named "Father of Technology and Innovation" by the UNESCO Institute for Information Technologies in Education. He has worked with world leaders to empower young people, build human capital, rebrand nations, and promote peace, innovation, and prosperity.
+                </p>
+                
+                <p className="text-lg text-slate-700 leading-relaxed mb-8">
+                  Dr. Ruma has been honored with numerous awards, including Social Worker of the Year (2016), the African Achievers Award, the Commonwealth Young Achievers Award, and the Global Achievers Award making him the first African in history to receive both the Commonwealth and Global Achievers Awards. He has been named among the 100 Most Influential Young Africans (2016 & 2020) and ranked among the Top 20 Most Influential Young Leaders in the World (2016).
+                </p>
+                
+                <p className="text-lg text-slate-700 leading-relaxed mb-8">
+                  He has spoken at prestigious global platforms such as the World Economic Forum (China & South Africa), UNESCO Youth Forum (Paris), Geneva Convention, and OpenCon (Washington D.C.). In 2018, he authored Technology: A Tool for Youth Empowerment, ThinkLikeRuma, and 100 Skills for Survival, contributing over 20 journal articles and book chapters.
                 </p>
                 
                 <p className="text-lg text-slate-700 leading-relaxed">
-                  Through The Ruma Foundation, Dr. Ruma continues to create opportunities for vulnerable groups by promoting access to quality education, women's and youth empowerment, skills development, and sustainable livelihoods. His impact has been celebrated with numerous international recognitions, making him one of Africa's most influential young leaders.
+                  In addition to his international engagements, he has served as Technical Assistant on Enterprise Development to the Katsina State Government, showcasing his deep commitment to policy reform, economic transformation, and sustainable regional development.
                 </p>
               </div>
             </div>

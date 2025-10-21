@@ -43,8 +43,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Working for a Better Future Section */}
       <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
         <div className="w-full px-6 lg:px-12">
           <div className="max-w-[1600px] mx-auto">
@@ -54,12 +52,12 @@ const Home = () => {
               <AnimatedSection animation="slideInLeft">
                 <div className="h-full flex flex-col justify-center px-6">
                   <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-                    Working for<br />a Better Future
+                    A Legacy of Service<br />A Vision for The Future
                   </h2>
                   <div className="w-16 h-1 bg-blue-900 mb-8"></div>
                   
                   <p className="text-gray-600 text-base leading-relaxed mb-6 italic text-justify">
-                    "In every position that I have had the good fortune to occupy, from being the Governor of Kwara State from 2003 to 2011, Chairman of the Nigerian Governors' Forum from 2007 to 2011, to the President of the Nigerian Senate from 2015 to 2019, I have been driven by a deep conviction to serve, to help, and to proffer solutions. With fresh ideas, courage, and a determination to make a difference, I always aimed to provide leadership that would significantly advance our progress. It has been a consistent mission of mine to leave every position better than I found it."
+                    "In every role I have been privileged to serve, from leading Enterprise Development Initiatives in Katsina State to driving innovation, youth empowerment, and institutional reform, I have remained guided by a deep commitment to impact, service, and sustainable progress. With fresh ideas, strategic vision, and a passion for results, I continuously strive to build systems that empower people, strengthen institutions, and unlock opportunities. My mission has always been simple yet profound: to leave every project, partnership, and institution better than I met it."
                   </p>
                   <p className="text-2xl font-serif italic text-gray-800">Dr. Babangida Ruma</p>
                 </div>
@@ -601,7 +599,7 @@ const Home = () => {
                   </h2>
                   <p className="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed">
                     For over two decades, I have dedicated my career to empowering young people, 
-                    strengthening institutions, and creating inclusive economic opportunities across Africa. 
+                    strengthening institutions, and creating inclusive economic opportunities across Nigeria and Africa. 
                     Through social entrepreneurship and digital innovation, I work to transform 
                     communities and build sustainable futures for the next generation.
                   </p>
@@ -633,6 +631,118 @@ const Home = () => {
                   </motion.div>
                 </div>
               </AnimatedSection>
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Under Active Organizations Section */}
+      <AnimatedSection animation="slideUp">
+        <section className="section-padding bg-white">
+          <div className="container-custom">
+            <div className="text-center mb-12">
+              <h2 className="text-responsive-lg font-bold text-slate-900 mb-4 sm:mb-6">
+                Under Active Organizations
+              </h2>
+              <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
+                Leading multiple organizations focused on youth empowerment, innovation, and community development
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {[
+                {
+                  name: "Collective Development (CODE)",
+                  role: "Founder & Executive Vice Chairman",
+                  description: "Pioneering foundation advancing girl-child education, women's empowerment, skills acquisition, and community-driven entrepreneurship.",
+                  initiatives: ["WAGES", "INCOMING", "LIFE"]
+                },
+                {
+                  name: "Opportunities Hub (OHUB)",
+                  role: "Founder",
+                  description: "Dynamic digital technology ecosystem placing African youth at the center of global transformation through digital innovation, employability and jobs creation.",
+                  initiatives: ["Digital Innovation", "Employability", "Jobs Creation"]
+                },
+                {
+                  name: "Social Innovation Academy (SINA)",
+                  role: "Founder",
+                  description: "Forward thinking leadership and innovation institute equipping change makers with the skills, mindset, and systems to build sustainable impact enterprises.",
+                  initiatives: ["Leadership Training", "Innovation", "Social Ventures"]
+                },
+                {
+                  name: "Enterprise University of Nigeria (EUN)",
+                  role: "Founder",
+                  description: "Institution focused on nurturing a new generation of entrepreneurs through practical education, research, and innovation.",
+                  initiatives: ["Practical Education", "Research", "Innovation"]
+                },
+                {
+                  name: "MSMEs Business Management Organization (BMO)",
+                  role: "Founder",
+                  description: "National platform providing business support, advisory solutions, and capacity-building services for micro, small, and medium enterprises across Nigeria.",
+                  initiatives: ["Business Support", "Advisory Solutions", "Capacity Building"]
+                },
+                {
+                  name: "The Ruma Foundation",
+                  role: "Founder",
+                  description: "Philanthropic foundation transforming lives through access to education, enterprise, skills development, and sustainable livelihoods.",
+                  initiatives: ["Education Access", "Skills Development", "Sustainable Livelihoods"]
+                }
+              ].map((org, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 group cursor-pointer"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="mb-4">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 group-hover:text-slate-700 transition-colors">
+                      {org.name}
+                    </h3>
+                    <p className="text-sm font-medium text-blue-600 mb-3">{org.role}</p>
+                  </div>
+                  
+                  <p className="text-slate-600 mb-4 text-sm leading-relaxed">
+                    {org.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {org.initiatives.map((initiative, i) => (
+                      <span key={i} className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-medium">
+                        {initiative}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Approach to Social Impact Section */}
+      <AnimatedSection animation="slideUp">
+        <section className="section-padding bg-gradient-to-br from-blue-50 to-slate-50">
+          <div className="container-custom">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-responsive-lg font-bold text-slate-900 mb-6 sm:mb-8">
+                Approach to Social Impact
+              </h2>
+              
+              <div className="space-y-6 text-left">
+                <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+                  My work is driven by a mission to create sustainable solutions that tackle some of the most pressing social and economic challenges across Nigeria. I am deeply committed to initiatives that empower young people, strengthen communities, and unlock inclusive economic opportunities for all.
+                </p>
+                
+                <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+                  Every organization and initiative I lead is intentionally designed to reflect my core values: youth empowerment, skills development, innovation, and community transformation. I do not just provide resources, I offer strategic guidance, mentorship, and systems that help people and communities realise their true potential.
+                </p>
+                
+                <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+                  Through a hands-on and impact-driven approach, I ensure that every project is positioned to create measurable change, scale sustainably, and transform lives, especially within underserved communities across Africa.
+                </p>
+              </div>
             </div>
           </div>
         </section>

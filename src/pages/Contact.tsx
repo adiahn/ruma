@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Container from '../components/Container';
 import Button from '../components/Button';
-import { Mail, Phone, MapPin, CheckCircle, Handshake, DollarSign, Mic } from 'lucide-react';
+import { Mail, MapPin, CheckCircle, Handshake, DollarSign, Mic } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -42,20 +42,26 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: 'info@collectivedevelopment.org',
-      subtitle: 'For CODE and general inquiries'
+      details: 'Info@ruma.ng',
+      subtitle: 'General inquiries and information'
     },
     {
       icon: Mail,
       title: 'Media & Speaking',
-      details: 'media@babangidaruma.com',
+      details: 'media@ruma.ng',
       subtitle: 'Speaking engagements and media requests'
+    },
+    {
+      icon: Mail,
+      title: 'Office',
+      details: 'Office@ruma.ng',
+      subtitle: 'Office and administrative inquiries'
     },
     {
       icon: MapPin,
       title: 'Location',
-      details: 'Katsina State, Nigeria',
-      subtitle: 'Technical Assistant on Enterprise Development'
+      details: 'Abuja, Nigeria',
+      subtitle: 'Contact location'
     }
   ];
 
@@ -225,9 +231,12 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full">
+                  <button 
+                    type="submit" 
+                    className="w-full bg-slate-900 text-white font-medium py-3 px-6 rounded-lg hover:bg-slate-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
+                  >
                     Send Message
-                  </Button>
+                  </button>
                 </form>
               )}
             </div>
