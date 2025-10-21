@@ -48,9 +48,9 @@ const Home = () => {
       <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
         <div className="w-full px-6 lg:px-12">
           <div className="max-w-[1600px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 items-stretch">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-stretch">
               
-              {/* Section 1 - Partners */}
+              {/* Section 1 - Title and Quote */}
               <AnimatedSection animation="slideInLeft">
                 <div className="h-full flex flex-col justify-center px-6">
                   <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
@@ -58,12 +58,6 @@ const Home = () => {
                   </h2>
                   <div className="w-16 h-1 bg-blue-900 mb-8"></div>
                   
-                </div>
-              </AnimatedSection>
-
-              {/* Section 2 - About/Quote */}
-              <AnimatedSection animation="fadeIn">
-                <div className="h-full flex flex-col justify-center px-6">
                   <p className="text-gray-600 text-base leading-relaxed mb-6 italic text-justify">
                     "In every position that I have had the good fortune to occupy, from being the Governor of Kwara State from 2003 to 2011, Chairman of the Nigerian Governors' Forum from 2007 to 2011, to the President of the Nigerian Senate from 2015 to 2019, I have been driven by a deep conviction to serve, to help, and to proffer solutions. With fresh ideas, courage, and a determination to make a difference, I always aimed to provide leadership that would significantly advance our progress. It has been a consistent mission of mine to leave every position better than I found it."
                   </p>
@@ -71,10 +65,9 @@ const Home = () => {
                 </div>
               </AnimatedSection>
 
-              {/* Section 3 - Icon */}
+              {/* Section 2 - Logo */}
               <AnimatedSection animation="slideInRight">
                 <div className="h-full flex items-center justify-center px-6">
-                  {/* <img src="/src/assets/icon.png" alt="Office Icon" className="w-64 h-64 object-contain" /> */}
                   <img src="/assets/logo-removebg-preview.png" alt="Office Badge" className="w-64 h-64 object-contain" /> 
                 </div>
               </AnimatedSection>
