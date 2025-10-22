@@ -51,8 +51,8 @@ const Home = () => {
               {/* Section 1 - Title and Quote */}
               <AnimatedSection animation="slideInLeft">
                 <div className="h-full flex flex-col justify-center px-6">
-                  <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-                    A Legacy of Service<br />A Vision for The Future
+                  <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6 leading-tight">
+                    A Legacy of Service A Vision for The Future
                   </h2>
                   <div className="w-16 h-1 bg-blue-900 mb-8"></div>
                   
