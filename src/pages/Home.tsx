@@ -66,7 +66,7 @@ const Home = () => {
               {/* Section 2 - Logo */}
               <AnimatedSection animation="slideInRight">
                 <div className="h-full flex items-center justify-center px-6">
-                  <img src="/assets/logo-removebg-preview.png" alt="Office Badge" className="w-64 h-64 object-contain" /> 
+                  <img src="/assets/logo-removebg-preview.png" alt="Office Badge" className="w-80 h-80 object-contain" /> 
                 </div>
               </AnimatedSection>
               
@@ -642,7 +642,7 @@ const Home = () => {
           <div className="container-custom">
             <div className="text-center mb-12">
               <h2 className="text-responsive-lg font-bold text-slate-900 mb-4 sm:mb-6">
-                Under Active Organizations
+                Active Organizations
               </h2>
               <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
                 Leading multiple organizations focused on youth empowerment, innovation, and community development
@@ -743,99 +743,6 @@ const Home = () => {
                   Through a hands-on and impact-driven approach, I ensure that every project is positioned to create measurable change, scale sustainably, and transform lives, especially within underserved communities across Africa.
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-      </AnimatedSection>
-
-      {/* Blog Preview Section */}
-      <AnimatedSection animation="fadeIn">
-        <section className="section-padding bg-white">
-          <div className="px-2 sm:px-4 lg:px-5">
-            <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-12">
-                <motion.h2 
-                  className="text-responsive-lg font-bold text-slate-900 mb-4 sm:mb-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  Latest Insights
-                </motion.h2>
-                <motion.p 
-                  className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                >
-                  Insights on youth empowerment, social entrepreneurship, and building sustainable communities across Africa and beyond.
-                </motion.p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                {[
-                  {
-                    title: "Empowering Africa's Youth Through Technology",
-                    excerpt: "How digital innovation and skills development are transforming young people's lives across Africa.",
-                    date: "Jan 15, 2024",
-                    readTime: "8 min read",
-                    category: "Youth Empowerment"
-                  },
-                  {
-                    title: "Social Entrepreneurship as a Force for Change",
-                    excerpt: "Building sustainable solutions that address poverty, unemployment, and inequality in communities.",
-                    date: "Jan 10, 2024",
-                    readTime: "6 min read",
-                    category: "Social Impact"
-                  },
-                  {
-                    title: "The Future of Skills Development in Africa",
-                    excerpt: "Creating pathways for young people to acquire practical skills and access enterprise opportunities.",
-                    date: "Jan 5, 2024",
-                    readTime: "7 min read",
-                    category: "Skills Development"
-                  }
-                ].map((post, index) => (
-                  <motion.article
-                    key={index}
-                    className="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 group cursor-pointer"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="mb-4">
-                      <span className="bg-slate-200 text-slate-700 px-3 py-1 rounded-full text-sm font-medium">
-                        {post.category}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3 group-hover:text-slate-700 transition-colors">
-                      {post.title}
-                    </h3>
-                    
-                    <p className="text-slate-600 mb-4 text-sm leading-relaxed">
-                      {post.excerpt}
-                    </p>
-                    
-                    <div className="flex items-center justify-between text-xs text-slate-500">
-                      <span>{post.date}</span>
-                      <span>{post.readTime}</span>
-                    </div>
-                  </motion.article>
-                ))}
-              </div>
-              
-              <motion.div 
-                className="text-center mt-8 sm:mt-12"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-              >
-                <Button to="/blog" size="lg" className="bg-slate-900 text-white hover:bg-slate-800">
-                  View All Articles
-                </Button>
-              </motion.div>
             </div>
           </div>
         </section>
