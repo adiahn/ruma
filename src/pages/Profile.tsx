@@ -111,6 +111,40 @@ const Profile = () => {
         </div>
       </section>
 
+      {/* Biography Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <AnimatedSection animation="slideUp">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-responsive-lg font-bold text-black mb-6">
+                  A True Living Legend
+                </h2>
+                <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                  His name is a globally-recognised brand that stands for Creativity, Innovation, Philanthropy and Excellence in Enterprise education.
+                </p>
+              </div>
+
+              <div className="bg-white p-12 border border-gray-200">
+                <div className="prose prose-lg prose-gray max-w-none">
+                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                    Dr. Babangida Ruma is a Nigerian technology and social entrepreneur, visionary youth leader, and advocate for enterprise and skills development. With more than two decades of transformative leadership, he has dedicated his career to building platforms that empower young people, strengthen institutions, and create inclusive economic opportunities across Nigeria and African countries.
+                  </p>
+                  
+                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                    Globally celebrated for his innovative use of technology for development, Dr. Ruma was named "Father of Technology and Innovation" by the UNESCO Institute for Information Technologies in Education. He has worked with world leaders to empower young people, build human capital, rebrand nations, and promote peace, innovation, and prosperity.
+                  </p>
+                  
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Dr. Ruma has been honored with numerous awards, including Social Worker of the Year (2016), the African Achievers Award, the Commonwealth Young Achievers Award, and the Global Achievers Award making him the first African in history to receive both the Commonwealth and Global Achievers Awards.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -207,40 +241,6 @@ const Profile = () => {
                   <p className="text-gray-700 leading-relaxed">{org.description}</p>
                 </motion.div>
               ))}
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Biography Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <AnimatedSection animation="slideUp">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-responsive-lg font-bold text-black mb-6">
-                  A True Living Legend
-                </h2>
-                <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                  His name is a globally-recognised brand that stands for Creativity, Innovation, Philanthropy and Excellence in Enterprise education.
-                </p>
-              </div>
-
-              <div className="bg-white p-12 border border-gray-200">
-                <div className="prose prose-lg prose-gray max-w-none">
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    Dr. Babangida Ruma is a Nigerian technology and social entrepreneur, visionary youth leader, and advocate for enterprise and skills development. With more than two decades of transformative leadership, he has dedicated his career to building platforms that empower young people, strengthen institutions, and create inclusive economic opportunities across Nigeria and African countries.
-                  </p>
-                  
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    Globally celebrated for his innovative use of technology for development, Dr. Ruma was named "Father of Technology and Innovation" by the UNESCO Institute for Information Technologies in Education. He has worked with world leaders to empower young people, build human capital, rebrand nations, and promote peace, innovation, and prosperity.
-                  </p>
-                  
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    Dr. Ruma has been honored with numerous awards, including Social Worker of the Year (2016), the African Achievers Award, the Commonwealth Young Achievers Award, and the Global Achievers Award making him the first African in history to receive both the Commonwealth and Global Achievers Awards.
-                  </p>
-                </div>
-              </div>
             </div>
           </AnimatedSection>
         </div>
