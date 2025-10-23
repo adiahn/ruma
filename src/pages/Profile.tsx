@@ -87,137 +87,60 @@ const Profile = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20" />
-          <motion.div
-            className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-            }}
-          />
-          <motion.div
-            className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"
-            animate={{
-              scale: [1.2, 1, 1.2],
-              opacity: [0.6, 0.3, 0.6],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-            }}
-          />
-        </div>
-
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/assets/hero.jpg)',
+            filter: 'grayscale(100%) brightness(0.5)'
+          }}
+        />
+        
+        {/* Lighter Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-20" />
+        
+        {/* Content */}
         <div className="relative z-10 w-full">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-16 items-center min-h-screen py-20">
-              {/* Left Content */}
-              <motion.div 
-                className="space-y-8"
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                {/* Badge */}
-                <motion.div
-                  className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-white text-sm font-medium"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                  <Star size={16} className="text-yellow-400" />
-                  Living Legend
-                </motion.div>
-
-                {/* Name */}
-                <motion.h1 
-                  className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                >
-                  Dr. Babangida
-                  <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    Ruma
-                  </span>
-                </motion.h1>
-
-                {/* Title */}
-                <motion.div
-                  className="space-y-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                >
-                  <h2 className="text-2xl sm:text-3xl text-blue-200 font-light">
-                    Technology & Social Entrepreneur
-                  </h2>
-                  <p className="text-lg text-gray-300 leading-relaxed max-w-lg">
-                    Transforming Africa through innovation, youth empowerment, and sustainable development
-                  </p>
-                </motion.div>
-
-                {/* CTA Buttons */}
-                <motion.div 
-                  className="flex flex-col sm:flex-row gap-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                >
-                  <Button to="/contact" variant="secondary" size="lg">
+            <div className="flex items-center justify-center min-h-[50vh] py-20">
+              <div className="text-center">
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-12">
+                  Dr. Babangida<br />Ruma
+                </h1>
+                
+                <p className="text-xl sm:text-2xl text-blue-200 mb-8 font-light">
+                  Technology & Social Entrepreneur
+                </p>
+                
+                <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto mb-12">
+                  Transforming Africa through innovation, youth empowerment, and sustainable development
+                </p>
+                
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <Button to="/contact" variant="secondary" size="lg" className="min-w-[180px]">
                     Get in Touch
                   </Button>
-                  <Button to="/business" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-slate-900">
+                  <Button to="/business" variant="outline" size="lg" className="min-w-[180px] border-2 border-white text-white hover:bg-white hover:text-slate-900">
                     View Portfolio
                   </Button>
-                </motion.div>
-              </motion.div>
-
-              {/* Right Side - Portrait */}
-              <motion.div 
-                className="relative flex justify-center"
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                <div className="relative">
-                  {/* Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl blur-2xl opacity-30 scale-110" />
-                  
-                  {/* Portrait */}
-                  <div className="relative w-80 h-96 lg:w-96 lg:h-[28rem] xl:w-[28rem] xl:h-[36rem]">
-                    <img 
-                      src="/assets/hero.jpg"
-                      alt="Dr. Babangida Ruma"
-                      className="w-full h-full object-cover rounded-2xl shadow-2xl"
-                    />
-                    
-                    {/* Overlay Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl" />
-                  </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding bg-white relative overflow-hidden">
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <AnimatedSection animation="fadeIn">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">
+          <AnimatedSection animation="slideUp">
+            <div className="text-center mb-12">
+              <h2 className="text-responsive-lg font-bold text-slate-900 mb-4 sm:mb-6">
                 Impact by Numbers
               </h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
                 Two decades of transformative leadership and measurable impact across Africa
               </p>
             </div>
@@ -250,12 +173,12 @@ const Profile = () => {
       {/* Major Achievements Section */}
       <section className="section-padding bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container-custom">
-          <AnimatedSection animation="fadeIn">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">
+          <AnimatedSection animation="slideUp">
+            <div className="text-center mb-12">
+              <h2 className="text-responsive-lg font-bold text-slate-900 mb-4 sm:mb-6">
                 Major Achievements
               </h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
                 Recognized globally for innovation, leadership, and transformative impact
               </p>
             </div>
@@ -301,12 +224,12 @@ const Profile = () => {
       {/* Organizations Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <AnimatedSection animation="fadeIn">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">
+          <AnimatedSection animation="slideUp">
+            <div className="text-center mb-12">
+              <h2 className="text-responsive-lg font-bold text-slate-900 mb-4 sm:mb-6">
                 Organizations Founded
               </h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
                 Leading multiple organizations focused on youth empowerment and community development
               </p>
             </div>
@@ -353,13 +276,13 @@ const Profile = () => {
       {/* Biography Section */}
       <section className="section-padding bg-gradient-to-br from-blue-50 to-slate-50">
         <div className="container-custom">
-          <AnimatedSection animation="fadeIn">
+          <AnimatedSection animation="slideUp">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-slate-900 mb-6">
+              <div className="text-center mb-12">
+                <h2 className="text-responsive-lg font-bold text-slate-900 mb-4 sm:mb-6">
                   A True Living Legend
                 </h2>
-                <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
+                <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
                   His name is a globally-recognised brand that stands for Creativity, Innovation, Philanthropy and Excellence in Enterprise education.
                 </p>
               </div>
@@ -385,44 +308,54 @@ const Profile = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="section-padding bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20" />
-        <div className="container-custom relative z-10">
-          <AnimatedSection animation="fadeIn">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.h2 
-                className="text-4xl md:text-5xl font-bold mb-8"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                Ready to Create Impact Together?
-              </motion.h2>
-              <motion.p 
-                className="text-xl text-blue-200 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                Let's explore how we can collaborate to advance youth empowerment, social entrepreneurship, and sustainable development across Africa.
-              </motion.p>
-              <motion.div 
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                <Button to="/contact" variant="secondary" size="lg">
-                  Start a Conversation
-                </Button>
-                <Button to="/business" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-slate-900">
-                  View Portfolio
-                </Button>
-              </motion.div>
-            </div>
-          </AnimatedSection>
+      <AnimatedSection animation="fadeIn">
+        <section className="section-padding bg-slate-900 text-white relative overflow-hidden">
+          <motion.div
+            className="absolute inset-0 opacity-10"
+            animate={{
+              background: [
+                'radial-gradient(circle at 20% 50%, #64748b 0%, transparent 50%)',
+                'radial-gradient(circle at 80% 50%, #64748b 0%, transparent 50%)',
+                'radial-gradient(circle at 40% 50%, #64748b 0%, transparent 50%)',
+              ],
+            }}
+            transition={{ duration: 8, repeat: Infinity }}
+          />
+          <div className="px-2 sm:px-4 lg:px-5">
+            <div className="max-w-7xl mx-auto text-center relative z-10">
+            <motion.h2 
+              className="text-4xl md:text-5xl font-bold mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Ready to Create Impact Together?
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Let's explore how we can collaborate to advance youth empowerment, social entrepreneurship, and sustainable development across Africa.
+            </motion.p>
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <Button to="/contact" variant="secondary">
+                Start a Conversation
+              </Button>
+              <Button to="/business" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
+                View Portfolio
+              </Button>
+            </motion.div>
+          </div>
         </div>
-      </section>
+        </section>
+      </AnimatedSection>
     </div>
   );
 };
