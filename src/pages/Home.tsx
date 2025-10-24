@@ -4,7 +4,7 @@ import AnimatedSection from '../components/AnimatedSection';
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image */}
@@ -44,8 +44,8 @@ const Home = () => {
         </div>
       </section>
       <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
-        <div className="w-full px-6 lg:px-12">
-          <div className="max-w-[1600px] mx-auto">
+        <div className="container-custom">
+          <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-stretch">
               
               {/* Section 1 - Title and Quote */}
@@ -76,7 +76,7 @@ const Home = () => {
       </section>
 
       {/* Partners Section */}
-      <section className="section-padding-sm bg-white border-t border-gray-100">
+      <section className="section-padding-sm bg-white border-t border-gray-100 overflow-hidden">
         <div className="container-custom">
           <motion.div 
             className="text-center mb-8 sm:mb-12"
@@ -93,7 +93,7 @@ const Home = () => {
           </motion.div>
         </div>
 
-        <div className="relative overflow-hidden space-y-6">
+        <div className="relative overflow-hidden space-y-6 w-full">
             {/* First Row */}
             <motion.div 
               className="flex space-x-12 lg:space-x-16"
@@ -727,8 +727,8 @@ const Home = () => {
             }}
             transition={{ duration: 8, repeat: Infinity }}
           />
-          <div className="px-2 sm:px-4 lg:px-5">
-            <div className="max-w-7xl mx-auto text-center relative z-10">
+          <div className="container-custom">
+            <div className="max-w-4xl mx-auto text-center relative z-10">
             <motion.h2 
               className="text-4xl md:text-5xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
