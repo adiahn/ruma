@@ -86,24 +86,24 @@ const Profile = () => {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex items-center justify-center min-h-[50vh] py-20">
               <div className="text-center">
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-8">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-6 sm:mb-8">
                   Dr. Babangida<br />Ruma
                 </h1>
                 
-                <p className="text-xl sm:text-2xl text-gray-300 mb-8 font-light">
+                <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 font-light">
                   Technology & Social Entrepreneur
                 </p>
                 
-                <p className="text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto mb-12">
+                <p className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-12 px-4 sm:px-0">
                   Transforming Africa through innovation, youth empowerment, and sustainable development
                 </p>
                 
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <Button to="/contact" variant="secondary" size="lg" className="min-w-[180px]">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
+                  <Button to="/contact" variant="secondary" size="lg" className="w-full sm:min-w-[180px] text-sm sm:text-base">
                     Get in Touch
                   </Button>
-                  <Button to="/business" variant="outline" size="lg" className="min-w-[180px] border-2 border-white text-white hover:bg-white hover:text-black">
+                  <Button to="/business" variant="outline" size="lg" className="w-full sm:min-w-[180px] border-2 border-white text-white hover:bg-white hover:text-black text-sm sm:text-base">
                     View Portfolio
                   </Button>
                 </div>
@@ -118,18 +118,18 @@ const Profile = () => {
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-responsive-lg font-bold text-black mb-6">
-                  A True Living Legend
-                </h2>
-                <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                  His name is a globally-recognised brand that stands for Creativity, Innovation, Philanthropy and Excellence in Enterprise education.
-                </p>
-              </div>
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6">
+                A True Living Legend
+              </h2>
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto px-4 sm:px-0">
+                His name is a globally-recognised brand that stands for Creativity, Innovation, Philanthropy and Excellence in Enterprise education.
+              </p>
+            </div>
 
-              <div className="bg-white p-12 border border-gray-200">
+            <div className="bg-white p-6 sm:p-8 md:p-12 border border-gray-200">
                 <div className="prose prose-lg prose-gray max-w-none">
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
                     Dr. Babangida Ruma is a Nigerian technology and social entrepreneur, visionary youth leader, and advocate for enterprise and skills development, as well as a political appointee. A prominent voice in youth development, he is known for his work in technology-driven education, entrepreneurship, and community organization. With more than two decades of transformative leadership, he has dedicated his career to building platforms that empower young people, strengthen institutions, and create inclusive economic opportunities across Nigeria and African countries.
                   </p>
                   
@@ -140,48 +140,48 @@ const Profile = () => {
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.5 }}
                     >
-                      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
                         He is the Founder & Executive Vice Chairman of Collective Development (CODE), a pioneering foundation advancing girl-child education, women's empowerment, skills acquisition, and community-driven entrepreneurship. Under his leadership, CODE has launched groundbreaking initiatives such as the Women & Girls-child Entrepreneurship Support Program (WAGES), the Initiative for Community Intervention on Girls-Child (INCOMING), and the Learning Initiative for Entrepreneurship (LIFE) an innovation-driven skills and enterprise program transforming youth into creators of opportunities. These initiatives have positioned CODE as a leading force for social and economic transformation in Northern Nigeria and beyond.
                       </p>
                       
-                      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
                         He is also the Founder of Opportunities Hub (OHUB), a dynamic digital technology ecosystem placing African youth at the center of global transformation through digital innovation, employability and jobs creation. In line with his global vision, Dr. Ruma later founded the Social Innovation Academy (SINA) a forward thinking leadership and innovation institute equipping change makers with the skills, mindset, and systems to build sustainable impact enterprises and social ventures that solve Nigerian's most pressing challenges.
                       </p>
                       
-                      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
                         Driven by his mission to institutionalise enterprise-driven learning, Dr. Ruma founded the Enterprise University of Nigeria (EUN), an institution focused on nurturing a new generation of entrepreneurs through practical education, research, and innovation. He also established the MSMEs Business Management Organization (BMO), a national platform providing business support, advisory solutions, and capacity-building services for micro, small, and medium enterprises across Nigeria.
                       </p>
                       
-                      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
                         From 2015 to 2017, Dr. Ruma served as the Global Youth Ambassador for the Commonwealth Youth Council (CYC) the world's largest youth organisation and as the United Nations Global Ambassador for the #TheirWorldAtSchool Education Campaign. His work has significantly advanced youth empowerment, enterprise, innovation, and digital inclusion across Africa.
                       </p>
                       
-                      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
                         As part of his lifelong commitment to underserved communities, he founded The Ruma Foundation, a philanthropic foundation transforming lives through access to education, enterprise, skills development, and sustainable livelihoods. Through this foundation, he continues to impact vulnerable groups while promoting leadership, innovation, and economic inclusion across Northern Nigeria.
                       </p>
                       
-                      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
                         Globally celebrated for his innovative use of technology for development, Dr. Ruma was named "Father of Technology and Innovation" by the UNESCO Institute for Information Technologies in Education. He has worked with world leaders to empower young people, build human capital, rebrand nations, and promote peace, innovation, and prosperity.
                       </p>
                       
-                      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
                         Dr. Ruma has been honored with numerous awards, including Social Worker of the Year (2016), the African Achievers Award, the Commonwealth Young Achievers Award, and the Global Achievers Award making him the first African in history to receive both the Commonwealth and Global Achievers Awards. He has been named among the 100 Most Influential Young Africans (2016 & 2020) and ranked among the Top 20 Most Influential Young Leaders in the World (2016).
                       </p>
                       
-                      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
                         He has spoken at prestigious global platforms such as the World Economic Forum (China & South Africa), UNESCO Youth Forum (Paris), Geneva Convention, and OpenCon (Washington D.C.). In 2018, he authored Technology: A Tool for Youth Empowerment, ThinkLikeRuma, and 100 Skills for Survival, contributing over 20 journal articles and book chapters.
                       </p>
                       
-                      <p className="text-lg text-gray-700 leading-relaxed">
+                      <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         In addition to his international engagements, he has served as Technical Assistant on Enterprise Development to the Katsina State Government, showcasing his deep commitment to policy reform, economic transformation, and sustainable regional development.
                       </p>
                     </motion.div>
                   )}
                   
-                  <div className="mt-8 text-center">
+                  <div className="mt-6 sm:mt-8 text-center">
                     <button
                       onClick={() => setIsExpanded(!isExpanded)}
-                      className="bg-black text-white px-8 py-3 font-medium hover:bg-gray-800 transition-colors duration-300"
+                      className="bg-black text-white px-6 sm:px-8 py-2 sm:py-3 font-medium hover:bg-gray-800 transition-colors duration-300 text-sm sm:text-base"
                     >
                       {isExpanded ? 'Read Less' : 'Read More'}
                     </button>
@@ -197,16 +197,16 @@ const Profile = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
-            <div className="text-center mb-16">
-              <h2 className="text-responsive-lg font-bold text-black mb-6">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6">
                 Impact by Numbers
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
                 Two decades of transformative leadership and measurable impact across Africa
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -216,8 +216,8 @@ const Profile = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-4xl font-bold text-black mb-2">{stat.number}</div>
-                  <div className="text-sm text-gray-600 font-medium uppercase tracking-wide">{stat.label}</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-1 sm:mb-2">{stat.number}</div>
+                  <div className="text-xs sm:text-sm text-gray-600 font-medium uppercase tracking-wide">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -229,31 +229,31 @@ const Profile = () => {
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
-            <div className="text-center mb-16">
-              <h2 className="text-responsive-lg font-bold text-black mb-6">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6">
                 Major Achievements
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
                 Recognized globally for innovation, leadership, and transformative impact
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
               {achievements.map((achievement, index) => (
                 <motion.div
                   key={index}
-                  className="border-l-4 border-black pl-8"
+                  className="border-l-4 border-black pl-4 sm:pl-6 md:pl-8"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="mb-4">
-                    <h3 className="text-2xl font-bold text-black mb-2">{achievement.title}</h3>
-                    <h4 className="text-lg font-semibold text-gray-700 mb-2">{achievement.subtitle}</h4>
-                    <span className="text-sm text-gray-500 font-medium">{achievement.year}</span>
+                  <div className="mb-3 sm:mb-4">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-1 sm:mb-2">{achievement.title}</h3>
+                    <h4 className="text-base sm:text-lg font-semibold text-gray-700 mb-1 sm:mb-2">{achievement.subtitle}</h4>
+                    <span className="text-xs sm:text-sm text-gray-500 font-medium">{achievement.year}</span>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">{achievement.description}</p>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{achievement.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -265,28 +265,28 @@ const Profile = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
-            <div className="text-center mb-16">
-              <h2 className="text-responsive-lg font-bold text-black mb-6">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6">
                 Organizations Founded
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
                 Leading multiple organizations focused on youth empowerment and community development
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
               {organizations.map((org, index) => (
                 <motion.div
                   key={index}
-                  className="border border-gray-200 p-8 hover:border-black transition-colors duration-300"
+                  className="border border-gray-200 p-4 sm:p-6 md:p-8 hover:border-black transition-colors duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <h3 className="text-xl font-bold text-black mb-2">{org.name}</h3>
-                  <p className="text-sm font-medium text-gray-600 mb-4">{org.role}</p>
-                  <p className="text-gray-700 leading-relaxed">{org.description}</p>
+                  <h3 className="text-lg sm:text-xl font-bold text-black mb-1 sm:mb-2">{org.name}</h3>
+                  <p className="text-xs sm:text-sm font-medium text-gray-600 mb-3 sm:mb-4">{org.role}</p>
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{org.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -300,7 +300,7 @@ const Profile = () => {
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
               <motion.h2 
-                className="text-4xl md:text-5xl font-bold mb-8"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -308,7 +308,7 @@ const Profile = () => {
                 Ready to Create Impact Together?
               </motion.h2>
               <motion.p 
-                className="text-xl text-gray-300 mb-12 leading-relaxed"
+                className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
