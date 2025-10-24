@@ -62,7 +62,7 @@ const Contact = () => {
               <div>
                 <h2 className="text-responsive-md font-bold text-black mb-8">Let's Connect</h2>
                 
-                <div className="space-y-8 mb-12">
+                <div className="space-y-8">
                   <div>
                     <h3 className="text-lg font-semibold text-black mb-1">Email</h3>
                     <p className="text-black font-medium">Info@ruma.ng</p>
@@ -85,29 +85,6 @@ const Contact = () => {
                     <h3 className="text-lg font-semibold text-black mb-1">Location</h3>
                     <p className="text-black font-medium">Abuja, Nigeria</p>
                     <p className="text-gray-600 text-sm">Contact location</p>
-                  </div>
-                </div>
-
-                {/* Why Connect */}
-                <div className="bg-white border border-gray-200 p-8">
-                  <h3 className="text-xl font-bold text-black mb-6">Why Connect With Dr. Ruma?</h3>
-                  <div className="grid grid-cols-2 gap-6 text-center">
-                    <div>
-                      <div className="text-2xl font-bold text-black mb-1">6</div>
-                      <div className="text-gray-600 text-sm">Organizations Founded</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-black mb-1">20+</div>
-                      <div className="text-gray-600 text-sm">Years of Impact</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-black mb-1">25+</div>
-                      <div className="text-gray-600 text-sm">Awards & Recognition</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-black mb-1">3</div>
-                      <div className="text-gray-600 text-sm">Books Published</div>
-                    </div>
                   </div>
                 </div>
               </div>
