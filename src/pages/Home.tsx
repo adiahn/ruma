@@ -636,7 +636,82 @@ const Home = () => {
         </section>
       </AnimatedSection>
 
-
+      {/* Blog Section */}
+      <AnimatedSection animation="slideUp">
+        <section className="section-padding bg-white">
+          <div className="container-custom">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-responsive-lg font-bold text-slate-900 mb-4 sm:mb-6">
+                Latest Insights
+              </h2>
+              <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto px-4 sm:px-0">
+                Thoughts on youth empowerment, technology innovation, and social entrepreneurship
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "The Future of Youth Empowerment in Africa",
+                  excerpt: "Exploring innovative approaches to empowering young people across the continent through technology and entrepreneurship.",
+                  date: "December 2024",
+                  readTime: "5 min read",
+                  category: "Youth Development"
+                },
+                {
+                  title: "Building Sustainable Communities Through Innovation",
+                  excerpt: "How social entrepreneurship and digital innovation can transform communities and create lasting impact.",
+                  date: "November 2024",
+                  readTime: "7 min read",
+                  category: "Social Innovation"
+                },
+                {
+                  title: "Technology as a Tool for Social Change",
+                  excerpt: "Leveraging technology to address pressing social challenges and create opportunities for underserved communities.",
+                  date: "October 2024",
+                  readTime: "6 min read",
+                  category: "Technology"
+                }
+              ].map((post, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white border border-gray-200 rounded-xl p-6 hover:border-gray-300 transition-all duration-300 group cursor-pointer"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="mb-4">
+                    <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">
+                      {post.category}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3 group-hover:text-slate-700 transition-colors">
+                    {post.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between text-xs sm:text-sm text-gray-500">
+                    <span>{post.date}</span>
+                    <span>{post.readTime}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            
+            <div className="text-center mt-12">
+              <Button to="/blog" variant="outline" className="w-full sm:w-auto">
+                View All Articles
+              </Button>
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
 
       {/* CTA Section */}
       <AnimatedSection animation="fadeIn">
