@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Button from '../components/Button';
 import AnimatedSection from '../components/AnimatedSection';
+import portrait from '../assets/portrait.jpg';
 
 const Home = () => {
   return (
@@ -202,20 +203,15 @@ const Home = () => {
               <AnimatedSection animation="slideInRight" delay={0.4}>
                 <div className="relative flex justify-center lg:justify-end">
                   <motion.div 
-                    className="aspect-square bg-gradient-to-br from-slate-200 to-slate-300 rounded-2xl elegant-shadow-lg flex items-center justify-center hover-lift w-full max-w-sm lg:max-w-none"
-                    whileHover={{ rotate: 1 }}
+                    className="rounded-2xl elegant-shadow-lg overflow-hidden hover-lift w-full max-w-sm lg:max-w-none"
+                    whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="text-center text-slate-600">
-                      <motion.div 
-                        className="text-4xl sm:text-6xl mb-4"
-                        animate={{ scale: [1, 1.1, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        📸
-                      </motion.div>
-                      <p className="text-base sm:text-lg font-medium">Professional Portrait</p>
-                    </div>
+                    <img 
+                      src={portrait} 
+                      alt="Dr. Babangida Ruma" 
+                      className="w-full h-auto object-cover"
+                    />
                   </motion.div>
                 </div>
               </AnimatedSection>
