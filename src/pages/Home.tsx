@@ -595,11 +595,11 @@ const Home = () => {
               <AnimatedSection animation="slideInLeft" delay={0.2}>
                 <div className="text-center lg:text-left">
                   <h2 className="text-responsive-lg font-bold text-slate-900 mb-4 sm:mb-6">
-                    Empowering Africa's Youth Through Innovation
+                    Empowering Nigeria's Youth Through Innovation
                   </h2>
                   <p className="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed">
                     For over two decades, I have dedicated my career to empowering young people, 
-                    strengthening institutions, and creating inclusive economic opportunities across Nigeria and Africa. 
+                    strengthening institutions, and creating inclusive economic opportunities across Nigeria and Nigeria. 
                     Through social entrepreneurship and digital innovation, I work to transform 
                     communities and build sustainable futures for the next generation.
                   </p>
@@ -652,7 +652,7 @@ const Home = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  title: "The Future of Youth Empowerment in Africa",
+                  title: "The Future of Youth Empowerment in Nigeria",
                   excerpt: "Exploring innovative approaches to empowering young people across the continent through technology and entrepreneurship.",
                   date: "December 2024",
                   readTime: "5 min read",

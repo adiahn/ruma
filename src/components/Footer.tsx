@@ -27,9 +27,6 @@ const Footer = () => {
             <div className="mb-6">
               <img src={logoWhite} alt="Dr. Babangida Ruma Logo" className="h-16 sm:h-20 w-auto" />
             </div>
-            <h3 className="text-lg sm:text-xl font-bold text-white mb-6">
-              Dr. Babangida Ruma
-            </h3>
             <div className="flex space-x-3 sm:space-x-4">
               {socialLinks.map((social) => (
                 <a
