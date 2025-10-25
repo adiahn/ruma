@@ -73,13 +73,12 @@ const Profile = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/assets/hero.jpg)',
-            filter: 'grayscale(100%) brightness(0.3)'
+            backgroundImage: 'url(/assets/hero.jpg)'
           }}
         />
         
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-60" />
+        <div className="absolute inset-0 bg-black bg-opacity-40" />
         
         {/* Content */}
         <div className="relative z-10 w-full">
