@@ -41,6 +41,7 @@ const Header = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Profile', path: '/profile' },
+    { name: 'Organizations & Initiatives', path: '/business' },
     { name: 'Recognitions', path: '/recognitions' },
     { name: 'Media Center', path: '/blog' },
     { name: 'Contact', path: '/contact' },
