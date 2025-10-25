@@ -149,7 +149,7 @@ const CODE = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="section-padding bg-white">
+      <section id="about" className="section-padding bg-white">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
             <div className="max-w-4xl mx-auto text-center mb-16">
@@ -191,7 +191,7 @@ const CODE = () => {
       </section>
 
       {/* Core Programs */}
-      <section className="section-padding bg-white">
+      <section id="programs" className="section-padding bg-white">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
             <div className="text-center mb-12 sm:mb-16">
@@ -290,7 +290,7 @@ const CODE = () => {
       </section>
 
       {/* Achievements */}
-      <section className="section-padding bg-white">
+      <section id="impact" className="section-padding bg-white">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
             <div className="text-center mb-12 sm:mb-16">
