@@ -24,9 +24,9 @@ const Profile = () => {
     },
     {
       title: "Global Achievers Award",
-      subtitle: "First African in History",
+      subtitle: "First Nigerian in History",
       year: "2016",
-      description: "First African to receive both Commonwealth and Global Achievers Awards"
+      description: "First Nigerian to receive both Commonwealth and Global Achievers Awards"
     },
     {
       title: "Top 20 Influential Leaders",
@@ -51,7 +51,7 @@ const Profile = () => {
     {
       name: "Opportunities Hub (OHUB)",
       role: "Founder",
-      description: "Digital technology ecosystem placing African youth at the center of global transformation"
+      description: "Digital technology ecosystem placing Nigerian youth at the center of global transformation"
     },
     {
       name: "Social Innovation Academy (SINA)",
@@ -95,7 +95,7 @@ const Profile = () => {
                 </p>
                 
                 <p className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-12 px-4 sm:px-0">
-                  Transforming Africa through innovation, youth empowerment, and sustainable development
+                  Transforming Nigeria through innovation, youth empowerment, and sustainable development
                 </p>
                 
                 {/* Buttons */}
@@ -119,18 +119,21 @@ const Profile = () => {
           <AnimatedSection animation="slideUp">
             <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-6 sm:mb-8">
                 A True Living Legend
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto px-4 sm:px-0">
-                His name is a globally-recognised brand that stands for Creativity, Innovation, Philanthropy and Excellence in Enterprise education.
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto px-4 sm:px-0 mb-4 sm:mb-6">
+                His name is a globally-recognised brand that stands for Creativity, Innovation, Philanthropy and Excellence in Enterprise education. His natural talent and unique vision, coupled with limitless drive, have led him to achieve what others might take many lifetimes to achieve.
+              </p>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto px-4 sm:px-0">
+                Colleagues and compatriots, competitors and admirers alike agree that Dr. Babangida Ruma is truly a living legend.
               </p>
             </div>
 
             <div className="bg-white p-6 sm:p-8 md:p-12 border border-gray-200">
                 <div className="prose prose-lg prose-gray max-w-none">
                   <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
-                    Dr. Babangida Ruma is a Nigerian technology and social entrepreneur, visionary youth leader, and advocate for enterprise and skills development, as well as a political appointee. A prominent voice in youth development, he is known for his work in technology-driven education, entrepreneurship, and community organization. With more than two decades of transformative leadership, he has dedicated his career to building platforms that empower young people, strengthen institutions, and create inclusive economic opportunities across Nigeria and African countries.
+                    Dr. Babangida Ruma is a Nigerian technology and social entrepreneur, visionary youth leader, and advocate for enterprise and skills development, as well as a political appointee. A prominent voice in youth development, he is known for his work in technology-driven education, entrepreneurship, and community organization. With more than two decades of transformative leadership, he has dedicated his career to building platforms that empower young people, strengthen institutions, and create inclusive economic opportunities across Nigeria and Nigerian countries.
                   </p>
                   
                   {isExpanded && (
@@ -145,7 +148,7 @@ const Profile = () => {
                       </p>
                       
                       <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
-                        He is also the Founder of Opportunities Hub (OHUB), a dynamic digital technology ecosystem placing African youth at the center of global transformation through digital innovation, employability and jobs creation. In line with his global vision, Dr. Ruma later founded the Social Innovation Academy (SINA) a forward thinking leadership and innovation institute equipping change makers with the skills, mindset, and systems to build sustainable impact enterprises and social ventures that solve Nigerian's most pressing challenges.
+                        He is also the Founder of Opportunities Hub (OHUB), a dynamic digital technology ecosystem placing Nigerian youth at the center of global transformation through digital innovation, employability and jobs creation. In line with his global vision, Dr. Ruma later founded the Social Innovation Academy (SINA) a forward thinking leadership and innovation institute equipping change makers with the skills, mindset, and systems to build sustainable impact enterprises and social ventures that solve Nigerian's most pressing challenges.
                       </p>
                       
                       <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
@@ -153,7 +156,7 @@ const Profile = () => {
                       </p>
                       
                       <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
-                        From 2015 to 2017, Dr. Ruma served as the Global Youth Ambassador for the Commonwealth Youth Council (CYC) the world's largest youth organisation and as the United Nations Global Ambassador for the #TheirWorldAtSchool Education Campaign. His work has significantly advanced youth empowerment, enterprise, innovation, and digital inclusion across Africa.
+                        From 2015 to 2017, Dr. Ruma served as the Global Youth Ambassador for the Commonwealth Youth Council (CYC) the world's largest youth organisation and as the United Nations Global Ambassador for the #TheirWorldAtSchool Education Campaign. His work has significantly advanced youth empowerment, enterprise, innovation, and digital inclusion across Nigeria.
                       </p>
                       
                       <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
@@ -165,11 +168,11 @@ const Profile = () => {
                       </p>
                       
                       <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
-                        Dr. Ruma has been honored with numerous awards, including Social Worker of the Year (2016), the African Achievers Award, the Commonwealth Young Achievers Award, and the Global Achievers Award making him the first African in history to receive both the Commonwealth and Global Achievers Awards. He has been named among the 100 Most Influential Young Africans (2016 & 2020) and ranked among the Top 20 Most Influential Young Leaders in the World (2016).
+                        Dr. Ruma has been honored with numerous awards, including Social Worker of the Year (2016), the Nigerian Achievers Award, the Commonwealth Young Achievers Award, and the Global Achievers Award making him the first Nigerian in history to receive both the Commonwealth and Global Achievers Awards. He has been named among the 100 Most Influential Young Nigerians (2016 & 2020) and ranked among the Top 20 Most Influential Young Leaders in the World (2016).
                       </p>
                       
                       <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
-                        He has spoken at prestigious global platforms such as the World Economic Forum (China & South Africa), UNESCO Youth Forum (Paris), Geneva Convention, and OpenCon (Washington D.C.). In 2018, he authored Technology: A Tool for Youth Empowerment, ThinkLikeRuma, and 100 Skills for Survival, contributing over 20 journal articles and book chapters.
+                        He has spoken at prestigious global platforms such as the World Economic Forum (China & South Nigeria), UNESCO Youth Forum (Paris), Geneva Convention, and OpenCon (Washington D.C.). In 2018, he authored Technology: A Tool for Youth Empowerment, ThinkLikeRuma, and 100 Skills for Survival, contributing over 20 journal articles and book chapters.
                       </p>
                       
                       <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
@@ -202,7 +205,7 @@ const Profile = () => {
                 Impact by Numbers
               </h2>
               <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
-                Two decades of transformative leadership and measurable impact across Africa
+                Two decades of transformative leadership and measurable impact across Nigeria
               </p>
             </div>
             
@@ -313,7 +316,7 @@ const Profile = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Let's explore how we can collaborate to advance youth empowerment, social entrepreneurship, and sustainable development across Africa.
+                Let's explore how we can collaborate to advance youth empowerment, social entrepreneurship, and sustainable development across Nigeria.
               </motion.p>
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center"
