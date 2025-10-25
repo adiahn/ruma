@@ -203,7 +203,7 @@ const Home = () => {
               <AnimatedSection animation="slideInRight" delay={0.4}>
                 <div className="relative flex justify-center lg:justify-end">
                   <motion.div 
-                    className="rounded-2xl elegant-shadow-lg overflow-hidden hover-lift w-full max-w-sm lg:max-w-none"
+                    className="rounded-2xl elegant-shadow-lg overflow-hidden hover-lift w-full max-w-xs lg:max-w-sm"
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.3 }}
                   >
