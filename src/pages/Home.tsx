@@ -12,7 +12,7 @@ const Home = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(/assets/hero.jpg)',
-            filter: 'grayscale(100%) brightness(0.5)'
+            filter: 'grayscale(0%) brightness(0.3)'
           }}
         />
         
