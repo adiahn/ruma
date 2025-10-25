@@ -53,7 +53,8 @@ const Profile = () => {
     {
       name: "Opportunities Hub (OHUB)",
       role: "Founder",
-      description: "Digital technology ecosystem placing Nigerian youth at the center of global transformation"
+      description: "Digital technology ecosystem placing Nigerian youth at the center of global transformation",
+      link: "https://opportunitieshub.ng"
     },
     {
       name: "Social Innovation Academy (SINA)",

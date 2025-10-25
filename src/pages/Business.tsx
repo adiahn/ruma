@@ -32,7 +32,8 @@ const Business = () => {
         'Digital Skills Training Programs',
         'Technology Innovation Hub',
         'Youth Entrepreneurship Development'
-      ]
+      ],
+      link: 'https://opportunitieshub.ng'
     },
     {
       name: 'Social Innovation Academy (SINA)',
