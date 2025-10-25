@@ -99,9 +99,10 @@ const Home = () => {
                 viewport={{ once: true }}
               >
                 <img 
-                  src="https://logos-world.net/wp-content/uploads/2021/02/BBC-Logo.png" 
+                  src="https://1000logos.net/wp-content/uploads/2016/10/BBC-Logo.png" 
                   alt="BBC"
-                  className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                  className="h-10 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                 />
               </motion.div>
 
@@ -114,9 +115,10 @@ const Home = () => {
                 viewport={{ once: true }}
               >
                 <img 
-                  src="https://logos-world.net/wp-content/uploads/2020/11/CNN-Logo.png" 
+                  src="https://1000logos.net/wp-content/uploads/2016/10/CNN-Logo.png" 
                   alt="CNN"
                   className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                 />
               </motion.div>
 
@@ -129,9 +131,10 @@ const Home = () => {
                 viewport={{ once: true }}
               >
                 <img 
-                  src="https://logos-world.net/wp-content/uploads/2023/04/Forbes-Logo.png" 
+                  src="https://1000logos.net/wp-content/uploads/2017/06/Forbes-Logo.png" 
                   alt="Forbes"
                   className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                 />
               </motion.div>
 
@@ -144,9 +147,10 @@ const Home = () => {
                 viewport={{ once: true }}
               >
                 <img 
-                  src="https://logos-world.net/wp-content/uploads/2020/11/The-Guardian-Logo.png" 
+                  src="https://1000logos.net/wp-content/uploads/2021/04/The-Guardian-logo.png" 
                   alt="The Guardian"
                   className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                 />
               </motion.div>
 
@@ -162,6 +166,7 @@ const Home = () => {
                   src="https://nigeriareports.com/wp-content/uploads/2024/04/nigeriareports-logo.png" 
                   alt="Nigeria Reports"
                   className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                 />
               </motion.div>
             </div>
