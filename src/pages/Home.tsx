@@ -75,514 +75,97 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section className="section-padding-sm bg-white border-t border-gray-100 overflow-hidden">
+      {/* Featured On Section */}
+      <section className="section-padding-sm bg-gray-50">
         <div className="container-custom">
-          <motion.div 
-            className="text-center mb-8 sm:mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-                  <h2 className="text-responsive-md font-bold text-slate-900 mb-4">
-                    Global Collaborations
-                  </h2>
-                  <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
-                    Working with international organizations to advance youth empowerment and social development
-                  </p>
-          </motion.div>
-        </div>
+          <AnimatedSection animation="slideUp">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-responsive-md font-bold text-slate-900 mb-4">
+                Featured On
+              </h2>
+              <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+                Recognized by leading global media outlets for innovative leadership and social impact
+              </p>
+            </div>
 
-        <div className="relative overflow-hidden space-y-6 w-full">
-            {/* First Row */}
-            <motion.div 
-              className="flex space-x-12 lg:space-x-16"
-              animate={{ x: ['100vw', '-100vw'] }}
-              transition={{ 
-                duration: 13,
-                repeat: Infinity,
-                ease: "linear"
-              }}
-              style={{ width: 'calc(300% + 600px)' }}
-            >
-              {/* First set of logos - Row 1 */}
-              <div className="flex space-x-12 lg:space-x-16 items-center min-w-max">
-                {/* Google */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" 
-                    alt="Google"
-                    className="h-10 w-auto object-contain"
-                  />
-                </motion.div>
+            {/* Media Logos Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-12 items-center justify-items-center">
+              {/* BBC */}
+              <motion.div
+                className="flex items-center justify-center p-4 transition-all duration-300 hover:opacity-70"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <img 
+                  src="https://logos-world.net/wp-content/uploads/2021/02/BBC-Logo.png" 
+                  alt="BBC"
+                  className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                />
+              </motion.div>
 
-                {/* Microsoft */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" 
-                    alt="Microsoft"
-                    className="h-10 w-auto object-contain"
-                  />
-                </motion.div>
+              {/* CNN */}
+              <motion.div
+                className="flex items-center justify-center p-4 transition-all duration-300 hover:opacity-70"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <img 
+                  src="https://logos-world.net/wp-content/uploads/2020/11/CNN-Logo.png" 
+                  alt="CNN"
+                  className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                />
+              </motion.div>
 
-                {/* Meta */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2021/10/Meta-Logo.png" 
-                    alt="Meta"
-                    className="h-10 w-auto object-contain"
-                  />
-                </motion.div>
+              {/* Forbes */}
+              <motion.div
+                className="flex items-center justify-center p-4 transition-all duration-300 hover:opacity-70"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <img 
+                  src="https://logos-world.net/wp-content/uploads/2023/04/Forbes-Logo.png" 
+                  alt="Forbes"
+                  className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                />
+              </motion.div>
 
-                {/* Amazon */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0018/0563/brand.gif?itok=HQqzbfgU" 
-                    alt="Amazon"
-                    className="h-10 w-auto object-contain"
-                  />
-                </motion.div>
+              {/* The Guardian */}
+              <motion.div
+                className="flex items-center justify-center p-4 transition-all duration-300 hover:opacity-70"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <img 
+                  src="https://logos-world.net/wp-content/uploads/2020/11/The-Guardian-Logo.png" 
+                  alt="The Guardian"
+                  className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                />
+              </motion.div>
 
-                {/* Apple */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://1000logos.net/wp-content/uploads/2016/10/Apple-Logo.png" 
-                    alt="Apple"
-                    className="h-10 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Tesla */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Tesla_T_symbol.svg" 
-                    alt="Tesla"
-                    className="h-12 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Netflix */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2020/04/Netflix-Logo.png" 
-                    alt="Netflix"
-                    className="h-10 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Spotify */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png" 
-                    alt="Spotify"
-                    className="h-10 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Uber */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2020/05/Uber-Logo.png" 
-                    alt="Uber"
-                    className="h-10 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Airbnb */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2020/10/Airbnb-Logo.png" 
-                    alt="Airbnb"
-                    className="h-10 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Twitter/X */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2023/08/X-Logo.png" 
-                    alt="X (Twitter)"
-                    className="h-10 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* LinkedIn */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" 
-                    alt="LinkedIn"
-                    className="h-12 w-auto object-contain"
-                  />
-                </motion.div>
-
-              </div>
-
-              {/* Duplicate set for seamless loop - Row 1 */}
-              <div className="flex space-x-12 lg:space-x-16 items-center min-w-max">
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="Microsoft" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2021/10/Meta-Logo.png" alt="Meta" className="h-12 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0018/0563/brand.gif?itok=HQqzbfgU" alt="Amazon" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://1000logos.net/wp-content/uploads/2016/10/Apple-Logo.png" alt="Apple" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Tesla_T_symbol.svg" alt="Tesla" className="h-12 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2020/04/Netflix-Logo.png" alt="Netflix" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png" alt="Spotify" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2020/05/Uber-Logo.png" alt="Uber" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2020/10/Airbnb-Logo.png" alt="Airbnb" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2023/08/X-Logo.png" alt="X (Twitter)" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" className="h-12 w-auto object-contain" />
-                </motion.div>
-              </div>
-            </motion.div>
-
-            {/* Second Row */}
-            <motion.div 
-              className="flex space-x-12 lg:space-x-16"
-              animate={{ x: ['100vw', '-100vw'] }}
-              transition={{ 
-                duration: 13,
-                repeat: Infinity,
-                ease: "linear",
-                delay: 2
-              }}
-              style={{ width: 'calc(300% + 600px)' }}
-            >
-              {/* First set of logos - Row 2 */}
-              <div className="flex space-x-12 lg:space-x-16 items-center min-w-max">
-                {/* Adobe */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2020/11/Adobe-Logo.png" 
-                    alt="Adobe"
-                    className="h-12 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Salesforce */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2020/09/Salesforce-Logo.png" 
-                    alt="Salesforce"
-                    className="h-12 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Oracle */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2020/09/Oracle-Logo.png" 
-                    alt="Oracle"
-                    className="h-8 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* IBM */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2020/09/IBM-Logo.png" 
-                    alt="IBM"
-                    className="h-8 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Intel */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg" 
-                    alt="Intel"
-                    className="h-12 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* NVIDIA */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg" 
-                    alt="NVIDIA"
-                    className="h-12 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* PayPal */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2020/07/PayPal-Logo.png" 
-                    alt="PayPal"
-                    className="h-8 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Stripe */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2021/03/Stripe-Logo.png" 
-                    alt="Stripe"
-                    className="h-8 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Zoom */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2021/02/Zoom-Logo.png" 
-                    alt="Zoom"
-                    className="h-8 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Slack */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" 
-                    alt="Slack"
-                    className="h-12 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Shopify */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg" 
-                    alt="Shopify"
-                    className="h-12 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Square */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://cdn.worldvectorlogo.com/logos/square-7.svg" 
-                    alt="Square"
-                    className="h-12 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Dropbox */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Dropbox_Icon.svg" 
-                    alt="Dropbox"
-                    className="h-12 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* GitHub */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" 
-                    alt="GitHub"
-                    className="h-8 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Atlassian */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://cdn.worldvectorlogo.com/logos/atlassian-1.svg" 
-                    alt="Atlassian"
-                    className="h-12 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* MongoDB */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" 
-                    alt="MongoDB"
-                    className="h-12 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Twilio */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2021/03/Twilio-Logo.png" 
-                    alt="Twilio"
-                    className="h-8 w-auto object-contain"
-                  />
-                </motion.div>
-
-                {/* Discord */}
-                <motion.div 
-                  className="flex items-center justify-center p-4 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2020/12/Discord-Logo.png" 
-                    alt="Discord"
-                    className="h-8 w-auto object-contain"
-                  />
-                </motion.div>
-              </div>
-
-              {/* Duplicate set for seamless loop - Row 2 */}
-              <div className="flex space-x-12 lg:space-x-16 items-center min-w-max">
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2020/11/Adobe-Logo.png" alt="Adobe" className="h-14 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2020/09/Salesforce-Logo.png" alt="Salesforce" className="h-14 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2020/09/Oracle-Logo.png" alt="Oracle" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2020/09/IBM-Logo.png" alt="IBM" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg" alt="Intel" className="h-12 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg" alt="NVIDIA" className="h-12 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2020/07/PayPal-Logo.png" alt="PayPal" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2021/03/Stripe-Logo.png" alt="Stripe" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2021/02/Zoom-Logo.png" alt="Zoom" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" alt="Slack" className="h-12 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg" alt="Shopify" className="h-12 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://cdn.worldvectorlogo.com/logos/square-7.svg" alt="Square" className="h-12 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Dropbox_Icon.svg" alt="Dropbox" className="h-12 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" alt="GitHub" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://cdn.worldvectorlogo.com/logos/atlassian-1.svg" alt="Atlassian" className="h-12 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" alt="MongoDB" className="h-12 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2021/03/Twilio-Logo.png" alt="Twilio" className="h-10 w-auto object-contain" />
-                </motion.div>
-                <motion.div className="flex items-center justify-center p-4">
-                  <img src="https://logos-world.net/wp-content/uploads/2020/12/Discord-Logo.png" alt="Discord" className="h-10 w-auto object-contain" />
-                </motion.div>
-              </div>
-            </motion.div>
+              {/* Nigeria Reports */}
+              <motion.div
+                className="flex items-center justify-center p-4 transition-all duration-300 hover:opacity-70"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <img 
+                  src="https://nigeriareports.com/wp-content/uploads/2024/04/nigeriareports-logo.png" 
+                  alt="Nigeria Reports"
+                  className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                />
+              </motion.div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
