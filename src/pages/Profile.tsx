@@ -77,25 +77,24 @@ const Profile = () => {
           }}
         />
         
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-40" />
-        
         {/* Content */}
         <div className="relative z-10 w-full">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex items-center justify-center min-h-[50vh] py-20">
               <div className="text-center">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-6 sm:mb-8">
-                  Dr. Babangida<br />Ruma
-                </h1>
-                
-                <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 font-light">
-                  Technology & Social Entrepreneur
-                </p>
-                
-                <p className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-12 px-4 sm:px-0">
-                  Transforming Nigeria through innovation, youth empowerment, and sustainable development
-                </p>
+                <div className="bg-black bg-opacity-60 px-8 py-6 rounded-lg mb-8">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-4 sm:mb-6">
+                    Dr. Babangida<br />Ruma
+                  </h1>
+                  
+                  <p className="text-lg sm:text-xl md:text-2xl text-gray-100 mb-4 sm:mb-6 font-light">
+                    Technology & Social Entrepreneur
+                  </p>
+                  
+                  <p className="text-base sm:text-lg text-gray-200 leading-relaxed max-w-3xl mx-auto">
+                    Transforming Nigeria through innovation, youth empowerment, and sustainable development
+                  </p>
+                </div>
                 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
