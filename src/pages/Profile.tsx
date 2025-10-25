@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import AnimatedSection from '../components/AnimatedSection';
 import Button from '../components/Button';
@@ -46,7 +47,8 @@ const Profile = () => {
     {
       name: "Collective Development (CODE)",
       role: "Founder & Executive Vice Chairman",
-      description: "Pioneering foundation advancing girl-child education and women's empowerment"
+      description: "Pioneering foundation advancing girl-child education and women's empowerment",
+      link: "/code"
     },
     {
       name: "Opportunities Hub (OHUB)",
@@ -276,20 +278,32 @@ const Profile = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
-              {organizations.map((org, index) => (
-                <motion.div
-                  key={index}
-                  className="border border-gray-200 p-4 sm:p-6 md:p-8 hover:border-black transition-colors duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-lg sm:text-xl font-bold text-black mb-1 sm:mb-2">{org.name}</h3>
-                  <p className="text-xs sm:text-sm font-medium text-gray-600 mb-3 sm:mb-4">{org.role}</p>
-                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{org.description}</p>
-                </motion.div>
-              ))}
+              {organizations.map((org, index) => {
+                const content = (
+                  <motion.div
+                    className={`border border-gray-200 p-4 sm:p-6 md:p-8 hover:border-black transition-colors duration-300 ${
+                      org.link ? 'cursor-pointer' : ''
+                    }`}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={org.link ? { y: -5 } : {}}
+                  >
+                    <h3 className="text-lg sm:text-xl font-bold text-black mb-1 sm:mb-2">{org.name}</h3>
+                    <p className="text-xs sm:text-sm font-medium text-gray-600 mb-3 sm:mb-4">{org.role}</p>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{org.description}</p>
+                  </motion.div>
+                );
+
+                return org.link ? (
+                  <Link key={index} to={org.link}>
+                    {content}
+                  </Link>
+                ) : (
+                  <div key={index}>{content}</div>
+                );
+              })}
             </div>
           </AnimatedSection>
         </div>

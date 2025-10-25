@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import AnimatedSection from '../components/AnimatedSection';
 import Button from '../components/Button';
@@ -20,7 +21,8 @@ const Business = () => {
         'Women & Girls-child Entrepreneurship Support Program (WAGES)',
         'Initiative for Community Intervention on Girls-Child (INCOMING)',
         'Learning Initiative for Entrepreneurship (LIFE)'
-      ]
+      ],
+      link: '/code'
     },
     {
       name: 'Opportunities Hub (OHUB)',
@@ -176,44 +178,56 @@ const Business = () => {
             </div>
             
             <div className="space-y-8 sm:space-y-12">
-              {organizations.map((org, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white border border-gray-200 p-6 sm:p-8 md:p-10 hover:border-black transition-colors duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="mb-4 sm:mb-6">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-2 sm:mb-3">
-                      {org.name}
-                    </h3>
-                    <p className="text-sm sm:text-base font-medium text-gray-600 mb-4 sm:mb-6">
-                      {org.role}
-                    </p>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                      {org.description}
-                    </p>
-                  </div>
-                  
-                  {org.initiatives && org.initiatives.length > 0 && (
-                    <div className="border-t border-gray-200 pt-4 sm:pt-6">
-                      <h4 className="text-sm sm:text-base font-bold text-black mb-3 sm:mb-4 uppercase tracking-wide">
-                        Key Initiatives
-                      </h4>
-                      <ul className="space-y-2 sm:space-y-3">
-                        {org.initiatives.map((initiative, idx) => (
-                          <li key={idx} className="text-sm sm:text-base text-gray-700 flex items-start">
-                            <span className="mr-2 mt-1">•</span>
-                            <span>{initiative}</span>
-                          </li>
-                        ))}
-                      </ul>
+              {organizations.map((org, index) => {
+                const content = (
+                  <motion.div
+                    className={`bg-white border border-gray-200 p-6 sm:p-8 md:p-10 hover:border-black transition-colors duration-300 ${
+                      org.link ? 'cursor-pointer' : ''
+                    }`}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={org.link ? { y: -5 } : {}}
+                  >
+                    <div className="mb-4 sm:mb-6">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-2 sm:mb-3">
+                        {org.name}
+                      </h3>
+                      <p className="text-sm sm:text-base font-medium text-gray-600 mb-4 sm:mb-6">
+                        {org.role}
+                      </p>
+                      <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                        {org.description}
+                      </p>
                     </div>
-                  )}
-                </motion.div>
-              ))}
+                    
+                    {org.initiatives && org.initiatives.length > 0 && (
+                      <div className="border-t border-gray-200 pt-4 sm:pt-6">
+                        <h4 className="text-sm sm:text-base font-bold text-black mb-3 sm:mb-4 uppercase tracking-wide">
+                          Key Initiatives
+                        </h4>
+                        <ul className="space-y-2 sm:space-y-3">
+                          {org.initiatives.map((initiative, idx) => (
+                            <li key={idx} className="text-sm sm:text-base text-gray-700 flex items-start">
+                              <span className="mr-2 mt-1">•</span>
+                              <span>{initiative}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </motion.div>
+                );
+
+                return org.link ? (
+                  <Link key={index} to={org.link}>
+                    {content}
+                  </Link>
+                ) : (
+                  <div key={index}>{content}</div>
+                );
+              })}
             </div>
           </AnimatedSection>
         </div>
