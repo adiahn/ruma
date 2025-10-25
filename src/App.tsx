@@ -30,51 +30,60 @@ const CODEHeader = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled
-        ? 'bg-black/95 backdrop-blur-sm shadow-sm border-b border-gray-800'
-        : 'bg-black backdrop-blur-sm border-b border-gray-800'
+        ? 'bg-white shadow-md border-b border-gray-200'
+        : 'bg-white/95 backdrop-blur-sm border-b border-gray-200'
     }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className={`flex items-center justify-between transition-all duration-300 ${
-          isScrolled ? 'h-16' : 'h-20'
-        }`}>
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a
             href="/code"
             className="flex items-center transition-all duration-300 hover:opacity-80"
           >
-            <span className={`text-white font-bold transition-all duration-300 ${
-              isScrolled ? 'text-xl' : 'text-2xl'
-            }`}>
-              Collective Development (CODE)
+            <span className="text-black font-bold text-xl tracking-tight">
+              Collective Development<br />
+              <span className="text-sm text-gray-600">(CODE)</span>
             </span>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-1">
             <a
               href="#programs"
-              className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors"
+              onClick={(e) => scrollToSection(e, 'programs')}
+              className="px-5 py-2.5 text-sm font-medium text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-all"
             >
               Our Programs
             </a>
             <a
               href="#impact"
-              className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors"
+              onClick={(e) => scrollToSection(e, 'impact')}
+              className="px-5 py-2.5 text-sm font-medium text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-all"
             >
               Impact
             </a>
             <a
               href="#about"
-              className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors"
+              onClick={(e) => scrollToSection(e, 'about')}
+              className="px-5 py-2.5 text-sm font-medium text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-all"
             >
               About
             </a>
             <a
               href="/contact"
-              className="px-6 py-2 bg-white text-black text-sm font-medium hover:bg-gray-100 transition-colors rounded-lg"
+              className="ml-4 px-6 py-2.5 bg-black text-white text-sm font-medium hover:bg-gray-800 transition-colors rounded-lg"
             >
               Get Involved
             </a>
@@ -83,45 +92,47 @@ const CODEHeader = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-gray-300 hover:text-white transition-colors"
+            className="md:hidden p-2 text-gray-700 hover:text-black transition-colors"
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? (
-              <span className="text-2xl">×</span>
-            ) : (
-              <span className="text-2xl">☰</span>
-            )}
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-800 py-4">
-            <div className="flex flex-col space-y-3">
+          <div className="md:hidden border-t border-gray-200 py-4 bg-white">
+            <div className="flex flex-col space-y-1">
               <a
                 href="#programs"
-                className="px-4 py-2 text-gray-300 hover:text-white transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => scrollToSection(e, 'programs')}
+                className="px-4 py-3 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
               >
                 Our Programs
               </a>
               <a
                 href="#impact"
-                className="px-4 py-2 text-gray-300 hover:text-white transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => scrollToSection(e, 'impact')}
+                className="px-4 py-3 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
               >
                 Impact
               </a>
               <a
                 href="#about"
-                className="px-4 py-2 text-gray-300 hover:text-white transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => scrollToSection(e, 'about')}
+                className="px-4 py-3 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
               >
                 About
               </a>
               <a
                 href="/contact"
-                className="mx-4 px-6 py-2 bg-white text-black text-sm font-medium hover:bg-gray-100 transition-colors rounded-lg text-center"
+                className="mx-4 mt-2 px-6 py-3 bg-black text-white text-sm font-medium hover:bg-gray-800 transition-colors rounded-lg text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Get Involved

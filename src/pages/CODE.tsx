@@ -98,7 +98,7 @@ const CODE = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gray-900">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -107,11 +107,11 @@ const CODE = () => {
           }}
         />
         
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-70" />
+        {/* Gradient Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/80" />
         
         {/* Content */}
-        <div className="relative z-10 w-full">
+        <div className="relative z-10 w-full pt-20">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
@@ -119,13 +119,16 @@ const CODE = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                  Collective Development (CODE)
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                  Collective Development
                 </h1>
-                <p className="text-xl sm:text-2xl text-gray-100 mb-8 font-light">
+                <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-6 font-light">
+                  (CODE)
+                </p>
+                <p className="text-base sm:text-lg lg:text-xl text-gray-200 mb-8 font-medium">
                   Pioneering Foundation for Girl-Child Education & Women's Empowerment
                 </p>
-                <p className="text-lg text-gray-200 mb-12 leading-relaxed max-w-3xl mx-auto">
+                <p className="text-base sm:text-lg text-gray-300 mb-12 leading-relaxed max-w-2xl mx-auto">
                   Transforming lives through education, entrepreneurship, and community-driven initiatives across Northern Nigeria and beyond.
                 </p>
               </motion.div>
@@ -361,16 +364,16 @@ const CODE = () => {
       </AnimatedSection>
 
       {/* Custom CODE Footer */}
-      <footer className="bg-black border-t border-gray-800">
+      <footer className="bg-gray-50 border-t border-gray-200">
         <div className="container-custom py-12 sm:py-16 lg:py-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
             {/* Brand */}
             <div className="sm:col-span-2 lg:col-span-2">
               <div className="mb-6">
-                <h3 className="text-2xl sm:text-3xl font-bold text-white">Collective Development</h3>
-                <p className="text-lg sm:text-xl text-gray-300 mt-2">(CODE)</p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-black">Collective Development</h3>
+                <p className="text-lg sm:text-xl text-gray-600 mt-2">(CODE)</p>
               </div>
-              <p className="text-sm sm:text-base text-gray-400 mb-6 max-w-md">
+              <p className="text-sm sm:text-base text-gray-600 mb-6 max-w-md">
                 Pioneering foundation advancing girl-child education and women's empowerment across Northern Nigeria.
               </p>
               <div className="flex space-x-3 sm:space-x-4">
@@ -378,7 +381,7 @@ const CODE = () => {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white transition-colors"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 hover:text-black transition-colors"
                   aria-label="LinkedIn"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -389,7 +392,7 @@ const CODE = () => {
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white transition-colors"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 hover:text-black transition-colors"
                   aria-label="Twitter"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -400,7 +403,7 @@ const CODE = () => {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white transition-colors"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 hover:text-black transition-colors"
                   aria-label="Instagram"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -412,22 +415,22 @@ const CODE = () => {
 
             {/* Programs */}
             <div>
-              <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              <h4 className="text-sm font-semibold text-black uppercase tracking-wider mb-4">
                 Our Programs
               </h4>
               <ul className="space-y-2 sm:space-y-3">
                 <li>
-                  <a href="#programs" className="text-sm text-gray-400 hover:text-white transition-colors block py-1">
+                  <a href="#programs" className="text-sm text-gray-600 hover:text-black transition-colors block py-1">
                     WAGES
                   </a>
                 </li>
                 <li>
-                  <a href="#programs" className="text-sm text-gray-400 hover:text-white transition-colors block py-1">
+                  <a href="#programs" className="text-sm text-gray-600 hover:text-black transition-colors block py-1">
                     INCOMING
                   </a>
                 </li>
                 <li>
-                  <a href="#programs" className="text-sm text-gray-400 hover:text-white transition-colors block py-1">
+                  <a href="#programs" className="text-sm text-gray-600 hover:text-black transition-colors block py-1">
                     LIFE
                   </a>
                 </li>
@@ -436,10 +439,10 @@ const CODE = () => {
 
             {/* Contact Info */}
             <div>
-              <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              <h4 className="text-sm font-semibold text-black uppercase tracking-wider mb-4">
                 Contact
               </h4>
-              <div className="space-y-2 sm:space-y-3 text-sm text-gray-400">
+              <div className="space-y-2 sm:space-y-3 text-sm text-gray-600">
                 <p>Northern Nigeria</p>
                 <p className="break-all">info@codefoundation.org</p>
                 <p>+234 (0) 8100061111</p>
@@ -448,22 +451,22 @@ const CODE = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className="border-t border-gray-800 pt-6 sm:pt-8">
+          <div className="border-t border-gray-300 pt-6 sm:pt-8">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
               <p className="text-xs sm:text-sm text-gray-500 text-center sm:text-left">
                 © {currentYear} Collective Development (CODE). All rights reserved.
               </p>
               <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
-                <a href="#" className="text-xs sm:text-sm text-gray-500 hover:text-white transition-colors py-1">
+                <a href="#" className="text-xs sm:text-sm text-gray-500 hover:text-black transition-colors py-1">
                   Privacy Policy
                 </a>
-                <a href="#" className="text-xs sm:text-sm text-gray-500 hover:text-white transition-colors py-1">
+                <a href="#" className="text-xs sm:text-sm text-gray-500 hover:text-black transition-colors py-1">
                   Terms of Service
                 </a>
               </div>
             </div>
-            <div className="mt-4 pt-4 border-t border-gray-800">
-              <p className="text-xs text-gray-600 text-center">
+            <div className="mt-4 pt-4 border-t border-gray-300">
+              <p className="text-xs text-gray-500 text-center">
                 Founded by Dr. Babangida Ruma | A registered non-profit organization
               </p>
             </div>
