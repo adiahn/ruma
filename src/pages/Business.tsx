@@ -221,9 +221,9 @@ const Business = () => {
                 );
 
                 return org.link ? (
-                  <Link key={index} to={org.link}>
+                  <a key={index} href={org.link} target="_blank" rel="noopener noreferrer">
                     {content}
-                  </Link>
+                  </a>
                 ) : (
                   <div key={index}>{content}</div>
                 );
