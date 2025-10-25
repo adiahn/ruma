@@ -23,6 +23,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-2">
+            <div className="mb-6">
+              <img src="/assets/logo-white.png" alt="Dr. Babangida Ruma Logo" className="h-12 w-auto" />
+            </div>
             <h3 className="text-lg sm:text-xl font-bold text-white mb-6">
               Dr. Babangida Ruma
             </h3>
