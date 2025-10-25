@@ -23,13 +23,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-2">
-            <h3 className="text-lg sm:text-xl font-bold text-white mb-4">
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-6">
               Dr. Babangida Ruma
             </h3>
-            <p className="text-sm sm:text-base text-slate-300 mb-6 max-w-md leading-relaxed">
-              Visionary entrepreneur, philanthropist, and business leader dedicated to 
-              creating sustainable value and positive impact across Africa and beyond.
-            </p>
             <div className="flex space-x-3 sm:space-x-4">
               {socialLinks.map((social) => (
                 <a
