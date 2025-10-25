@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoWhite from '../assets/logo-white.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -24,7 +25,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-2">
             <div className="mb-6">
-              <img src="/assets/logo-white.png" alt="Dr. Babangida Ruma Logo" className="h-12 w-auto" />
+              <img src={logoWhite} alt="Dr. Babangida Ruma Logo" className="h-16 sm:h-20 w-auto" />
             </div>
             <h3 className="text-lg sm:text-xl font-bold text-white mb-6">
               Dr. Babangida Ruma
