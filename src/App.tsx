@@ -6,6 +6,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Business from './pages/Business';
+import CODE from './pages/CODE';
 import Recognitions from './pages/Recognitions';
 import Media from './pages/Media';
 import Contact from './pages/Contact';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/business" element={<Business />} />
+            <Route path="/code" element={<CODE />} />
             <Route path="/recognitions" element={<Recognitions />} />
             <Route path="/media" element={<Media />} />
             <Route path="/contact" element={<Contact />} />

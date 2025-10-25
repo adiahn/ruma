@@ -76,9 +76,9 @@ const Footer = () => {
               Contact
             </h4>
             <div className="space-y-2 sm:space-y-3 text-sm text-slate-300">
-              <p>Lagos, Nigeria</p>
+              <p>Abuja, Nigeria</p>
               <p className="break-all">contact@babangidaruma.com</p>
-              <p>+234 (0) 800 RUMA</p>
+              <p>+234 (0) 8100061111</p>
             </div>
           </div>
         </div>
