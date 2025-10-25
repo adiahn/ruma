@@ -8,6 +8,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLibraryOpen, setIsLibraryOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -40,11 +41,14 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Profile', path: '/profile' },
-    { name: 'Initiatives', path: '/business' },
     { name: 'Recognitions', path: '/recognitions' },
     { name: 'Media Center', path: '/blog' },
     { name: 'Contact', path: '/contact' },
+  ];
+
+  const profileItems = [
+    { name: 'Profile', path: '/profile' },
+    { name: 'Organizations & Initiatives', path: '/business' },
   ];
 
   const libraryItems = [
@@ -82,7 +86,80 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-2">
-            {navItems.map((item) => {
+            {navItems.slice(0, 1).map((item) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`relative px-5 font-medium transition-all duration-300 rounded-lg ${
+                    isScrolled ? 'py-2 text-sm' : 'py-2.5 text-base'
+                  } ${
+                    isActive
+                      ? 'text-slate-900 bg-slate-100'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                  }`}
+                >
+                  {item.name}
+                  {isActive && (
+                    <motion.div
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-slate-900"
+                      layoutId="activeIndicator"
+                      initial={false}
+                      transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                    />
+                  )}
+                </Link>
+              );
+            })}
+
+            {/* Profile Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsProfileOpen(true)}
+              onMouseLeave={() => setIsProfileOpen(false)}
+            >
+              <button
+                className={`relative px-5 font-medium transition-all duration-300 rounded-lg flex items-center gap-1 ${
+                  isScrolled ? 'py-2 text-sm' : 'py-2.5 text-base'
+                } ${
+                  location.pathname === '/profile' || location.pathname === '/business'
+                    ? 'text-slate-900 bg-slate-100'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                }`}
+              >
+                Profile
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isProfileOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              <AnimatePresence>
+                {isProfileOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50"
+                  >
+                    {profileItems.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.path}
+                        className={`block px-4 py-2.5 text-base font-medium transition-colors duration-200 ${
+                          location.pathname === item.path
+                            ? 'text-slate-900 bg-slate-100'
+                            : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {navItems.slice(1).map((item) => {
               const isActive = location.pathname === item.path;
               return (
                 <Link
@@ -189,7 +266,47 @@ const Header = () => {
               className="md:hidden absolute top-full left-0 w-full border-b shadow-sm bg-white border-slate-200"
             >
             <nav className="px-6 py-4 space-y-1">
-              {navItems.map((item) => {
+              {navItems.slice(0, 1).map((item) => {
+                const isActive = location.pathname === item.path;
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    onClick={closeMenu}
+                    className={`block px-4 py-3 text-base font-medium rounded-md transition-all duration-200 ${
+                      isActive
+                        ? 'text-slate-900 bg-slate-100 border-l-4 border-slate-900'
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
+
+              {/* Profile Submenu - Mobile */}
+              <div className="pt-2">
+                <div className="text-sm font-semibold text-slate-400 px-4 py-2">Profile</div>
+                {profileItems.map((item) => {
+                  const isActive = location.pathname === item.path;
+                  return (
+                    <Link
+                      key={item.name}
+                      to={item.path}
+                      onClick={closeMenu}
+                      className={`block px-4 py-3 pl-8 text-base font-medium rounded-md transition-all duration-200 ${
+                        isActive
+                          ? 'text-slate-900 bg-slate-100 border-l-4 border-slate-900'
+                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                })}
+              </div>
+
+              {navItems.slice(1).map((item) => {
                 const isActive = location.pathname === item.path;
                 return (
                   <Link
