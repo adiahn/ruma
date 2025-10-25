@@ -96,7 +96,7 @@ const CODE = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gray-900">
         {/* Background Image */}
@@ -112,23 +112,23 @@ const CODE = () => {
         
         {/* Content */}
         <div className="relative z-10 w-full pt-20">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 leading-tight px-4 sm:px-0">
                   Collective Development
                 </h1>
-                <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-6 font-light">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-4 sm:mb-6 font-light">
                   (CODE)
                 </p>
-                <p className="text-base sm:text-lg lg:text-xl text-gray-200 mb-8 font-medium">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 font-medium px-4 sm:px-0">
                   Pioneering Foundation for Girl-Child Education & Women's Empowerment
                 </p>
-                <p className="text-base sm:text-lg text-gray-300 mb-12 leading-relaxed max-w-2xl mx-auto">
+                <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-8 sm:mb-12 leading-relaxed max-w-2xl mx-auto px-4 sm:px-0">
                   Transforming lives through education, entrepreneurship, and community-driven initiatives across Northern Nigeria and beyond.
                 </p>
               </motion.div>
@@ -222,26 +222,26 @@ const CODE = () => {
                     viewport={{ once: true }}
                   >
                     {/* Icon & Name */}
-                    <div className={`bg-gray-50 border border-gray-200 p-8 sm:p-12 ${index % 2 === 1 ? 'order-2' : ''}`}>
+                    <div className={`bg-gray-50 border border-gray-200 p-6 sm:p-8 md:p-12 ${index % 2 === 1 ? 'order-2' : ''}`}>
                       <div className="text-center">
-                        <div className="flex justify-center mb-6">
+                        <div className="flex justify-center mb-4 sm:mb-6">
                           <IconComponent size={80} className="text-black" strokeWidth={1.5} />
                         </div>
-                        <h3 className="text-2xl sm:text-3xl font-bold text-black mb-2">{program.name}</h3>
-                        <p className="text-base sm:text-lg text-gray-700">{program.fullName}</p>
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-2">{program.name}</h3>
+                        <p className="text-sm sm:text-base md:text-lg text-gray-700 px-4 sm:px-0">{program.fullName}</p>
                       </div>
                     </div>
 
                     {/* Description */}
                     <div className={`${index % 2 === 1 ? 'order-1' : ''}`}>
-                      <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
+                      <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
                         {program.description}
                       </p>
-                      <ul className="space-y-3">
+                      <ul className="space-y-2 sm:space-y-3">
                         {program.features.map((feature, idx) => (
                           <li key={idx} className="flex items-start">
-                            <span className="text-black mr-3 text-xl">•</span>
-                            <span className="text-gray-700">{feature}</span>
+                            <span className="text-black mr-2 sm:mr-3 text-lg sm:text-xl">•</span>
+                            <span className="text-sm sm:text-base text-gray-700">{feature}</span>
                           </li>
                         ))}
                       </ul>
