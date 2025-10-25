@@ -99,9 +99,11 @@ const Home = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="text-2xl sm:text-3xl font-bold text-gray-600 hover:text-black transition-colors">
-                  BBC
-                </div>
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/BBC_News_2019.svg/1200px-BBC_News_2019.svg.png" 
+                  alt="BBC"
+                  className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                />
               </motion.div>
 
               {/* CNN */}
@@ -112,9 +114,11 @@ const Home = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="text-2xl sm:text-3xl font-bold text-gray-600 hover:text-black transition-colors">
-                  CNN
-                </div>
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/1200px-CNN.svg.png" 
+                  alt="CNN"
+                  className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                />
               </motion.div>
 
               {/* Forbes */}
@@ -125,9 +129,11 @@ const Home = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <div className="text-2xl sm:text-3xl font-bold text-gray-600 hover:text-black transition-colors">
-                  FORBES
-                </div>
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Forbes_logo.svg/1200px-Forbes_logo.svg.png" 
+                  alt="Forbes"
+                  className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                />
               </motion.div>
 
               {/* The Guardian */}
@@ -138,9 +144,11 @@ const Home = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <div className="text-lg sm:text-xl font-bold text-gray-600 hover:text-black transition-colors text-center">
-                  The Guardian
-                </div>
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Guardian_logo.svg/1200px-Guardian_logo.svg.png" 
+                  alt="The Guardian"
+                  className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                />
               </motion.div>
 
               {/* Nigeria Reports */}
@@ -151,9 +159,11 @@ const Home = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <div className="text-sm sm:text-base font-bold text-gray-600 hover:text-black transition-colors text-center">
-                  Nigeria Reports
-                </div>
+                <img 
+                  src="https://nigeriareports.com/wp-content/uploads/2024/04/nigeriareports-logo.png" 
+                  alt="Nigeria Reports"
+                  className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
+                />
               </motion.div>
             </div>
           </AnimatedSection>
