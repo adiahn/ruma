@@ -218,39 +218,48 @@ const RumaFoundation = () => {
             </div>
           </AnimatedSection>
 
-          <div className="space-y-12">
+          <div className="space-y-20">
             {corePrograms.map((program, index) => {
               const IconComponent = program.Icon;
               return (
                 <AnimatedSection key={index} animation={index % 2 === 0 ? "slideInLeft" : "slideInRight"}>
                   <motion.div
-                    className={`grid md:grid-cols-2 gap-8 sm:gap-12 items-center`}
+                    className={`grid md:grid-cols-2 gap-12 items-center`}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                   >
-                    <div className={`bg-gray-50 border border-gray-200 p-6 sm:p-8 md:p-12 ${index % 2 === 1 ? 'order-2' : ''}`}>
-                      <div className="text-center">
-                        <div className="flex justify-center mb-4 sm:mb-6">
-                          <IconComponent size={80} className="text-black" strokeWidth={1.5} />
+                    <div className={`${index % 2 === 1 ? 'order-2' : ''}`}>
+                      <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-3xl p-10 shadow-2xl border border-emerald-400/20">
+                        <div className="bg-emerald-700/30 backdrop-blur-sm rounded-2xl p-8 mb-6">
+                          <div className="flex justify-center">
+                            <IconComponent size={90} className="text-white" strokeWidth={2} />
+                          </div>
                         </div>
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-2">{program.name}</h3>
+                        <h3 className="text-4xl font-light text-white mb-3 text-center">{program.name}</h3>
+                        <div className="w-24 h-0.5 bg-emerald-300 mx-auto"></div>
                       </div>
                     </div>
 
                     <div className={`${index % 2 === 1 ? 'order-1' : ''}`}>
-                      <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
+                      <p className="text-xl text-gray-700 mb-8 leading-relaxed font-light">
                         {program.description}
                       </p>
-                      <ul className="space-y-2 sm:space-y-3">
+                      <div className="space-y-4">
                         {program.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <span className="text-black mr-2 sm:mr-3 text-lg sm:text-xl">•</span>
-                            <span className="text-sm sm:text-base text-gray-700">{feature}</span>
-                          </li>
+                          <motion.div 
+                            key={idx} 
+                            className="flex items-center bg-emerald-50 p-5 rounded-xl border border-emerald-200"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.4, delay: idx * 0.1 }}
+                          >
+                            <div className="w-2 h-2 bg-emerald-600 rounded-full mr-4"></div>
+                            <span className="text-base text-emerald-900 font-light">{feature}</span>
+                          </motion.div>
                         ))}
-                      </ul>
+                      </div>
                     </div>
                   </motion.div>
                 </AnimatedSection>

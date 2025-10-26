@@ -253,52 +253,66 @@ const LIFE = () => {
       </section>
 
       {/* Core Programs */}
-      <section id="programs" className="section-padding bg-white">
+      <section id="programs" className="section-padding bg-white py-24">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
-                Our Programs
+            <div className="text-center mb-20">
+              <h2 className="text-6xl sm:text-7xl md:text-8xl font-black mb-6">
+                <span className="bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+                  Launch
+                </span>
+                <span className="block text-5xl sm:text-6xl md:text-7xl text-orange-800">Your Business</span>
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
-                Comprehensive entrepreneurship training and support for aspiring young entrepreneurs
+              <p className="text-2xl text-gray-700 max-w-3xl mx-auto font-semibold">
+                Step-by-step programs designed for startup success
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="space-y-12">
+          <div className="space-y-32">
             {corePrograms.map((program, index) => {
               const IconComponent = program.Icon;
               return (
                 <AnimatedSection key={index} animation={index % 2 === 0 ? "slideInLeft" : "slideInRight"}>
                   <motion.div
-                    className={`grid md:grid-cols-2 gap-8 sm:gap-12 items-center`}
+                    className={`grid md:grid-cols-2 gap-16 items-center`}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                   >
-                    <div className={`bg-gray-50 border border-gray-200 p-6 sm:p-8 md:p-12 ${index % 2 === 1 ? 'order-2' : ''}`}>
-                      <div className="text-center">
-                        <div className="flex justify-center mb-4 sm:mb-6">
-                          <IconComponent size={80} className="text-black" strokeWidth={1.5} />
+                    <div className={`relative ${index % 2 === 1 ? 'order-2' : ''}`}>
+                      <div className="bg-gradient-to-br from-orange-500 to-amber-500 rounded-3xl p-12 shadow-2xl transform hover:scale-105 transition-transform">
+                        <div className="bg-white/20 backdrop-blur-md rounded-2xl p-8 mb-6">
+                          <IconComponent size={100} className="text-white" strokeWidth={2.5} />
                         </div>
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-2">{program.name}</h3>
+                        <h3 className="text-4xl sm:text-5xl font-black text-white mb-2 text-center">{program.name}</h3>
+                        <div className="mt-6 text-center">
+                          <span className="inline-block px-6 py-2 bg-white/30 text-white font-bold rounded-full">START HERE</span>
+                        </div>
                       </div>
                     </div>
 
                     <div className={`${index % 2 === 1 ? 'order-1' : ''}`}>
-                      <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
+                      <p className="text-2xl text-gray-800 mb-10 leading-relaxed font-semibold">
                         {program.description}
                       </p>
-                      <ul className="space-y-2 sm:space-y-3">
+                      <div className="space-y-5">
                         {program.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <span className="text-black mr-2 sm:mr-3 text-lg sm:text-xl">•</span>
-                            <span className="text-sm sm:text-base text-gray-700">{feature}</span>
-                          </li>
+                          <motion.div 
+                            key={idx} 
+                            className="flex items-center bg-gradient-to-r from-orange-50 to-amber-50 p-5 rounded-2xl border-2 border-orange-200 shadow-md hover:shadow-xl transition-all group"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.4, delay: idx * 0.1 }}
+                          >
+                            <div className="bg-orange-500 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4 font-black text-xl group-hover:scale-125 transition-transform">
+                              {idx + 1}
+                            </div>
+                            <span className="text-lg text-gray-900 font-bold">{feature}</span>
+                          </motion.div>
                         ))}
-                      </ul>
+                      </div>
                     </div>
                   </motion.div>
                 </AnimatedSection>

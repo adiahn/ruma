@@ -215,52 +215,61 @@ const SINA = () => {
       </section>
 
       {/* Core Programs */}
-      <section id="programs" className="section-padding bg-white">
+      <section id="programs" className="section-padding bg-gradient-to-b from-white to-blue-50/30 py-20">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl sm:text-6xl font-black text-blue-900 mb-4">
                 Our Programs
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
-                Comprehensive training and support for aspiring social entrepreneurs and change makers
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-800 mx-auto mb-6"></div>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Comprehensive training and support for aspiring social entrepreneurs
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="space-y-12">
+          <div className="space-y-20">
             {corePrograms.map((program, index) => {
               const IconComponent = program.Icon;
               return (
                 <AnimatedSection key={index} animation={index % 2 === 0 ? "slideInLeft" : "slideInRight"}>
                   <motion.div
-                    className={`grid md:grid-cols-2 gap-8 sm:gap-12 items-center`}
+                    className={`grid md:grid-cols-2 gap-12 items-center`}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                   >
-                    <div className={`bg-gray-50 border border-gray-200 p-6 sm:p-8 md:p-12 ${index % 2 === 1 ? 'order-2' : ''}`}>
+                    <div className={`bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl p-10 md:p-16 shadow-2xl ${index % 2 === 1 ? 'order-2' : ''}`}>
                       <div className="text-center">
-                        <div className="flex justify-center mb-4 sm:mb-6">
-                          <IconComponent size={80} className="text-black" strokeWidth={1.5} />
+                        <div className="flex justify-center mb-6">
+                          <div className="bg-white/20 backdrop-blur-sm p-6 rounded-2xl">
+                            <IconComponent size={80} className="text-white" strokeWidth={2} />
+                          </div>
                         </div>
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-2">{program.name}</h3>
+                        <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2">{program.name}</h3>
                       </div>
                     </div>
 
                     <div className={`${index % 2 === 1 ? 'order-1' : ''}`}>
-                      <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
+                      <p className="text-xl text-gray-700 mb-8 leading-relaxed font-medium">
                         {program.description}
                       </p>
-                      <ul className="space-y-2 sm:space-y-3">
+                      <div className="space-y-4">
                         {program.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <span className="text-black mr-2 sm:mr-3 text-lg sm:text-xl">•</span>
-                            <span className="text-sm sm:text-base text-gray-700">{feature}</span>
-                          </li>
+                          <motion.div 
+                            key={idx} 
+                            className="flex items-center bg-blue-50 p-4 rounded-xl border border-blue-200"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.4, delay: idx * 0.1 }}
+                          >
+                            <div className="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
+                            <span className="text-base text-gray-800 font-medium">{feature}</span>
+                          </motion.div>
                         ))}
-                      </ul>
+                      </div>
                     </div>
                   </motion.div>
                 </AnimatedSection>
