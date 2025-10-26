@@ -218,48 +218,37 @@ const RumaFoundation = () => {
             </div>
           </AnimatedSection>
 
-          <div className="space-y-20">
+          <div className="space-y-24 max-w-4xl mx-auto">
             {corePrograms.map((program, index) => {
               const IconComponent = program.Icon;
               return (
                 <AnimatedSection key={index} animation={index % 2 === 0 ? "slideInLeft" : "slideInRight"}>
                   <motion.div
-                    className={`grid md:grid-cols-2 gap-12 items-center`}
+                    className="border-b border-gray-200 pb-20 last:border-0"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                   >
-                    <div className={`${index % 2 === 1 ? 'order-2' : ''}`}>
-                      <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-3xl p-10 shadow-2xl border border-emerald-400/20">
-                        <div className="bg-emerald-700/30 backdrop-blur-sm rounded-2xl p-8 mb-6">
-                          <div className="flex justify-center">
-                            <IconComponent size={90} className="text-white" strokeWidth={2} />
-                          </div>
-                        </div>
-                        <h3 className="text-4xl font-light text-white mb-3 text-center">{program.name}</h3>
-                        <div className="w-24 h-0.5 bg-emerald-300 mx-auto"></div>
+                    <div className="flex items-start gap-8 mb-8">
+                      <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center border border-gray-300 rounded-full bg-white">
+                        <IconComponent size={24} className="text-gray-700" strokeWidth={1.5} />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-3xl font-light text-black mb-4 tracking-tight">{program.name}</h3>
+                        <p className="text-base text-gray-600 leading-relaxed font-light max-w-2xl">
+                          {program.description}
+                        </p>
                       </div>
                     </div>
-
-                    <div className={`${index % 2 === 1 ? 'order-1' : ''}`}>
-                      <p className="text-xl text-gray-700 mb-8 leading-relaxed font-light">
-                        {program.description}
-                      </p>
-                      <div className="space-y-4">
-                        {program.features.map((feature, idx) => (
-                          <motion.div 
-                            key={idx} 
-                            className="flex items-center bg-emerald-50 p-5 rounded-xl border border-emerald-200"
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.4, delay: idx * 0.1 }}
-                          >
-                            <div className="w-2 h-2 bg-emerald-600 rounded-full mr-4"></div>
-                            <span className="text-base text-emerald-900 font-light">{feature}</span>
-                          </motion.div>
-                        ))}
-                      </div>
+                    
+                    <div className="ml-22 grid sm:grid-cols-2 gap-4">
+                      {program.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-start">
+                          <span className="text-gray-400 mr-3 mt-1">—</span>
+                          <span className="text-sm text-gray-700 font-light">{feature}</span>
+                        </div>
+                      ))}
                     </div>
                   </motion.div>
                 </AnimatedSection>
