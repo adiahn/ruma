@@ -9,7 +9,7 @@ const Profile = () => {
 
   const stats = [
     { number: "20+", label: "Years of Impact" },
-    { number: "6", label: "Organizations Founded" },
+    { number: "7", label: "Organizations Founded" },
     { number: "25+", label: "Awards Received" },
     { number: "100+", label: "Countries Impacted" },
     { number: "1M+", label: "Lives Transformed" },
@@ -70,6 +70,11 @@ const Profile = () => {
       name: "The Ruma Foundation",
       role: "Founder",
       description: "Philanthropic foundation transforming lives through access to education, enterprise, skills development, and sustainable livelihoods"
+    },
+    {
+      name: "Learning Initiative For Entrepreneurship (LIFE)",
+      role: "Founder",
+      description: "Innovation-driven skills and enterprise program transforming youth into creators of opportunities"
     }
   ];
 

@@ -6,7 +6,7 @@ import Button from '../components/Button';
 
 const Business = () => {
   const stats = [
-    { number: '6', label: 'Organizations Founded' },
+    { number: '7', label: 'Organizations Founded' },
     { number: '20+', label: 'Years of Impact' },
     { number: '3', label: 'Books Published' },
     { number: '25+', label: 'Global Recognition' },
@@ -73,6 +73,17 @@ const Business = () => {
         'Education Support Programs',
         'Skills Development Initiatives',
         'Community Empowerment Projects'
+      ]
+    },
+    {
+      name: 'Learning Initiative For Entrepreneurship (LIFE)',
+      role: 'Founder',
+      description: 'Innovation-driven skills and enterprise program transforming youth into creators of opportunities through practical entrepreneurship training and mentorship.',
+      initiatives: [
+        'Youth Entrepreneurship Training',
+        'Skills Development Programs',
+        'Mentorship and Coaching',
+        'Opportunity Creation Workshops'
       ]
     },
   ];
