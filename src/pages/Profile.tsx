@@ -315,18 +315,11 @@ const Profile = () => {
                   return <div key={index}>{content}</div>;
                 }
 
-                if (isExternalLink) {
-                  return (
-                    <a key={index} href={org.link} target="_blank" rel="noopener noreferrer">
-                      {content}
-                    </a>
-                  );
-                }
-
+                // Always open in new tab, whether external or internal
                 return (
-                  <Link key={index} to={org.link}>
+                  <a key={index} href={org.link} target="_blank" rel="noopener noreferrer">
                     {content}
-                  </Link>
+                  </a>
                 );
               })}
             </div>
