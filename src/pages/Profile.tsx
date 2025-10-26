@@ -59,7 +59,8 @@ const Profile = () => {
     {
       name: "Social Innovation Academy (SINA)",
       role: "Founder",
-      description: "Leadership and innovation institute equipping change makers"
+      description: "Leadership and innovation institute equipping change makers",
+      link: "/sina"
     },
     {
       name: "Enterprise University of Nigeria (EUN)",
@@ -71,12 +72,6 @@ const Profile = () => {
       role: "Founder",
       description: "Philanthropic foundation transforming lives through access to education, enterprise, skills development, and sustainable livelihoods",
       link: "/ruma-foundation"
-    },
-    {
-      name: "Social Innovation Academy (SINA)",
-      role: "Founder",
-      description: "Leadership and innovation institute equipping change makers",
-      link: "/sina"
     },
     {
       name: "Learning Initiative For Entrepreneurship (LIFE)",
@@ -298,6 +293,7 @@ const Profile = () => {
             
             <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
               {organizations.map((org, index) => {
+                const isExternalLink = org.link && org.link.startsWith('http');
                 const content = (
                   <motion.div
                     className={`border border-gray-200 p-4 sm:p-6 md:p-8 hover:border-black transition-colors duration-300 ${
@@ -315,12 +311,22 @@ const Profile = () => {
                   </motion.div>
                 );
 
-                return org.link ? (
-                  <a key={index} href={org.link} target="_blank" rel="noopener noreferrer">
+                if (!org.link) {
+                  return <div key={index}>{content}</div>;
+                }
+
+                if (isExternalLink) {
+                  return (
+                    <a key={index} href={org.link} target="_blank" rel="noopener noreferrer">
+                      {content}
+                    </a>
+                  );
+                }
+
+                return (
+                  <Link key={index} to={org.link}>
                     {content}
-                  </a>
-                ) : (
-                  <div key={index}>{content}</div>
+                  </Link>
                 );
               })}
             </div>

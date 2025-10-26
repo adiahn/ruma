@@ -43,7 +43,8 @@ const Business = () => {
         'Leadership Development Programs',
         'Social Enterprise Incubation',
         'Innovation Labs'
-      ]
+      ],
+      link: '/sina'
     },
     {
       name: 'Enterprise University of Nigeria (EUN)',
@@ -75,17 +76,6 @@ const Business = () => {
         'Community Empowerment Projects'
       ],
       link: '/ruma-foundation'
-    },
-    {
-      name: 'Social Innovation Academy (SINA)',
-      role: 'Founder',
-      description: 'Forward-thinking leadership and innovation institute equipping change makers with the skills, mindset, and systems to build sustainable impact enterprises and social ventures that solve Nigeria\'s most pressing challenges.',
-      initiatives: [
-        'Leadership Development Programs',
-        'Social Enterprise Incubation',
-        'Innovation Labs'
-      ],
-      link: '/sina'
     },
     {
       name: 'Learning Initiative For Entrepreneurship (LIFE)',
@@ -204,6 +194,7 @@ const Business = () => {
             
             <div className="space-y-8 sm:space-y-12">
               {organizations.map((org, index) => {
+                const isExternalLink = org.link && org.link.startsWith('http');
                 const content = (
                   <motion.div
                     className={`bg-white border border-gray-200 p-6 sm:p-8 md:p-10 hover:border-black transition-colors duration-300 ${
@@ -245,12 +236,22 @@ const Business = () => {
                   </motion.div>
                 );
 
-                return org.link ? (
-                  <a key={index} href={org.link} target="_blank" rel="noopener noreferrer">
+                if (!org.link) {
+                  return <div key={index}>{content}</div>;
+                }
+
+                if (isExternalLink) {
+                  return (
+                    <a key={index} href={org.link} target="_blank" rel="noopener noreferrer">
+                      {content}
+                    </a>
+                  );
+                }
+
+                return (
+                  <Link key={index} to={org.link}>
                     {content}
-                  </a>
-                ) : (
-                  <div key={index}>{content}</div>
+                  </Link>
                 );
               })}
             </div>
