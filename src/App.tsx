@@ -16,6 +16,9 @@ import PressRelease from './pages/library/PressRelease';
 import Speeches from './pages/library/Speeches';
 import Books from './pages/library/Books';
 import Gallery from './pages/library/Gallery';
+import RumaFoundation from './pages/RumaFoundation';
+import SINA from './pages/SINA';
+import LIFE from './pages/LIFE';
 
 // CODE-specific Header component
 const CODEHeader = () => {
@@ -149,6 +152,7 @@ const CODEHeader = () => {
 const AppContent = () => {
   const location = useLocation();
   const isCODEPage = location.pathname === '/code';
+  const isStandalonePage = ['/code', '/ruma-foundation', '/sina', '/life'].includes(location.pathname);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -159,6 +163,9 @@ const AppContent = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/business" element={<Business />} />
           <Route path="/code" element={<CODE />} />
+          <Route path="/ruma-foundation" element={<RumaFoundation />} />
+          <Route path="/sina" element={<SINA />} />
+          <Route path="/life" element={<LIFE />} />
           <Route path="/recognitions" element={<Recognitions />} />
           <Route path="/media" element={<Media />} />
           <Route path="/contact" element={<Contact />} />
@@ -170,7 +177,7 @@ const AppContent = () => {
           <Route path="/library/gallery" element={<Gallery />} />
         </Routes>
       </main>
-      {!isCODEPage && <Footer />}
+      {!isStandalonePage && <Footer />}
     </div>
   );
 };

@@ -69,12 +69,20 @@ const Profile = () => {
     {
       name: "The Ruma Foundation",
       role: "Founder",
-      description: "Philanthropic foundation transforming lives through access to education, enterprise, skills development, and sustainable livelihoods"
+      description: "Philanthropic foundation transforming lives through access to education, enterprise, skills development, and sustainable livelihoods",
+      link: "/ruma-foundation"
+    },
+    {
+      name: "Social Innovation Academy (SINA)",
+      role: "Founder",
+      description: "Leadership and innovation institute equipping change makers",
+      link: "/sina"
     },
     {
       name: "Learning Initiative For Entrepreneurship (LIFE)",
       role: "Founder",
-      description: "Innovation-driven skills and enterprise program transforming youth into creators of opportunities"
+      description: "Innovation-driven skills and enterprise program transforming youth into creators of opportunities",
+      link: "/life"
     }
   ];
 

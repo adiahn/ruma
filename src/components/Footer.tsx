@@ -77,7 +77,7 @@ const Footer = () => {
             </h4>
             <div className="space-y-2 sm:space-y-3 text-sm text-slate-300">
               <p>Abuja, Nigeria</p>
-              <p className="break-all">contact@babangidaruma.com</p>
+              <p className="break-all">contact@ruma.ng</p>
               <p>+234 (0) 8100061111</p>
             </div>
           </div>

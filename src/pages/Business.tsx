@@ -73,7 +73,19 @@ const Business = () => {
         'Education Support Programs',
         'Skills Development Initiatives',
         'Community Empowerment Projects'
-      ]
+      ],
+      link: '/ruma-foundation'
+    },
+    {
+      name: 'Social Innovation Academy (SINA)',
+      role: 'Founder',
+      description: 'Forward-thinking leadership and innovation institute equipping change makers with the skills, mindset, and systems to build sustainable impact enterprises and social ventures that solve Nigeria\'s most pressing challenges.',
+      initiatives: [
+        'Leadership Development Programs',
+        'Social Enterprise Incubation',
+        'Innovation Labs'
+      ],
+      link: '/sina'
     },
     {
       name: 'Learning Initiative For Entrepreneurship (LIFE)',
@@ -84,7 +96,8 @@ const Business = () => {
         'Skills Development Programs',
         'Mentorship and Coaching',
         'Opportunity Creation Workshops'
-      ]
+      ],
+      link: '/life'
     },
   ];
 
