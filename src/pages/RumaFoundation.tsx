@@ -95,32 +95,42 @@ const RumaFoundation = () => {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gray-900">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80)'
-          }}
-        />
-        
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/80" />
+      <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-gradient-to-br from-emerald-900 via-green-800 to-teal-800">
+        {/* Decorative Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.05) 10px, rgba(255,255,255,.05) 20px)'
+          }}></div>
+        </div>
         
         <div className="relative z-10 w-full pt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-            <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+            <div className="max-w-5xl mx-auto text-center">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 leading-tight px-4 sm:px-0">
-                  The Ruma Foundation
+                <div className="inline-block mb-8">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-emerald-500 blur-2xl opacity-30"></div>
+                    <div className="relative px-6 py-3 bg-emerald-500/20 backdrop-blur-sm rounded-2xl border border-emerald-400/30">
+                      <span className="text-emerald-100 text-sm font-bold uppercase tracking-widest">Philanthropic Foundation</span>
+                    </div>
+                  </div>
+                </div>
+                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white mb-6 leading-tight">
+                  The Ruma
+                  <span className="block font-bold bg-gradient-to-r from-emerald-300 to-teal-300 bg-clip-text text-transparent">
+                    Foundation
+                  </span>
                 </h1>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 font-medium px-4 sm:px-0">
-                  Transforming Lives Through Education, Enterprise, and Skills Development
+                <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-emerald-400 to-transparent mx-auto mb-8"></div>
+                <p className="text-xl sm:text-2xl md:text-3xl text-emerald-100 mb-6 font-light max-w-3xl mx-auto leading-relaxed">
+                  Creating sustainable change through education, enterprise, and compassionate community support
                 </p>
-                <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-8 sm:mb-12 leading-relaxed max-w-2xl mx-auto px-4 sm:px-0">
-                  A philanthropic foundation dedicated to creating sustainable livelihoods, promoting education, and empowering communities across Northern Nigeria.
+                <p className="text-base sm:text-lg text-emerald-200 max-w-2xl mx-auto font-light">
+                  Empowering vulnerable communities to thrive independently and build a brighter future
                 </p>
               </motion.div>
 
@@ -128,14 +138,14 @@ const RumaFoundation = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center"
+                className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-12"
               >
-                <Button to="/contact" variant="secondary" size="lg" className="px-8">
-                  Get Involved
-                </Button>
-                <Button to="/profile" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black">
+                <button className="px-12 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl shadow-emerald-500/30">
+                  Partner With Us
+                </button>
+                <button className="px-12 py-4 bg-transparent border-2 border-emerald-400 text-emerald-100 font-semibold rounded-xl hover:bg-emerald-400/10 transition-all">
                   Learn More
-                </Button>
+                </button>
               </motion.div>
             </div>
           </div>
@@ -143,40 +153,50 @@ const RumaFoundation = () => {
       </section>
 
       {/* Mission Section */}
-      <section id="about" className="section-padding bg-white">
+      <section id="about" className="section-padding bg-gradient-to-b from-white to-emerald-50/30 py-24">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6">
-                Our Mission
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8">
-                To transform lives through access to education, enterprise, skills development, and sustainable livelihoods, impacting vulnerable groups while promoting leadership, innovation, and economic inclusion.
-              </p>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                Founded by Dr. Babangida Ruma, The Ruma Foundation is committed to creating lasting positive change in underserved communities through comprehensive development initiatives.
-              </p>
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-emerald-900 mb-6">
+                  Our Mission
+                </h2>
+                <div className="w-24 h-0.5 bg-gradient-to-r from-emerald-600 to-teal-600 mx-auto mb-8"></div>
+              </div>
+              <div className="bg-white rounded-3xl shadow-2xl p-8 sm:p-12 border border-emerald-100">
+                <p className="text-xl sm:text-2xl text-gray-700 leading-relaxed mb-8 text-center font-light">
+                  To transform lives through access to education, enterprise, skills development, and sustainable livelihoods, impacting vulnerable groups while promoting leadership, innovation, and economic inclusion.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed text-center">
+                  Founded by Dr. Babangida Ruma, The Ruma Foundation embodies a vision of hope and opportunity, creating lasting positive change in underserved communities through comprehensive development initiatives that address both immediate needs and long-term sustainability.
+                </p>
+              </div>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Impact Stats */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gradient-to-br from-emerald-700 to-teal-700 text-white py-20">
         <div className="container-custom">
           <AnimatedSection animation="fadeIn">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-light mb-4">Our Impact</h2>
+              <p className="text-xl text-emerald-100 font-light">Making a real difference, one life at a time</p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {impactStats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className="text-center bg-white p-6 sm:p-8 border border-gray-200 hover:border-black transition-colors duration-300"
+                  className="text-center bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-emerald-300/30 hover:bg-white/20 transition-all cursor-pointer"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
                 >
-                  <div className="text-4xl sm:text-5xl font-bold text-black mb-2">{stat.number}</div>
-                  <div className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</div>
+                  <div className="text-5xl sm:text-6xl font-light text-white mb-3">{stat.number}</div>
+                  <div className="text-sm sm:text-base text-emerald-100 font-medium">{stat.label}</div>
                 </motion.div>
               ))}
             </div>

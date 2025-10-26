@@ -95,35 +95,33 @@ const SINA = () => {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gray-900">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80)'
-          }}
-        />
-        
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/80" />
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900">
+        {/* Decorative Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400 opacity-20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-400 opacity-20 rounded-full blur-3xl"></div>
+        </div>
         
         <div className="relative z-10 w-full pt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 leading-tight px-4 sm:px-0">
-                  Social Innovation Academy
+                <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
+                  <span className="text-white text-sm font-semibold uppercase tracking-wide">Leadership Academy</span>
+                </div>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 leading-tight px-4 sm:px-0">
+                  Social Innovation
+                  <span className="block text-blue-200">Academy</span>
                 </h1>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-4 sm:mb-6 font-light">
+                <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-100 mb-6">
                   (SINA)
                 </p>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 font-medium px-4 sm:px-0">
-                  Equipping Change Makers to Solve Nigeria's Most Pressing Challenges
-                </p>
-                <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-8 sm:mb-12 leading-relaxed max-w-2xl mx-auto px-4 sm:px-0">
-                  A forward-thinking leadership and innovation institute empowering social entrepreneurs with the skills, mindset, and systems to build sustainable impact enterprises.
+                <p className="text-lg sm:text-xl md:text-2xl text-blue-50 mb-8 max-w-3xl mx-auto font-light">
+                  Empowering the next generation of leaders to create sustainable impact and solve Nigeria's most pressing challenges.
                 </p>
               </motion.div>
 
@@ -131,14 +129,14 @@ const SINA = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center"
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               >
-                <Button to="/contact" variant="secondary" size="lg" className="px-8">
+                <button className="px-8 py-4 bg-white text-blue-700 font-bold rounded-xl hover:bg-blue-50 transition-all transform hover:scale-105 shadow-xl">
                   Join Our Programs
-                </Button>
-                <Button to="/profile" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black">
+                </button>
+                <button className="px-8 py-4 bg-blue-500/30 backdrop-blur-sm border-2 border-white text-white font-bold rounded-xl hover:bg-blue-500/50 transition-all">
                   Learn More
-                </Button>
+                </button>
               </motion.div>
             </div>
           </div>
@@ -146,40 +144,69 @@ const SINA = () => {
       </section>
 
       {/* Mission Section */}
-      <section id="about" className="section-padding bg-white">
+      <section id="about" className="section-padding bg-gradient-to-b from-blue-50 to-white py-20">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6">
-                Our Mission
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8">
-                To equip change makers with the skills, mindset, and systems to build sustainable impact enterprises and social ventures that solve Nigeria's most pressing challenges.
-              </p>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                SINA fosters a culture of innovation and social entrepreneurship, empowering leaders to create lasting positive change in their communities.
-              </p>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-4xl sm:text-5xl font-bold text-blue-900 mb-6">
+                  Our Mission
+                </h2>
+                <div className="w-20 h-1 bg-blue-600 mb-6"></div>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  To equip change makers with the skills, mindset, and systems to build sustainable impact enterprises and social ventures that solve Nigeria's most pressing challenges.
+                </p>
+                <p className="text-base text-gray-600 leading-relaxed">
+                  SINA fosters a culture of innovation and social entrepreneurship, empowering leaders to create lasting positive change in their communities through cutting-edge training programs and mentorship.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl p-8 text-white shadow-2xl">
+                <h3 className="text-2xl font-bold mb-4">Why SINA?</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="text-2xl mr-3">✨</span>
+                    <span>World-class innovation training programs</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-2xl mr-3">🚀</span>
+                    <span>Access to seed funding and resources</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-2xl mr-3">👥</span>
+                    <span>Networking with global leaders</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-2xl mr-3">💡</span>
+                    <span>Hands-on social enterprise incubation</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Impact Stats */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-blue-600 text-white">
         <div className="container-custom">
           <AnimatedSection animation="fadeIn">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Our Impact</h2>
+              <p className="text-blue-100 text-lg">Creating measurable change across Nigeria</p>
+            </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
               {impactStats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className="text-center bg-white p-6 sm:p-8 border border-gray-200 hover:border-black transition-colors duration-300"
+                  className="text-center bg-white/10 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all cursor-pointer"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
                 >
-                  <div className="text-4xl sm:text-5xl font-bold text-black mb-2">{stat.number}</div>
-                  <div className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</div>
+                  <div className="text-4xl sm:text-5xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-sm sm:text-base text-blue-100 font-medium">{stat.label}</div>
                 </motion.div>
               ))}
             </div>

@@ -106,35 +106,36 @@ const LIFE = () => {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gray-900">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80)'
-          }}
-        />
-        
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/80" />
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-br from-orange-500 via-amber-500 to-yellow-500">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-amber-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+        </div>
         
         <div className="relative z-10 w-full pt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-            <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+            <div className="max-w-5xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
+                className="text-center"
               >
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 leading-tight px-4 sm:px-0">
-                  Learning Initiative For Entrepreneurship
+                <div className="inline-flex items-center px-5 py-2 bg-white/20 backdrop-blur-md rounded-full mb-8 border border-white/30">
+                  <span className="text-white text-sm font-bold uppercase tracking-wider">🚀 Young Entrepreneurs Program</span>
+                </div>
+                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-none">
+                  Start Your
+                  <span className="block bg-gradient-to-r from-yellow-200 to-white bg-clip-text text-transparent">Entrepreneurship</span>
+                  <span className="block text-6xl sm:text-7xl md:text-8xl lg:text-9xl">Journey</span>
                 </h1>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-4 sm:mb-6 font-light">
-                  (LIFE)
+                <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-100 mb-4">
+                  LIFE Program
                 </p>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 font-medium px-4 sm:px-0">
-                  Transforming Youth Into Creators of Opportunities
-                </p>
-                <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-8 sm:mb-12 leading-relaxed max-w-2xl mx-auto px-4 sm:px-0">
-                  An innovation-driven skills and enterprise program empowering young people with the tools, knowledge, and mindset to build successful businesses and create their own opportunities.
+                <p className="text-lg sm:text-xl md:text-2xl text-orange-50 mb-12 max-w-3xl mx-auto font-medium">
+                  Transform from an opportunity seeker to an opportunity creator. Build your business from the ground up.
                 </p>
               </motion.div>
 
@@ -142,14 +143,38 @@ const LIFE = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center"
+                className="flex flex-col sm:flex-row gap-6 justify-center items-center"
               >
-                <Button to="/contact" variant="secondary" size="lg" className="px-8">
-                  Join Our Programs
-                </Button>
-                <Button to="/profile" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black">
-                  Learn More
-                </Button>
+                <button className="group px-10 py-5 bg-white text-orange-600 font-black text-lg rounded-2xl hover:shadow-2xl transition-all transform hover:scale-110 hover:-translate-y-1">
+                  Apply Now
+                  <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform">→</span>
+                </button>
+                <button className="px-10 py-5 bg-orange-600/30 backdrop-blur-md border-3 border-white text-white font-black text-lg rounded-2xl hover:bg-orange-600/50 transition-all">
+                  View Program Details
+                </button>
+              </motion.div>
+
+              {/* Stats Banner */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="mt-16 bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
+              >
+                <div className="grid grid-cols-3 gap-8 text-center">
+                  <div>
+                    <div className="text-4xl sm:text-5xl font-black text-white">2000+</div>
+                    <div className="text-yellow-100 text-sm font-bold mt-2">Graduates</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl sm:text-5xl font-black text-white">500+</div>
+                    <div className="text-yellow-100 text-sm font-bold mt-2">Startups</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl sm:text-5xl font-black text-white">₦50M+</div>
+                    <div className="text-yellow-100 text-sm font-bold mt-2">Funding Raised</div>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>
@@ -157,40 +182,69 @@ const LIFE = () => {
       </section>
 
       {/* Mission Section */}
-      <section id="about" className="section-padding bg-white">
+      <section id="about" className="section-padding bg-white py-24">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6">
-                Our Mission
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8">
-                To transform youth into creators of opportunities through innovation-driven skills development and comprehensive entrepreneurship training.
-              </p>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                LIFE provides young people with the practical skills, knowledge, and entrepreneurial mindset needed to build successful businesses and contribute to economic development.
-              </p>
+            <div className="grid lg:grid-cols-3 gap-12 items-start">
+              <div className="lg:col-span-2">
+                <h2 className="text-5xl sm:text-6xl font-black text-orange-600 mb-6 leading-tight">
+                  Turn Your Ideas Into
+                  <span className="block text-orange-800">Profitable Businesses</span>
+                </h2>
+                <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 mb-8"></div>
+                <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                  LIFE is not just a training program—it's a complete entrepreneurship ecosystem designed to transform ambitious young Nigerians into successful business owners.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  With hands-on mentorship, access to funding opportunities, and a supportive community of fellow entrepreneurs, you'll have everything you need to succeed.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-orange-500 to-amber-500 rounded-3xl p-10 text-white shadow-2xl transform hover:scale-105 transition-transform">
+                <h3 className="text-3xl font-black mb-6">What You Get</h3>
+                <ul className="space-y-4 text-lg">
+                  <li className="flex items-start">
+                    <span className="text-3xl mr-4">💼</span>
+                    <span className="font-semibold">Business Plan Development</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-3xl mr-4">💰</span>
+                    <span className="font-semibold">Access to Startup Funding</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-3xl mr-4">🤝</span>
+                    <span className="font-semibold">1-on-1 Mentorship</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-3xl mr-4">🌐</span>
+                    <span className="font-semibold">Networking Opportunities</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Impact Stats */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gradient-to-br from-orange-600 to-amber-600 text-white py-20">
         <div className="container-custom">
           <AnimatedSection animation="fadeIn">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl sm:text-6xl font-black mb-4">Our Impact</h2>
+              <p className="text-xl text-orange-100">Real Results. Real Businesses. Real Impact.</p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {impactStats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className="text-center bg-white p-6 sm:p-8 border border-gray-200 hover:border-black transition-colors duration-300"
+                  className="text-center bg-white/20 backdrop-blur-md p-8 rounded-2xl border border-white/30 hover:bg-white/30 transition-all cursor-pointer transform hover:scale-110"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-4xl sm:text-5xl font-bold text-black mb-2">{stat.number}</div>
-                  <div className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</div>
+                  <div className="text-5xl sm:text-6xl font-black text-white mb-3">{stat.number}</div>
+                  <div className="text-base text-orange-100 font-bold uppercase tracking-wide">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
