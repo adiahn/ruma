@@ -54,7 +54,8 @@ const Business = () => {
         'Entrepreneurship Education',
         'Enterprise Research',
         'Innovation Programs'
-      ]
+      ],
+      link: '/eun'
     },
     {
       name: 'MSMEs Business Management Organization (BMO)',

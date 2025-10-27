@@ -65,7 +65,8 @@ const Profile = () => {
     {
       name: "Enterprise University of Nigeria (EUN)",
       role: "Founder",
-      description: "Institution focused on nurturing a new generation of entrepreneurs"
+      description: "Institution focused on nurturing a new generation of entrepreneurs",
+      link: "/eun"
     },
     {
       name: "The Ruma Foundation",

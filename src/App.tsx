@@ -19,6 +19,7 @@ import Gallery from './pages/library/Gallery';
 import RumaFoundation from './pages/RumaFoundation';
 import SINA from './pages/SINA';
 import LIFE from './pages/LIFE';
+import EUN from './pages/EUN';
 
 // CODE-specific Header component
 const CODEHeader = () => {
@@ -352,6 +353,84 @@ const LIFEHeader = () => {
   );
 };
 
+// EUN Header
+const EUNHeader = () => {
+  const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setIsMobileMenuOpen(false);
+    }
+  };
+
+  return (
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 bg-white ${
+      isScrolled ? 'shadow-md' : ''
+    }`}>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <a href="/eun" className="flex items-center hover:opacity-80 transition-all">
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center mr-3">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14v6m-3-6h6" />
+              </svg>
+            </div>
+            <div>
+              <div className="text-xl font-bold text-gray-900">EUN</div>
+              <div className="text-xs text-gray-500">Enterprise University of Nigeria</div>
+            </div>
+          </a>
+          <nav className="hidden md:flex items-center space-x-1">
+            <a href="#programs" onClick={(e) => scrollToSection(e, 'programs')} className="px-5 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
+              Programs
+            </a>
+            <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="px-5 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
+              About
+            </a>
+            <a href="#admissions" onClick={(e) => scrollToSection(e, 'admissions')} className="px-5 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
+              Admissions
+            </a>
+            <a href="/contact" className="ml-4 px-6 py-2 bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors rounded-lg">
+              Apply Now
+            </a>
+          </nav>
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden p-2 text-gray-700 hover:text-gray-900 transition-colors">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+        {isMobileMenuOpen && (
+          <div className="md:hidden border-t border-gray-200 py-4 bg-white">
+            <div className="flex flex-col space-y-1">
+              <a href="#programs" onClick={(e) => scrollToSection(e, 'programs')} className="px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg">Programs</a>
+              <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg">About</a>
+              <a href="#admissions" onClick={(e) => scrollToSection(e, 'admissions')} className="px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg">Admissions</a>
+              <a href="/contact" className="mx-4 mt-2 px-6 py-3 bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 rounded-lg text-center">Apply Now</a>
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
 // Wrapper component to conditionally render headers
 const AppContent = () => {
   const location = useLocation();
@@ -359,13 +438,15 @@ const AppContent = () => {
   const isRumaFoundationPage = location.pathname === '/ruma-foundation';
   const isSINAPage = location.pathname === '/sina';
   const isLIFEPage = location.pathname === '/life';
-  const isStandalonePage = ['/code', '/ruma-foundation', '/sina', '/life'].includes(location.pathname);
+  const isEUNPage = location.pathname === '/eun';
+  const isStandalonePage = ['/code', '/ruma-foundation', '/sina', '/life', '/eun'].includes(location.pathname);
 
   const renderHeader = () => {
     if (isCODEPage) return <CODEHeader />;
     if (isRumaFoundationPage) return <RumaFoundationHeader />;
     if (isSINAPage) return <SINAHeader />;
     if (isLIFEPage) return <LIFEHeader />;
+    if (isEUNPage) return <EUNHeader />;
     return <Header />;
   };
 
@@ -381,6 +462,7 @@ const AppContent = () => {
           <Route path="/ruma-foundation" element={<RumaFoundation />} />
           <Route path="/sina" element={<SINA />} />
           <Route path="/life" element={<LIFE />} />
+          <Route path="/eun" element={<EUN />} />
           <Route path="/recognitions" element={<Recognitions />} />
           <Route path="/media" element={<Media />} />
           <Route path="/contact" element={<Contact />} />
