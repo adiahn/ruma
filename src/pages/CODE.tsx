@@ -1,60 +1,95 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, GraduationCap, Rocket, TrendingUp, Target, Heart, Sparkles, Globe } from 'lucide-react';
+import { Users, GraduationCap, Rocket, TrendingUp, Target, Heart, Sparkles, Globe, Building2, BookOpen, Briefcase, Award } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 import Button from '../components/Button';
 
 const CODE = () => {
   const impactStats = [
-    { number: '10,000+', label: 'Women & Girls Empowered' },
-    { number: '5,000+', label: 'Entrepreneurs Trained' },
-    { number: '50+', label: 'Communities Impacted' },
-    { number: '15+', label: 'Years of Service' }
+    { number: '2,000,000', label: 'Target Beneficiaries by 2030' },
+    { number: '5,000,000+', label: 'OHUB Subscribers Worldwide' },
+    { number: '10,000', label: 'Youth Trained Annually' },
+    { number: '300+', label: 'Marginalized Communities' }
   ];
 
   const corePrograms = [
     {
-      name: 'WAGES',
-      fullName: 'Women & Girls-Child Entrepreneurship Support Program',
-      description: 'Empowering women and girls through entrepreneurship training, mentorship, and access to funding opportunities to create sustainable businesses and economic independence.',
+      name: 'Opportunities Hub (OHUB)',
+      description: 'Digital Business Incubation Training and Capacity Development hub with over 5 million subscribers worldwide. A platform profiling opportunities for young people across Africa.',
       features: [
-        'Business Skills Training',
-        'Mentorship Programs',
-        'Access to Microfinance',
-        'Market Linkage Support'
+        'Access to IT Facilities and Job Search',
+        'Access to Loan and Scholarship Programs',
+        'CV, Job Application and Interview Help',
+        'Links to Volunteering and Work Placements',
+        'Online Training and Certification',
+        'Free Vocational and Soft Skills Training',
+        'Access to Start-up Grants',
+        'Personalized Employment Support'
+      ],
+      Icon: Globe
+    },
+    {
+      name: 'Digital Skills Clinic',
+      description: 'Dual-mode enterprise education initiative leveraging public-private partnerships to drive entrepreneurship and job creation for underserved communities.',
+      features: [
+        'MSMED for Small Business Owners',
+        'Startup Programs for Unemployed Youth',
+        'SPACE - Support Program for Continuing Education',
+        'UNIPREP - University Preparation Program',
+        'Deepening Financial Inclusion',
+        'Supporting Corps of Volunteers',
+        'E-Business Development Support'
+      ],
+      Icon: Building2
+    },
+    {
+      name: 'Digital Skills Bank',
+      description: 'Program designed to boost livelihood and employability outcomes for 10,000 uneducated rural youth annually through informal training and development.',
+      features: [
+        'One-Stop Digital Skills Market Eco-System',
+        'Online Human Resource Platform (www.skillsbank.ng)',
+        'Specialized Vocation Showcase',
+        'Flexible Service Connection',
+        'Earn-as-you-go Opportunities',
+        'Bridging Economic Gaps',
+        'Sustainable Rural Development'
+      ],
+      Icon: Briefcase
+    },
+    {
+      name: 'WAGES',
+      description: 'Women And Girl-Child Entrepreneurship Support initiative with extensive training on ICT, Vocation Skills, and Business Management.',
+      features: [
+        'ICT and Vocation Skills Training',
+        'Business Management Development',
+        'Sustainable Income Generation',
+        'Dual-Mode Learning System',
+        'Micro-credit Access Linkage',
+        'Business Incubation Centers',
+        'Competitive Certifications'
       ],
       Icon: Users
     },
     {
-      name: 'INCOMING',
-      fullName: 'Initiative for Community Intervention on Girls-Child',
-      description: 'Protecting and supporting vulnerable girls through education, skills training, and community-based interventions to prevent child marriage and promote empowerment.',
+      name: '#GoBackToSchool',
+      description: 'Broad-based coalition dedicated to ensuring quality education for all, focusing on women and girl-child education.',
       features: [
-        'Education Support',
-        'Skills Development',
-        'Community Awareness',
-        'Protection Services'
+        'Returning Children to School',
+        'Raising Awareness Campaigns',
+        'Financial Assistance and Scholarships',
+        'Advocacy Visits to Community Leaders',
+        'Quality Education Campaigns',
+        'Intra and Inter-school Quiz Competitions',
+        'Vocational Training Programs'
       ],
-      Icon: GraduationCap
-    },
-    {
-      name: 'LIFE',
-      fullName: 'Learning Initiative for Entrepreneurship',
-      description: 'An innovation-driven skills and enterprise program transforming youth into creators of opportunities through practical entrepreneurship education and mentorship.',
-      features: [
-        'Enterprise Training',
-        'Innovation Labs',
-        'Startup Incubation',
-        'Investment Readiness'
-      ],
-      Icon: Rocket
+      Icon: BookOpen
     }
   ];
 
   const values = [
     {
       title: 'Empowerment',
-      description: 'We believe in unlocking the potential of every woman and girl to create positive change in their communities.',
+      description: 'We believe in unlocking the potential of every individual to create positive change in their communities.',
       Icon: TrendingUp
     },
     {
@@ -64,7 +99,7 @@ const CODE = () => {
     },
     {
       title: 'Inclusion',
-      description: 'We ensure that underserved communities, especially women and girls, have equal access to opportunities.',
+      description: 'We ensure that underserved communities have equal access to opportunities and resources.',
       Icon: Globe
     },
     {
@@ -76,20 +111,20 @@ const CODE = () => {
 
   const achievements = [
     {
-      title: 'Girl-Child Education Advocacy',
-      content: 'Promoting access to quality education for thousands of girls across Northern Nigeria.'
+      title: 'CAC Registration',
+      content: 'Registered with Corporate Affairs Commission (CAC) in Nigeria 2023 as Ruma Initiative for Collective Development (CODE)'
     },
     {
-      title: 'Women Entrepreneurship',
-      content: 'Supporting women-led businesses and creating economic opportunities in underserved communities.'
+      title: 'Global Recognition',
+      content: 'OHUB recognized in 190 countries worldwide with over 100 million website hits annually'
     },
     {
-      title: 'Skills Development',
-      content: 'Providing vocational training and digital skills to enhance employability and entrepreneurship.'
+      title: 'Partnership Network',
+      content: 'Supported by UNIDO, Google, NBTE, and MSME Business Management Organization'
     },
     {
-      title: 'Community Transformation',
-      content: 'Building stronger communities through education, empowerment, and sustainable development initiatives.'
+      title: 'Training Impact',
+      content: 'Training of persons with disabilities, artisans, unserved youth, and women on ICT and entrepreneurship'
     }
   ];
 
@@ -126,10 +161,10 @@ const CODE = () => {
                   (CODE)
                 </p>
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 font-medium px-4 sm:px-0">
-                  Pioneering Foundation for Girl-Child Education & Women's Empowerment
+                  Time to Bridge the Digital Wealth and Knowledge Divide
                 </p>
                 <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-8 sm:mb-12 leading-relaxed max-w-2xl mx-auto px-4 sm:px-0">
-                  Transforming lives through education, entrepreneurship, and community-driven initiatives across Northern Nigeria and beyond.
+                  "All of the services we provide in our different programs are 100% free and priority is given to the most vulnerable members of the Community"
                 </p>
               </motion.div>
 
@@ -151,41 +186,113 @@ const CODE = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section id="about" className="section-padding bg-white">
+      {/* About Section */}
+      <section id="about" className="section-padding bg-white py-24">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6">
-                Our Mission
+            <div className="max-w-4xl mx-auto text-center mb-20">
+              <h2 className="text-5xl sm:text-6xl font-light text-black mb-6 tracking-tight">
+                About Us
               </h2>
-              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8">
-                To advance girl-child education, women's empowerment, and community-driven entrepreneurship through innovative programs and sustainable initiatives.
-              </p>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                Under the visionary leadership of Dr. Babangida Ruma, CODE has launched groundbreaking initiatives that position it as a leading force for social and economic transformation. We believe that when women and girls are empowered, entire communities thrive.
-              </p>
+              <div className="w-16 h-px bg-gray-400 mx-auto mb-8"></div>
             </div>
           </AnimatedSection>
+
+          <div className="max-w-5xl mx-auto">
+            <AnimatedSection animation="slideUp">
+              <div className="prose prose-lg mx-auto text-gray-700 font-light leading-relaxed">
+                <p className="text-lg mb-8">
+                  Founded in 2013, Ruma Initiative as Cooperative Society and later registered with Corporate Affairs Commission (CAC) in Nigeria 2023 as Ruma Initiative for Collective Development which is fondly called Collective Development [CODE] as non governmental and nonprofit grassroots foundation that works in unserved, underserved, underprivileged and marginalized communities, leveraging technology, Innovation and creativity to close learning gaps, tackle digital inequity, unemployment, access to opportunities and ensure skills development for poor and vulnerable children and youth from low-income families.
+                </p>
+                
+                <p className="text-lg mb-8">
+                  We provide innovative, life-saving support to those in need and strive to create more enabling and progressive environments through our work. Our philosophy on aid and development is centered on locally driven solutions from a committed and professional collective of compassionate people.
+                </p>
+                
+                <p className="text-lg mb-8">
+                  We are changing lives by developing skills to an individual, enterprise and community level throughout Nigeria. Our technical and vocational skills training programs focus on addressing the scarce and critical skills shortage throughout the country.
+                </p>
+                
+                <p className="text-lg mb-8">
+                  We foster job creation by means of facilitating apprenticeships, co-operative learning opportunities, skills advancement, work placements to our Digital Innovation Centre (DIC). Our model is centered on Training And Placing (TAP) our graduates; through partnerships we facilitate for them with private sector co-operations as well as the Federal Government public private companies.
+                </p>
+                
+                <p className="text-lg">
+                  Our graduates receive a trade specific toolkit on successful completion of the course and each year we increase the number of Business/cooperative/enterprise start up grants we award graduates who demonstrate sound business plans.
+                </p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission, Vision, Goal Section */}
+      <section className="section-padding bg-gray-50 py-24">
+        <div className="container-custom">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-12">
+              <AnimatedSection animation="slideUp">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Target size={32} className="text-white" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-2xl font-light text-black mb-4 tracking-tight">Mission</h3>
+                  <p className="text-base text-gray-600 font-light leading-relaxed">
+                    To organize, mobilize and channel human, material, physical and financial resources towards creating multiple, alternative and informal learning and skills opportunities for marginalized populations in order to attain self-reliance and self-development.
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection animation="slideUp" delay={0.2}>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Sparkles size={32} className="text-white" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-2xl font-light text-black mb-4 tracking-tight">Vision</h3>
+                  <p className="text-base text-gray-600 font-light leading-relaxed">
+                    Improve the access and quality of education, skills development available to poor and vulnerable children in rural communities across Nigeria.
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection animation="slideUp" delay={0.4}>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Award size={32} className="text-white" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-2xl font-light text-black mb-4 tracking-tight">Our Goal</h3>
+                  <p className="text-base text-gray-600 font-light leading-relaxed">
+                    Our 10-year Goal is to educate, empower and skill Up 2,000,000 children, youth and women by 2030. Educate-Empower-Skill Up 2million Children, youth and women 2030
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Impact Stats */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-white py-24">
         <div className="container-custom">
           <AnimatedSection animation="fadeIn">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl sm:text-6xl font-light text-black mb-6 tracking-tight">
+                Our Impact
+              </h2>
+              <div className="w-16 h-px bg-gray-400 mx-auto mb-8"></div>
+            </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
               {impactStats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className="text-center bg-white p-6 sm:p-8 border border-gray-200 hover:border-black transition-colors duration-300"
+                  className="text-center bg-gray-50 p-6 sm:p-8 border border-gray-200 hover:border-black transition-colors duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-4xl sm:text-5xl font-bold text-black mb-2">{stat.number}</div>
-                  <div className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</div>
+                  <div className="text-4xl sm:text-5xl font-light text-black mb-2">{stat.number}</div>
+                  <div className="text-sm sm:text-base text-gray-600 font-light">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -194,57 +301,51 @@ const CODE = () => {
       </section>
 
       {/* Core Programs */}
-      <section id="programs" className="section-padding bg-white">
+      <section id="programs" className="section-padding bg-gray-50 py-24">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
-                Our Programs
+            <div className="text-center mb-20 max-w-3xl mx-auto">
+              <h2 className="text-5xl sm:text-6xl font-light text-black mb-6 tracking-tight">
+                Our Initiatives
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
-                Three flagship initiatives driving transformative impact across Northern Nigeria
+              <div className="w-16 h-px bg-gray-400 mx-auto mb-8"></div>
+              <p className="text-lg text-gray-600 font-light leading-relaxed">
+                Comprehensive programs designed to bridge the digital wealth and knowledge divide
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="space-y-12">
+          <div className="space-y-24 max-w-4xl mx-auto">
             {corePrograms.map((program, index) => {
               const IconComponent = program.Icon;
               return (
                 <AnimatedSection key={index} animation={index % 2 === 0 ? "slideInLeft" : "slideInRight"}>
                   <motion.div
-                    className={`grid md:grid-cols-2 gap-8 sm:gap-12 items-center ${
-                      index % 2 === 1 ? 'md:flex-row-reverse' : ''
-                    }`}
+                    className="border-b border-gray-200 pb-20 last:border-0"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                   >
-                    {/* Icon & Name */}
-                    <div className={`bg-gray-50 border border-gray-200 p-6 sm:p-8 md:p-12 ${index % 2 === 1 ? 'order-2' : ''}`}>
-                      <div className="text-center">
-                        <div className="flex justify-center mb-4 sm:mb-6">
-                          <IconComponent size={80} className="text-black" strokeWidth={1.5} />
-                        </div>
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-2">{program.name}</h3>
-                        <p className="text-sm sm:text-base md:text-lg text-gray-700 px-4 sm:px-0">{program.fullName}</p>
+                    <div className="flex items-start gap-8 mb-8">
+                      <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center border border-gray-300 rounded-full bg-white">
+                        <IconComponent size={24} className="text-gray-700" strokeWidth={1.5} />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-3xl font-light text-black mb-4 tracking-tight">{program.name}</h3>
+                        <p className="text-base text-gray-600 leading-relaxed font-light max-w-2xl">
+                          {program.description}
+                        </p>
                       </div>
                     </div>
-
-                    {/* Description */}
-                    <div className={`${index % 2 === 1 ? 'order-1' : ''}`}>
-                      <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
-                        {program.description}
-                      </p>
-                      <ul className="space-y-2 sm:space-y-3">
-                        {program.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <span className="text-black mr-2 sm:mr-3 text-lg sm:text-xl">•</span>
-                            <span className="text-sm sm:text-base text-gray-700">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    
+                    <div className="ml-22 grid sm:grid-cols-2 gap-4">
+                      {program.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-start">
+                          <span className="text-gray-400 mr-3 mt-1">—</span>
+                          <span className="text-sm text-gray-700 font-light">{feature}</span>
+                        </div>
+                      ))}
                     </div>
                   </motion.div>
                 </AnimatedSection>
@@ -255,36 +356,37 @@ const CODE = () => {
       </section>
 
       {/* Core Values */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-white py-24">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
+            <div className="text-center mb-20 max-w-3xl mx-auto">
+              <h2 className="text-5xl sm:text-6xl font-light text-black mb-6 tracking-tight">
                 Our Values
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+              <div className="w-16 h-px bg-gray-400 mx-auto mb-8"></div>
+              <p className="text-lg text-gray-600 font-light leading-relaxed">
                 The principles that guide everything we do
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
               const IconComponent = value.Icon;
               return (
                 <motion.div
                   key={index}
-                  className="bg-white border border-gray-200 p-6 sm:p-8 hover:border-black transition-colors duration-300"
+                  className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="flex justify-center mb-4">
-                    <IconComponent size={48} className="text-black" strokeWidth={1.5} />
+                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <IconComponent size={32} className="text-gray-700" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-black mb-3 text-center">{value.title}</h3>
-                  <p className="text-sm sm:text-base text-gray-600 text-center">{value.description}</p>
+                  <h3 className="text-xl font-light text-black mb-4 tracking-tight">{value.title}</h3>
+                  <p className="text-sm text-gray-600 font-light leading-relaxed">{value.description}</p>
                 </motion.div>
               );
             })}
@@ -293,44 +395,47 @@ const CODE = () => {
       </section>
 
       {/* Achievements */}
-      <section id="impact" className="section-padding bg-white">
+      <section id="impact" className="section-padding bg-gray-50 py-24">
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
-                Our Impact
+            <div className="text-center mb-20 max-w-3xl mx-auto">
+              <h2 className="text-5xl sm:text-6xl font-light text-black mb-6 tracking-tight">
+                Key Achievements
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
-                Creating lasting change in communities across Northern Nigeria
+              <div className="w-16 h-px bg-gray-400 mx-auto mb-8"></div>
+              <p className="text-lg text-gray-600 font-light leading-relaxed">
+                Milestones in our journey of transformation
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                className="border-l-4 border-black pl-6 py-4 bg-gray-50"
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-lg sm:text-xl font-bold text-black mb-3">{achievement.title}</h3>
-                <p className="text-sm sm:text-base text-gray-700">{achievement.content}</p>
-              </motion.div>
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-8">
+              {achievements.map((achievement, index) => (
+                <motion.div
+                  key={index}
+                  className="border-l-4 border-black pl-8 py-6 bg-white"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-xl font-light text-black mb-3 tracking-tight">{achievement.title}</h3>
+                  <p className="text-base text-gray-600 font-light leading-relaxed">{achievement.content}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
       <AnimatedSection animation="fadeIn">
-        <section className="section-padding bg-black text-white">
+        <section className="section-padding bg-black text-white py-24">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
               <motion.h2
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -338,7 +443,7 @@ const CODE = () => {
                 Join Us in Creating Lasting Change
               </motion.h2>
               <motion.p
-                className="text-base sm:text-lg md:text-xl text-gray-300 mb-12 leading-relaxed"
+                className="text-base sm:text-lg md:text-xl text-gray-300 mb-12 leading-relaxed font-light"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -370,10 +475,11 @@ const CODE = () => {
             {/* Brand */}
             <div className="sm:col-span-2 lg:col-span-2">
               <div className="mb-6">
-                <h3 className="text-2xl sm:text-3xl font-bold text-black">Collective Development</h3>
-                <p className="text-lg sm:text-xl text-gray-600 mt-2">(CODE)</p>
+                <h3 className="text-2xl sm:text-3xl font-light text-black tracking-tight">Collective Development</h3>
+                <p className="text-lg sm:text-xl text-gray-600 mt-2 font-light">(CODE)</p>
+                <p className="text-sm text-gray-500 mt-2">CAC/IT:7420182</p>
               </div>
-              <p className="text-sm sm:text-base text-gray-600 mb-6 max-w-md">
+              <p className="text-sm sm:text-base text-gray-600 mb-6 max-w-md font-light">
                 Pioneering foundation advancing girl-child education and women's empowerment across Northern Nigeria.
               </p>
               <div className="flex space-x-3 sm:space-x-4">
@@ -415,23 +521,33 @@ const CODE = () => {
 
             {/* Programs */}
             <div>
-              <h4 className="text-sm font-semibold text-black uppercase tracking-wider mb-4">
+              <h4 className="text-sm font-light text-black uppercase tracking-wider mb-4">
                 Our Programs
               </h4>
               <ul className="space-y-2 sm:space-y-3">
                 <li>
-                  <a href="#programs" className="text-sm text-gray-600 hover:text-black transition-colors block py-1">
+                  <a href="#programs" className="text-sm text-gray-600 hover:text-black transition-colors block py-1 font-light">
+                    OHUB
+                  </a>
+                </li>
+                <li>
+                  <a href="#programs" className="text-sm text-gray-600 hover:text-black transition-colors block py-1 font-light">
+                    Digital Skills Clinic
+                  </a>
+                </li>
+                <li>
+                  <a href="#programs" className="text-sm text-gray-600 hover:text-black transition-colors block py-1 font-light">
+                    Digital Skills Bank
+                  </a>
+                </li>
+                <li>
+                  <a href="#programs" className="text-sm text-gray-600 hover:text-black transition-colors block py-1 font-light">
                     WAGES
                   </a>
                 </li>
                 <li>
-                  <a href="#programs" className="text-sm text-gray-600 hover:text-black transition-colors block py-1">
-                    INCOMING
-                  </a>
-                </li>
-                <li>
-                  <a href="#programs" className="text-sm text-gray-600 hover:text-black transition-colors block py-1">
-                    LIFE
+                  <a href="#programs" className="text-sm text-gray-600 hover:text-black transition-colors block py-1 font-light">
+                    #GoBackToSchool
                   </a>
                 </li>
               </ul>
@@ -439,13 +555,14 @@ const CODE = () => {
 
             {/* Contact Info */}
             <div>
-              <h4 className="text-sm font-semibold text-black uppercase tracking-wider mb-4">
+              <h4 className="text-sm font-light text-black uppercase tracking-wider mb-4">
                 Contact
               </h4>
-              <div className="space-y-2 sm:space-y-3 text-sm text-gray-600">
+              <div className="space-y-2 sm:space-y-3 text-sm text-gray-600 font-light">
                 <p>Northern Nigeria</p>
-                <p className="break-all">info@codefoundation.org</p>
+                <p className="break-all">info@collectivedevelopment.ng</p>
                 <p>+234 (0) 8100061111</p>
+                <p>+234 (0) 8100000739</p>
               </div>
             </div>
           </div>
@@ -453,20 +570,20 @@ const CODE = () => {
           {/* Bottom Bar */}
           <div className="border-t border-gray-300 pt-6 sm:pt-8">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-              <p className="text-xs sm:text-sm text-gray-500 text-center sm:text-left">
+              <p className="text-xs sm:text-sm text-gray-500 text-center sm:text-left font-light">
                 © {currentYear} Collective Development (CODE). All rights reserved.
               </p>
               <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
-                <a href="#" className="text-xs sm:text-sm text-gray-500 hover:text-black transition-colors py-1">
+                <a href="#" className="text-xs sm:text-sm text-gray-500 hover:text-black transition-colors py-1 font-light">
                   Privacy Policy
                 </a>
-                <a href="#" className="text-xs sm:text-sm text-gray-500 hover:text-black transition-colors py-1">
+                <a href="#" className="text-xs sm:text-sm text-gray-500 hover:text-black transition-colors py-1 font-light">
                   Terms of Service
                 </a>
               </div>
             </div>
             <div className="mt-4 pt-4 border-t border-gray-300">
-              <p className="text-xs text-gray-500 text-center">
+              <p className="text-xs text-gray-500 text-center font-light">
                 Founded by Dr. Babangida Ruma | A registered non-profit organization
               </p>
             </div>
