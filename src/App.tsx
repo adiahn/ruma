@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { GraduationCap } from 'lucide-react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -382,7 +381,7 @@ const EUNHeader = () => {
         <div className="flex items-center justify-between h-16">
           <a href="/eun" className="flex items-center hover:opacity-80 transition-all">
             <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center mr-3">
-              <GraduationCap className="w-6 h-6 text-white" />
+              <span className="text-white font-bold text-lg">E</span>
             </div>
             <div>
               <div className="text-xl font-bold text-gray-900">EUN</div>

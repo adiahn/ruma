@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, BookOpen, Users, Award, Building2, CheckCircle, ArrowRight, Target, TrendingUp, Globe } from 'lucide-react';
 
 const EUN = () => {
   const programs = [
@@ -43,30 +42,26 @@ const EUN = () => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Students Enrolled', icon: Users },
-    { number: '50+', label: 'Industry Partners', icon: Building2 },
-    { number: '95%', label: 'Employment Rate', icon: TrendingUp },
-    { number: '15+', label: 'Countries Represented', icon: Globe }
+    { number: '500+', label: 'Students Enrolled' },
+    { number: '50+', label: 'Industry Partners' },
+    { number: '95%', label: 'Employment Rate' },
+    { number: '15+', label: 'Countries Represented' }
   ];
 
   const values = [
     {
-      icon: Target,
       title: 'Innovation Driven',
       description: 'Fostering creative thinking and innovative solutions to real-world challenges'
     },
     {
-      icon: Award,
       title: 'Excellence',
       description: 'Commitment to academic rigor and highest standards of education'
     },
     {
-      icon: Users,
       title: 'Practical Learning',
       description: 'Hands-on experience with real-world projects and industry partnerships'
     },
     {
-      icon: Globe,
       title: 'Global Perspective',
       description: 'Preparing students for international opportunities and global leadership'
     }
@@ -89,7 +84,7 @@ const EUN = () => {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <GraduationCap className="w-6 h-6 text-white" />
+                <span className="text-white font-bold text-lg">E</span>
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">EUN</h1>
@@ -127,9 +122,8 @@ const EUN = () => {
                 Enterprise University of Nigeria is dedicated to nurturing innovative leaders and entrepreneurs through practical, industry-focused education.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center">
+                <button className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                   Apply Now
-                  <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
                 <button className="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-colors">
                   Learn More
@@ -144,10 +138,7 @@ const EUN = () => {
               className="relative"
             >
               <div className="relative w-full h-96 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl shadow-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center opacity-30"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <GraduationCap className="w-32 h-32 text-white opacity-50" />
-                </div>
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
               </div>
             </motion.div>
           </div>
@@ -158,8 +149,7 @@ const EUN = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
+                          {stats.map((stat, index) => {
               return (
                 <motion.div
                   key={index}
@@ -169,9 +159,6 @@ const EUN = () => {
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-8 h-8 text-blue-600" />
-                  </div>
                   <div className="text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>
                   <div className="text-gray-600">{stat.label}</div>
                 </motion.div>
@@ -194,7 +181,6 @@ const EUN = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => {
-              const Icon = value.icon;
               return (
                 <motion.div
                   key={index}
@@ -204,9 +190,6 @@ const EUN = () => {
                   viewport={{ once: true }}
                   className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                    <Icon className="w-7 h-7 text-blue-600" />
-                  </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
                 </motion.div>
@@ -237,16 +220,9 @@ const EUN = () => {
                 viewport={{ once: true }}
                 className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-blue-500 transition-all hover:shadow-lg"
               >
-                <div className="flex items-start justify-between mb-6">
-                  <div className="flex items-start gap-6">
-                    <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="w-7 h-7 text-blue-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{program.name}</h3>
-                      <p className="text-sm text-gray-500">{program.duration}</p>
-                    </div>
-                  </div>
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{program.name}</h3>
+                  <p className="text-sm text-gray-500">{program.duration}</p>
                 </div>
                 
                 <p className="text-gray-700 mb-6 leading-relaxed">{program.description}</p>
@@ -254,7 +230,7 @@ const EUN = () => {
                 <div className="grid sm:grid-cols-2 gap-4">
                   {program.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-blue-600 font-bold mr-2">•</span>
                       <span className="text-gray-700">{feature}</span>
                     </div>
                   ))}
@@ -283,7 +259,7 @@ const EUN = () => {
                 viewport={{ once: true }}
                 className="flex items-start gap-4"
               >
-                <CheckCircle className="w-6 h-6 text-blue-200 flex-shrink-0 mt-1" />
+                <span className="text-blue-200 font-bold mr-2">•</span>
                 <p className="text-lg">{item}</p>
               </motion.div>
             ))}
@@ -299,9 +275,8 @@ const EUN = () => {
             Join us and become part of the next generation of innovative entrepreneurs
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-10 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center text-lg">
+            <button className="px-10 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg">
               Apply Now
-              <ArrowRight className="w-5 h-5 ml-2" />
             </button>
             <button className="px-10 py-4 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-colors text-lg">
               Contact Us
@@ -317,7 +292,7 @@ const EUN = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6" />
+                  <span className="text-white font-bold text-lg">E</span>
                 </div>
                 <div>
                   <h3 className="text-lg font-bold">EUN</h3>
