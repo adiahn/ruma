@@ -9,6 +9,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLibraryOpen, setIsLibraryOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isInitiativesOpen, setIsInitiativesOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -56,6 +57,14 @@ const Header = () => {
     { name: 'Speeches', path: '/library/speeches' },
     { name: 'Books', path: '/library/books' },
     { name: 'Gallery', path: '/library/gallery' },
+  ];
+
+  const initiativesItems = [
+    { name: 'Collective Development (CODE)', path: '/code' },
+    { name: 'The Ruma Foundation', path: '/ruma-foundation' },
+    { name: 'Social Innovation Academy (SINA)', path: '/sina' },
+    { name: 'LIFE (Learning Initiative For Entrepreneurship)', path: '/life' },
+    { name: 'Enterprise University of Nigeria (EUN)', path: '/eun' },
   ];
 
   const closeMenu = () => setIsMobileMenuOpen(false);
@@ -153,6 +162,49 @@ const Header = () => {
                       >
                         {item.name}
                       </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Initiatives Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsInitiativesOpen(true)}
+              onMouseLeave={() => setIsInitiativesOpen(false)}
+            >
+              <button
+                className={`relative px-5 font-medium transition-all duration-300 rounded-lg flex items-center gap-1 ${
+                  isScrolled ? 'py-2 text-sm' : 'py-2.5 text-base'
+                } ${
+                  location.pathname === '/business'
+                    ? 'text-slate-900 bg-slate-100'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                }`}
+              >
+                Initiatives
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isInitiativesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              <AnimatePresence>
+                {isInitiativesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-[340px] bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50"
+                  >
+                    {initiativesItems.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`block px-4 py-2.5 text-base font-medium transition-colors duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50`}
+                      >
+                        {item.name}
+                      </a>
                     ))}
                   </motion.div>
                 )}
@@ -304,6 +356,23 @@ const Header = () => {
                     </Link>
                   );
                 })}
+              </div>
+
+              {/* Initiatives Submenu - Mobile (opens in new tab) */}
+              <div className="pt-2">
+                <div className="text-sm font-semibold text-slate-400 px-4 py-2">Initiatives</div>
+                {initiativesItems.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeMenu}
+                    className={`block px-4 py-3 pl-8 text-base font-medium rounded-md transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50`}
+                  >
+                    {item.name}
+                  </a>
+                ))}
               </div>
 
               {navItems.slice(1).map((item) => {
