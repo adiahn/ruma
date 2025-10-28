@@ -308,29 +308,29 @@ const LIFEHeader = () => {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-amber-50 shadow-lg' : 'bg-amber-50/95 backdrop-blur-sm'
+      isScrolled ? 'bg-green-50 shadow-lg' : 'bg-green-50/95 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <a href="/life" className="flex items-center hover:opacity-80 transition-all">
             <img src={lifeLogo} alt="LIFE" className="h-10 w-10 object-cover rounded mr-3" />
-            <span className="text-amber-800 font-bold text-xl">LIFE</span>
+            <span className="text-green-800 font-bold text-xl">LIFE</span>
           </a>
           <nav className="hidden md:flex items-center space-x-1">
-            <a href="#programs" onClick={(e) => scrollToSection(e, 'programs')} className="px-5 py-2.5 text-sm font-medium text-amber-700 hover:text-amber-900 hover:bg-amber-100 rounded-lg transition-all">
+            <a href="#programs" onClick={(e) => scrollToSection(e, 'programs')} className="px-5 py-2.5 text-sm font-medium text-green-700 hover:text-green-900 hover:bg-green-100 rounded-lg transition-all">
               Programs
             </a>
-            <a href="#impact" onClick={(e) => scrollToSection(e, 'impact')} className="px-5 py-2.5 text-sm font-medium text-amber-700 hover:text-amber-900 hover:bg-amber-100 rounded-lg transition-all">
+            <a href="#impact" onClick={(e) => scrollToSection(e, 'impact')} className="px-5 py-2.5 text-sm font-medium text-green-700 hover:text-green-900 hover:bg-green-100 rounded-lg transition-all">
               Impact
             </a>
-            <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="px-5 py-2.5 text-sm font-medium text-amber-700 hover:text-amber-900 hover:bg-amber-100 rounded-lg transition-all">
+            <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="px-5 py-2.5 text-sm font-medium text-green-700 hover:text-green-900 hover:bg-green-100 rounded-lg transition-all">
               About
             </a>
-            <a href="/contact" className="ml-4 px-6 py-2.5 bg-amber-800 text-white text-sm font-medium hover:bg-amber-900 transition-colors rounded-lg">
+            <a href="/contact" className="ml-4 px-6 py-2.5 bg-green-800 text-white text-sm font-medium hover:bg-green-900 transition-colors rounded-lg">
               Apply Now
             </a>
           </nav>
-          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden p-2 text-amber-800 hover:text-amber-900 transition-colors">
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden p-2 text-green-800 hover:text-green-900 transition-colors">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMobileMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -341,12 +341,12 @@ const LIFEHeader = () => {
           </button>
         </div>
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-amber-200 py-4 bg-amber-50">
+          <div className="md:hidden border-t border-green-200 py-4 bg-green-50">
             <div className="flex flex-col space-y-1">
-              <a href="#programs" onClick={(e) => scrollToSection(e, 'programs')} className="px-4 py-3 text-amber-700 hover:text-amber-900 hover:bg-amber-100 rounded-lg">Programs</a>
-              <a href="#impact" onClick={(e) => scrollToSection(e, 'impact')} className="px-4 py-3 text-amber-700 hover:text-amber-900 hover:bg-amber-100 rounded-lg">Impact</a>
-              <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="px-4 py-3 text-amber-700 hover:text-amber-900 hover:bg-amber-100 rounded-lg">About</a>
-              <a href="/contact" className="mx-4 mt-2 px-6 py-3 bg-amber-800 text-white text-sm font-medium hover:bg-amber-900 rounded-lg text-center">Apply Now</a>
+              <a href="#programs" onClick={(e) => scrollToSection(e, 'programs')} className="px-4 py-3 text-green-700 hover:text-green-900 hover:bg-green-100 rounded-lg">Programs</a>
+              <a href="#impact" onClick={(e) => scrollToSection(e, 'impact')} className="px-4 py-3 text-green-700 hover:text-green-900 hover:bg-green-100 rounded-lg">Impact</a>
+              <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="px-4 py-3 text-green-700 hover:text-green-900 hover:bg-green-100 rounded-lg">About</a>
+              <a href="/contact" className="mx-4 mt-2 px-6 py-3 bg-green-800 text-white text-sm font-medium hover:bg-green-900 rounded-lg text-center">Apply Now</a>
             </div>
           </div>
         )}

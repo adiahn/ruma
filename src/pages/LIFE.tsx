@@ -127,12 +127,12 @@ const LIFE = () => {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-br from-orange-500 via-amber-500 to-yellow-500">
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-amber-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-teal-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
         </div>
 
         {/* Content */}
@@ -150,20 +150,20 @@ const LIFE = () => {
                 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 leading-tight">
                   Learning Initiative For
-                  <span className="block bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-emerald-200 to-green-200 bg-clip-text text-transparent">
                     Entrepreneurship
                   </span>
                 </h1>
                 
-                <p className="text-lg sm:text-xl md:text-2xl text-orange-100 mb-6 font-semibold">
+                <p className="text-lg sm:text-xl md:text-2xl text-green-100 mb-6 font-semibold">
                   (LIFE) LTD/GTE RC:1320802
                 </p>
                 
-                <p className="text-base sm:text-lg md:text-xl text-orange-200 mb-8 font-medium">
+                <p className="text-base sm:text-lg md:text-xl text-green-200 mb-8 font-medium">
                   Dual Mode Learning for Entrepreneurship & Job Creation
                 </p>
                 
-                <p className="text-sm sm:text-base md:text-lg text-orange-100 mb-12 leading-relaxed max-w-2xl mx-auto">
+                <p className="text-sm sm:text-base md:text-lg text-green-100 mb-12 leading-relaxed max-w-2xl mx-auto">
                   Premier Business Incubation for the Unserved and Underserved
                 </p>
               </motion.div>
@@ -178,19 +178,19 @@ const LIFE = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl font-black text-white">1,000+</div>
-                    <div className="text-xs sm:text-sm text-orange-100">Youths Trained</div>
+                    <div className="text-xs sm:text-sm text-green-100">Youths Trained</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl font-black text-white">30,000+</div>
-                    <div className="text-xs sm:text-sm text-orange-100">Volunteers</div>
+                    <div className="text-xs sm:text-sm text-green-100">Volunteers</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl font-black text-white">25</div>
-                    <div className="text-xs sm:text-sm text-orange-100">Vocation Trades</div>
+                    <div className="text-xs sm:text-sm text-green-100">Vocation Trades</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl font-black text-white">100</div>
-                    <div className="text-xs sm:text-sm text-orange-100">Bed Hospital</div>
+                    <div className="text-xs sm:text-sm text-green-100">Bed Hospital</div>
                   </div>
                 </div>
               </motion.div>
@@ -201,10 +201,10 @@ const LIFE = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                <Button to="/contact" variant="secondary" size="lg" className="px-8 bg-white text-orange-600 hover:bg-orange-50">
+                <Button to="/contact" variant="secondary" size="lg" className="px-8 bg-white text-green-600 hover:bg-green-50">
                   Apply Now
                 </Button>
-                <Button to="/profile" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-orange-600">
+                <Button to="/profile" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600">
                   View Program Details
                 </Button>
               </motion.div>
@@ -246,13 +246,13 @@ const LIFE = () => {
       </section>
 
       {/* Mission, Vision Section */}
-      <section className="section-padding bg-gradient-to-b from-white to-orange-50/30 py-24">
+      <section className="section-padding bg-gradient-to-b from-white to-green-50/30 py-24">
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16">
               <AnimatedSection animation="slideUp">
-                <div className="bg-white p-8 rounded-2xl shadow-lg border border-orange-100">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="bg-white p-8 rounded-2xl shadow-lg border border-green-100">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Target size={32} className="text-white" strokeWidth={1.5} />
                   </div>
                   <h3 className="text-3xl font-light text-black mb-6 tracking-tight text-center">Mission</h3>
@@ -263,8 +263,8 @@ const LIFE = () => {
               </AnimatedSection>
 
               <AnimatedSection animation="slideUp" delay={0.2}>
-                <div className="bg-white p-8 rounded-2xl shadow-lg border border-orange-100">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="bg-white p-8 rounded-2xl shadow-lg border border-green-100">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Sparkles size={32} className="text-white" strokeWidth={1.5} />
                   </div>
                   <h3 className="text-3xl font-light text-black mb-6 tracking-tight text-center">Vision</h3>
@@ -292,7 +292,7 @@ const LIFE = () => {
               {impactStats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className="text-center bg-gray-50 p-6 sm:p-8 border border-gray-200 hover:border-orange-300 transition-colors duration-300"
+                  className="text-center bg-gray-50 p-6 sm:p-8 border border-gray-200 hover:border-green-300 transition-colors duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -422,7 +422,7 @@ const LIFE = () => {
               {achievements.map((achievement, index) => (
                 <motion.div
                   key={index}
-                  className="border-l-4 border-orange-500 pl-8 py-6 bg-gray-50"
+                  className="border-l-4 border-green-500 pl-8 py-6 bg-gray-50"
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -540,7 +540,7 @@ const LIFE = () => {
 
       {/* Call to Action */}
       <AnimatedSection animation="fadeIn">
-        <section className="section-padding bg-black text-white py-24">
+        <section className="section-padding bg-gradient-to-br from-green-600 to-emerald-600 text-white py-24">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
               <motion.h2
@@ -565,10 +565,10 @@ const LIFE = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                <Button to="/contact" variant="secondary" size="lg">
+                <Button to="/contact" variant="secondary" size="lg" className="px-8 bg-white text-green-600 hover:bg-green-50">
                   Partner With Us
                 </Button>
-                <Button to="/profile" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black">
+                <Button to="/profile" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600">
                   Learn More About Our Work
                 </Button>
               </motion.div>
