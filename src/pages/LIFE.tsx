@@ -127,14 +127,7 @@ const LIFE = () => {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-teal-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
-        </div>
-
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500">
         {/* Content */}
         <div className="relative z-10 w-full pt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
@@ -144,68 +137,29 @@ const LIFE = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="inline-block px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
-                  <span className="text-white font-semibold text-sm">Young Entrepreneurs Program</span>
-                </div>
-                
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
                   Learning Initiative For
                   <span className="block bg-gradient-to-r from-emerald-200 to-green-200 bg-clip-text text-transparent">
                     Entrepreneurship
                   </span>
                 </h1>
                 
-                <p className="text-lg sm:text-xl md:text-2xl text-green-100 mb-6 font-semibold">
-                  (LIFE) LTD/GTE RC:1320802
-                </p>
-                
-                <p className="text-base sm:text-lg md:text-xl text-green-200 mb-8 font-medium">
+                <p className="text-lg sm:text-xl md:text-2xl text-green-100 mb-8 font-medium">
                   Dual Mode Learning for Entrepreneurship & Job Creation
                 </p>
-                
-                <p className="text-sm sm:text-base md:text-lg text-green-100 mb-12 leading-relaxed max-w-2xl mx-auto">
-                  Premier Business Incubation for the Unserved and Underserved
-                </p>
-              </motion.div>
-
-              {/* Stats Banner */}
-              <motion.div
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-6 mb-12 border border-white/20"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-              >
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-black text-white">1,000+</div>
-                    <div className="text-xs sm:text-sm text-green-100">Youths Trained</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-black text-white">30,000+</div>
-                    <div className="text-xs sm:text-sm text-green-100">Volunteers</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-black text-white">25</div>
-                    <div className="text-xs sm:text-sm text-green-100">Vocation Trades</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-black text-white">100</div>
-                    <div className="text-xs sm:text-sm text-green-100">Bed Hospital</div>
-                  </div>
-                </div>
               </motion.div>
 
               <motion.div
                 className="flex flex-col sm:flex-row gap-4 justify-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
               >
                 <Button to="/contact" variant="secondary" size="lg" className="px-8 bg-white text-green-600 hover:bg-green-50">
                   Apply Now
                 </Button>
                 <Button to="/profile" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600">
-                  View Program Details
+                  Learn More
                 </Button>
               </motion.div>
             </div>
@@ -246,30 +200,24 @@ const LIFE = () => {
       </section>
 
       {/* Mission, Vision Section */}
-      <section className="section-padding bg-gradient-to-b from-white to-green-50/30 py-24">
+      <section className="section-padding bg-white py-24">
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16">
               <AnimatedSection animation="slideUp">
-                <div className="bg-white p-8 rounded-2xl shadow-lg border border-green-100">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Target size={32} className="text-white" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="text-3xl font-light text-black mb-6 tracking-tight text-center">Mission</h3>
+                <div className="bg-gray-50 p-8 rounded-lg border border-gray-200">
+                  <h3 className="text-2xl font-light text-black mb-6 tracking-tight">Mission</h3>
                   <p className="text-base text-gray-600 font-light leading-relaxed">
-                    Enhancing the competitiveness of Youth, Women and Girl-Child to opportunities of empowerment through entrepreneurship capacity development; thereby creating wealth, jobs opportunities and sustainable MSME's Eco-System Complex for underserved and unserved communities in Nigeria. We Leverage on a concerted alliance network for a Dual-Mode demand driven entrepreneurship development poised to mainstreaming subscribers in to the National Skills Qualification Framework (NSQF).
+                    Enhancing the competitiveness of Youth, Women and Girl-Child to opportunities of empowerment through entrepreneurship capacity development; thereby creating wealth, jobs opportunities and sustainable MSME's Eco-System Complex for underserved and unserved communities in Nigeria.
                   </p>
                 </div>
               </AnimatedSection>
 
               <AnimatedSection animation="slideUp" delay={0.2}>
-                <div className="bg-white p-8 rounded-2xl shadow-lg border border-green-100">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Sparkles size={32} className="text-white" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="text-3xl font-light text-black mb-6 tracking-tight text-center">Vision</h3>
+                <div className="bg-gray-50 p-8 rounded-lg border border-gray-200">
+                  <h3 className="text-2xl font-light text-black mb-6 tracking-tight">Vision</h3>
                   <p className="text-base text-gray-600 font-light leading-relaxed">
-                    Catalyst for deepening "financial inclusion" and promoting" inclusive entrepreneurship education through extensive collaboration and partnership with the public & private sector, using cost effective and demand driven approach thereby creating an enabling environment for a robust, sustainable MSMEs eco-system complex that will grow the economy and catalyse Nigeria's tax to GDP Destination.
+                    Catalyst for deepening "financial inclusion" and promoting" inclusive entrepreneurship education through extensive collaboration and partnership with the public & private sector, using cost effective and demand driven approach.
                   </p>
                 </div>
               </AnimatedSection>
@@ -279,31 +227,20 @@ const LIFE = () => {
       </section>
 
       {/* Impact Stats */}
-      <section className="section-padding bg-white py-24">
+      <section className="section-padding bg-gray-50 py-20">
         <div className="container-custom">
-          <AnimatedSection animation="fadeIn">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl sm:text-6xl font-light text-black mb-6 tracking-tight">
-                Our Impact
-              </h2>
-              <div className="w-16 h-px bg-gray-400 mx-auto mb-8"></div>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-              {impactStats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="text-center bg-gray-50 p-6 sm:p-8 border border-gray-200 hover:border-green-300 transition-colors duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="text-4xl sm:text-5xl font-light text-black mb-2">{stat.number}</div>
-                  <div className="text-sm sm:text-base text-gray-600 font-light">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </AnimatedSection>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-light text-black mb-4">Our Impact</h2>
+            <div className="w-12 h-px bg-gray-400 mx-auto"></div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {impactStats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-2xl font-light text-black mb-1">{stat.number}</div>
+                <div className="text-sm text-gray-600">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
