@@ -21,6 +21,11 @@ import SINA from './pages/SINA';
 import LIFE from './pages/LIFE';
 import EUN from './pages/EUN';
 
+import codeLogo from './assets/code.jpg';
+import rumaLogo from './assets/ruma.jpg';
+import lifeLogo from './assets/life.jpg';
+import eunLogo from './assets/eun.jpg';
+
 // CODE-specific Header component
 const CODEHeader = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -52,14 +57,9 @@ const CODEHeader = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a
-            href="/code"
-            className="flex items-center transition-all duration-300 hover:opacity-80"
-          >
-            <span className="text-black font-bold text-xl tracking-tight">
-              Collective Development<br />
-              <span className="text-sm text-gray-600">(CODE)</span>
-            </span>
+          <a href="/code" className="flex items-center transition-all duration-300 hover:opacity-80">
+            <img src={codeLogo} alt="CODE" className="h-10 w-10 object-cover rounded mr-3" />
+            <span className="text-black font-bold text-xl tracking-tight">CODE</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -176,6 +176,7 @@ const RumaFoundationHeader = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <a href="/ruma-foundation" className="flex items-center hover:opacity-80 transition-all">
+            <img src={rumaLogo} alt="Ruma Foundation" className="h-10 w-10 object-cover rounded mr-3" />
             <span className="text-emerald-800 font-bold text-xl">The Ruma Foundation</span>
           </a>
           <nav className="hidden md:flex items-center space-x-1">
@@ -312,6 +313,7 @@ const LIFEHeader = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <a href="/life" className="flex items-center hover:opacity-80 transition-all">
+            <img src={lifeLogo} alt="LIFE" className="h-10 w-10 object-cover rounded mr-3" />
             <span className="text-amber-800 font-bold text-xl">LIFE</span>
           </a>
           <nav className="hidden md:flex items-center space-x-1">
@@ -380,9 +382,7 @@ const EUNHeader = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="/eun" className="flex items-center hover:opacity-80 transition-all">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center mr-3">
-              <span className="text-white font-bold text-lg">E</span>
-            </div>
+            <img src={eunLogo} alt="EUN" className="h-10 w-10 object-cover rounded mr-3" />
             <div>
               <div className="text-xl font-bold text-gray-900">EUN</div>
               <div className="text-xs text-gray-500">Enterprise University of Nigeria</div>
