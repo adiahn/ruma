@@ -447,31 +447,31 @@ const AppContent = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50">
       {renderHeader()}
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/business" element={<Business />} />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/business" element={<Business />} />
           <Route path="/code" element={<CODE />} />
           <Route path="/ruma-foundation" element={<RumaFoundation />} />
           <Route path="/sina" element={<SINA />} />
           <Route path="/life" element={<LIFE />} />
           <Route path="/eun" element={<EUN />} />
-          <Route path="/recognitions" element={<Recognitions />} />
-          <Route path="/media" element={<Media />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogPost />} />
-          <Route path="/library/press-release" element={<PressRelease />} />
-          <Route path="/library/speeches" element={<Speeches />} />
-          <Route path="/library/books" element={<Books />} />
-          <Route path="/library/gallery" element={<Gallery />} />
-        </Routes>
-      </main>
+            <Route path="/recognitions" element={<Recognitions />} />
+            <Route path="/media" element={<Media />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/library/press-release" element={<PressRelease />} />
+            <Route path="/library/speeches" element={<Speeches />} />
+            <Route path="/library/books" element={<Books />} />
+            <Route path="/library/gallery" element={<Gallery />} />
+          </Routes>
+        </main>
       {!isStandalonePage && <Footer />}
-    </div>
+      </div>
   );
 };
 

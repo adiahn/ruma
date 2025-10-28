@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Users, GraduationCap, Rocket, TrendingUp, Target, Heart, Sparkles, Globe, Building2, BookOpen, Briefcase, Award } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 import Button from '../components/Button';
+import codeLogo from '../assets/code.jpg';
 
 const CODE = () => {
   const impactStats = [
@@ -475,6 +476,11 @@ const CODE = () => {
             {/* Brand */}
             <div className="sm:col-span-2 lg:col-span-2">
               <div className="mb-6">
+                <img 
+                  src={codeLogo} 
+                  alt="CODE Logo" 
+                  className="h-16 w-auto mb-4"
+                />
                 <h3 className="text-2xl sm:text-3xl font-light text-black tracking-tight">Collective Development</h3>
                 <p className="text-lg sm:text-xl text-gray-600 mt-2 font-light">(CODE)</p>
                 <p className="text-sm text-gray-500 mt-2">CAC/IT:7420182</p>

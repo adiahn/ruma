@@ -42,14 +42,13 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Recognitions', path: '/recognitions' },
-    { name: 'Media Center', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
 
   const profileItems = [
     { name: 'Profile', path: '/profile' },
     { name: 'Organizations & Initiatives', path: '/business' },
+    { name: 'Recognitions', path: '/recognitions' },
   ];
 
   const libraryItems = [
@@ -57,6 +56,7 @@ const Header = () => {
     { name: 'Speeches', path: '/library/speeches' },
     { name: 'Books', path: '/library/books' },
     { name: 'Gallery', path: '/library/gallery' },
+    { name: 'Media Center', path: '/blog' },
   ];
 
   const initiativesItems = [
@@ -95,7 +95,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-2">
-            {navItems.slice(0, 1).map((item) => {
+            {navItems.map((item) => {
               const isActive = location.pathname === item.path;
               return (
                 <Link
@@ -211,33 +211,6 @@ const Header = () => {
               </AnimatePresence>
             </div>
 
-            {navItems.slice(1).map((item) => {
-              const isActive = location.pathname === item.path;
-              return (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className={`relative px-5 font-medium transition-all duration-300 rounded-lg ${
-                    isScrolled ? 'py-2 text-sm' : 'py-2.5 text-base'
-                  } ${
-                    isActive
-                      ? 'text-slate-900 bg-slate-100'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                  }`}
-                >
-                  {item.name}
-                  {isActive && (
-                    <motion.div
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-slate-900"
-                      layoutId="activeIndicator"
-                      initial={false}
-                      transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                    />
-                  )}
-                </Link>
-              );
-            })}
-            
             {/* Library Dropdown */}
             <div 
               className="relative"
@@ -318,7 +291,7 @@ const Header = () => {
               className="md:hidden absolute top-full left-0 w-full border-b shadow-sm bg-white border-slate-200"
             >
             <nav className="px-6 py-4 space-y-1">
-              {navItems.slice(0, 1).map((item) => {
+              {navItems.map((item) => {
                 const isActive = location.pathname === item.path;
                 return (
                   <Link
@@ -375,24 +348,6 @@ const Header = () => {
                 ))}
               </div>
 
-              {navItems.slice(1).map((item) => {
-                const isActive = location.pathname === item.path;
-                return (
-                  <Link
-                    key={item.name}
-                    to={item.path}
-                    onClick={closeMenu}
-                    className={`block px-4 py-3 text-base font-medium rounded-md transition-all duration-200 ${
-                      isActive
-                        ? 'text-slate-900 bg-slate-100 border-l-4 border-slate-900'
-                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                );
-              })}
-              
               {/* Library Submenu - Mobile */}
               <div className="pt-2">
                 <div className="text-sm font-semibold text-slate-400 px-4 py-2">Library</div>

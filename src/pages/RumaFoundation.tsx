@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Heart, GraduationCap, Building2, Users, Target, Sparkles, Globe, Award } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 import Button from '../components/Button';
+import rumaLogo from '../assets/ruma.jpg';
 
 const RumaFoundation = () => {
   const impactStats = [
@@ -375,6 +376,11 @@ const RumaFoundation = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-8">
             {/* Brand */}
             <div>
+              <img 
+                src={rumaLogo} 
+                alt="Ruma Foundation Logo" 
+                className="h-16 w-auto mb-4"
+              />
               <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">The Ruma Foundation</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 Transforming lives through education, enterprise, and skills development.

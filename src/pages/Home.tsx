@@ -81,91 +81,91 @@ const Home = () => {
         <div className="container-custom">
           <AnimatedSection animation="slideUp">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-responsive-md font-bold text-slate-900 mb-4">
+                  <h2 className="text-responsive-md font-bold text-slate-900 mb-4">
                 Featured On
-              </h2>
-              <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+                  </h2>
+                  <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
                 Recognized by leading global media outlets for innovative leadership and social impact
-              </p>
-            </div>
+                  </p>
+        </div>
 
             {/* Media Logos Grid */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-12 items-center justify-items-center">
               {/* BBC */}
-              <motion.div
+            <motion.div 
                 className="flex items-center justify-center p-4 transition-all duration-300 hover:opacity-70"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-              >
-                <img 
+                >
+                  <img 
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/BBC_News_2019.svg/1200px-BBC_News_2019.svg.png" 
                   alt="BBC"
                   className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
-                />
-              </motion.div>
+                  />
+                </motion.div>
 
               {/* CNN */}
-              <motion.div
+                <motion.div 
                 className="flex items-center justify-center p-4 transition-all duration-300 hover:opacity-70"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-              >
-                <img 
+                >
+                  <img 
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/1200px-CNN.svg.png" 
                   alt="CNN"
                   className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
-                />
-              </motion.div>
+                  />
+                </motion.div>
 
               {/* Forbes */}
-              <motion.div
+                <motion.div 
                 className="flex items-center justify-center p-4 transition-all duration-300 hover:opacity-70"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-              >
-                <img 
+                >
+                  <img 
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Forbes_logo.svg/1200px-Forbes_logo.svg.png" 
                   alt="Forbes"
                   className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
-                />
-              </motion.div>
+                  />
+                </motion.div>
 
               {/* The Guardian */}
-              <motion.div
+                <motion.div 
                 className="flex items-center justify-center p-4 transition-all duration-300 hover:opacity-70"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-              >
-                <img 
+                >
+                  <img 
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Guardian_logo.svg/1200px-Guardian_logo.svg.png" 
                   alt="The Guardian"
                   className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
-                />
-              </motion.div>
+                  />
+                </motion.div>
 
               {/* Nigeria Reports */}
-              <motion.div
+                <motion.div 
                 className="flex items-center justify-center p-4 transition-all duration-300 hover:opacity-70"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-              >
-                <img 
+                >
+                  <img 
                   src="https://nigeriareports.com/wp-content/uploads/2024/04/nigeriareports-logo.png" 
                   alt="Nigeria Reports"
                   className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all"
-                />
-              </motion.div>
-            </div>
+                  />
+                </motion.div>
+              </div>
           </AnimatedSection>
         </div>
       </section>

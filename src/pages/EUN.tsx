@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import eunLogo from '../assets/eun.jpg';
 
 const EUN = () => {
   const programs = [
@@ -290,6 +291,11 @@ const EUN = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
+              <img 
+                src={eunLogo} 
+                alt="EUN Logo" 
+                className="h-16 w-auto mb-4"
+              />
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">E</span>

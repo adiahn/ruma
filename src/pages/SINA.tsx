@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Lightbulb, Users, Rocket, Target, Sparkles, Globe, Award, BookOpen } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 import Button from '../components/Button';
+import sinaLogo from '../assets/sina.jpg';
 
 const SINA = () => {
   const impactStats = [
@@ -386,6 +387,11 @@ const SINA = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-8">
             {/* Brand */}
             <div>
+              <img 
+                src={sinaLogo} 
+                alt="SINA Logo" 
+                className="h-16 w-auto mb-4"
+              />
               <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">Social Innovation Academy</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 Empowering change makers to solve Nigeria's most pressing challenges.
