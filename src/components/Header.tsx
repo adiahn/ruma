@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import codeLogo from '../assets/code.jpg';
+import rumaLogo from '../assets/ruma.jpg';
+import lifeLogo from '../assets/life.jpg';
+import eunLogo from '../assets/eun.jpg';
 // Using public folder for production compatibility
 
 const Header = () => {
@@ -59,11 +63,11 @@ const Header = () => {
   ];
 
   const initiativesItems = [
-    { name: 'Collective Development (CODE)', path: '/code' },
-    { name: 'The Ruma Foundation', path: '/ruma-foundation' },
-    { name: 'Social Innovation Academy (SINA)', path: '/sina' },
-    { name: 'LIFE (Learning Initiative For Entrepreneurship)', path: '/life' },
-    { name: 'Enterprise University of Nigeria (EUN)', path: '/eun' },
+    { name: 'Collective Development (CODE)', path: '/code', logo: codeLogo },
+    { name: 'The Ruma Foundation', path: '/ruma-foundation', logo: rumaLogo },
+    { name: 'Social Innovation Academy (SINA)', path: '/sina', logo: undefined },
+    { name: 'LIFE (Learning Initiative For Entrepreneurship)', path: '/life', logo: lifeLogo },
+    { name: 'Enterprise University of Nigeria (EUN)', path: '/eun', logo: eunLogo },
   ];
 
   const closeMenu = () => setIsMobileMenuOpen(false);
@@ -192,19 +196,28 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-[340px] bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50"
+                    className="absolute top-full left-0 mt-2 w-[360px] bg-white rounded-lg shadow-lg border border-slate-200 p-3 z-50"
                   >
-                    {initiativesItems.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.path}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`block px-4 py-2.5 text-base font-medium transition-colors duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50`}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
+                    <div className="grid grid-cols-2 gap-3">
+                      {initiativesItems.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex items-center gap-3 rounded-md border border-slate-200 hover:border-slate-300 hover:bg-slate-50 px-3 py-2 transition-colors"
+                        >
+                          {item.logo ? (
+                            <img src={item.logo} alt={item.name} className="h-8 w-8 object-cover rounded-sm" />
+                          ) : (
+                            <div className="h-8 w-8 rounded-sm bg-slate-200 flex items-center justify-center text-xs text-slate-600">
+                              SINA
+                            </div>
+                          )}
+                          <span className="text-sm font-medium text-slate-700 group-hover:text-slate-900 line-clamp-2">{item.name}</span>
+                        </a>
+                      ))}
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -362,9 +375,14 @@ const Header = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={closeMenu}
-                    className={`block px-4 py-3 pl-8 text-base font-medium rounded-md transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50`}
+                    className={`flex items-center gap-3 px-4 py-3 pl-8 text-base font-medium rounded-md transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50`}
                   >
-                    {item.name}
+                    {item.logo ? (
+                      <img src={item.logo} alt={item.name} className="h-6 w-6 object-cover rounded-sm" />
+                    ) : (
+                      <div className="h-6 w-6 rounded-sm bg-slate-200 flex items-center justify-center text-[10px] text-slate-600">SINA</div>
+                    )}
+                    <span>{item.name}</span>
                   </a>
                 ))}
               </div>
