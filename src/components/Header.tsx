@@ -42,7 +42,6 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Contact', path: '/contact' },
   ];
 
   const profileItems = [
@@ -256,6 +255,28 @@ const Header = () => {
                 )}
               </AnimatePresence>
             </div>
+
+            {/* Contact - last item in desktop menu */}
+            <Link
+              to="/contact"
+              className={`relative px-5 font-medium transition-all duration-300 rounded-lg ${
+                isScrolled ? 'py-2 text-sm' : 'py-2.5 text-base'
+              } ${
+                location.pathname === '/contact'
+                  ? 'text-slate-900 bg-slate-100'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+              }`}
+            >
+              Contact
+              {location.pathname === '/contact' && (
+                <motion.div
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-slate-900"
+                  layoutId="activeIndicator"
+                  initial={false}
+                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                />
+              )}
+            </Link>
           </nav>
 
           {/* CTA Button - Desktop */}
@@ -369,6 +390,19 @@ const Header = () => {
                   );
                 })}
               </div>
+
+              {/* Contact - last item in mobile menu */}
+              <Link
+                to="/contact"
+                onClick={closeMenu}
+                className={`block mt-2 px-4 py-3 text-base font-medium rounded-md transition-all duration-200 ${
+                  location.pathname === '/contact'
+                    ? 'text-slate-900 bg-slate-100 border-l-4 border-slate-900'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                }`}
+              >
+                Contact
+              </Link>
               
               <div className="pt-4">
                 <Link
