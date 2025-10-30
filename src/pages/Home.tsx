@@ -13,12 +13,12 @@ const Home = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(/assets/hero.jpg)',
-            filter: 'grayscale(0%) brightness(0.3)'
+            filter: 'grayscale(0%) brightness(0.5)'
           }}
         />
         
         {/* Lighter Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-20" />
+        <div className="absolute inset-0 bg-black bg-opacity-10" />
         
         {/* Content */}
         <div className="relative z-10 w-full">
