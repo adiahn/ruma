@@ -46,7 +46,6 @@ const Header = () => {
 
   const profileItems = [
     { name: 'Profile', path: '/profile' },
-    { name: 'Organizations & Initiatives', path: '/business' },
     { name: 'Recognitions', path: '/recognitions' },
   ];
 
@@ -62,8 +61,9 @@ const Header = () => {
     { name: 'Collective Development (CODE)', path: '/code' },
     { name: 'The Ruma Foundation', path: '/ruma-foundation' },
     { name: 'Social Innovation Academy (SINA)', path: '/sina' },
-    { name: 'LIFE (Learning Initiative For Entrepreneurship)', path: '/life' },
+    { name: 'Learning Initiative for Entrepreneurship (LIFE)', path: '/life' },
     { name: 'Enterprise University of Nigeria (EUN)', path: '/eun' },
+    { name: 'Opportunities Hub (OHUB)', path: 'https://opportunitieshub.ng' },
   ];
 
   const closeMenu = () => setIsMobileMenuOpen(false);

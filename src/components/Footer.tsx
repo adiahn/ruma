@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import logoWhite from '../assets/logo-white.png';
 
@@ -12,6 +11,15 @@ const Footer = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  const initiatives = [
+    { name: 'Collective Development (CODE)', path: '/code' },
+    { name: 'The Ruma Foundation', path: '/ruma-foundation' },
+    { name: 'Social Innovation Academy (SINA)', path: '/sina' },
+    { name: 'Learning Initiative for Entrepreneurship (LIFE)', path: '/life' },
+    { name: 'Enterprise University of Nigeria (EUN)', path: '/eun' },
+    { name: 'Opportunities Hub (OHUB)', path: 'https://opportunitieshub.ng' },
+  ];
+
   const socialLinks = [
     { name: 'LinkedIn', href: '#', icon: 'linkedin' },
     { name: 'Twitter', href: '#', icon: 'twitter' },
@@ -21,7 +29,7 @@ const Footer = () => {
   return (
     <footer className="bg-slate-800 border-t border-slate-700">
       <div className="container-custom py-12 sm:py-16 lg:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-2">
             <div className="mb-6">
@@ -51,17 +59,16 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               Quick Links
             </h4>
-            <ul className="space-y-2 sm:space-y-3">
+            <ul className="space-y-1 sm:space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-slate-300 hover:text-white transition-colors text-sm touch-target block py-1"
+                    className="text-slate-300 hover:text-white transition-colors text-sm block py-0.5 leading-tight"
                   >
                     {link.name}
                   </Link>
@@ -70,12 +77,43 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          <div className="lg:col-span-2">
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              Initiatives
+            </h4>
+            <ul className="space-y-1 sm:space-y-2">
+              {initiatives.map((item) => {
+                const isInternal = item.path.startsWith('/');
+                return (
+                  <li key={item.name}>
+                    {isInternal ? (
+                      <Link
+                        to={item.path}
+                        className="text-slate-300 hover:text-white transition-colors text-sm block py-0.5 leading-tight"
+                      >
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <a
+                        href={item.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-slate-300 hover:text-white transition-colors text-sm block py-0.5 leading-tight"
+                      >
+                        {item.name}
+                      </a>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               Contact
             </h4>
-            <div className="space-y-2 sm:space-y-3 text-sm text-slate-300">
+            <div className="space-y-1 sm:space-y-2 text-sm text-slate-300 leading-tight">
               <p>Abuja, Nigeria</p>
               <p className="break-all">contact@ruma.ng</p>
               <p>+234 (0) 8100061111</p>
@@ -83,8 +121,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-slate-700 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+        <div className="border-t border-slate-700 pt-4 sm:pt-6 flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
           <p className="text-xs sm:text-sm text-slate-400 text-center sm:text-left">
             © {currentYear} Dr. Babangida Ruma. All rights reserved.
           </p>

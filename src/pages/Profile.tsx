@@ -100,8 +100,8 @@ const Profile = () => {
             <div className="flex items-center justify-center min-h-[50vh] py-20">
               <div className="text-center">
                 <div className="bg-black bg-opacity-60 px-8 py-6 rounded-lg mb-8">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-4 sm:mb-6">
-                    Dr. Babangida<br />Ruma
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight mb-4 sm:mb-6 whitespace-nowrap">
+                    Dr. Babangida Ruma
                   </h1>
                   
                   <p className="text-lg sm:text-xl md:text-2xl text-gray-100 mb-4 sm:mb-6 font-light">
