@@ -59,7 +59,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="order-2">
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               Quick Links
             </h4>
@@ -77,7 +77,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 order-1">
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               Initiatives
             </h4>
@@ -109,7 +109,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="order-3">
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               Contact
             </h4>
